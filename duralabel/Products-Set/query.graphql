@@ -1,0 +1,82 @@
+query ProductSet($productIds: [Int!], $activeCurrencyCode: currencyCode!) {
+  site {
+    settings {
+      storeName
+      tax {
+        plp
+      }
+    }
+    currency(currencyCode: $activeCurrencyCode) {
+      display {
+        symbol
+        symbolPlacement
+        decimalToken
+        decimalPlaces
+        thousandsToken
+      }
+    }
+    products(entityIds: $productIds) {
+      edges {
+        node {
+          brand {
+            name
+          }
+          name
+          entityId
+          addToCartUrl
+          addToWishlistUrl
+          path
+          sku
+          priceWithTax: prices(includeTax: true, currencyCode: $activeCurrencyCode)  {
+            price {
+              currencyCode
+              value
+              formatted
+            }
+          }
+          priceWithoutTax: prices(includeTax: false, currencyCode: $activeCurrencyCode)  {
+            price {
+              currencyCode
+              value
+              formatted
+            }
+          }
+          salePriceWithoutTax: prices(includeTax: false, currencyCode: $activeCurrencyCode)  {
+            salePrice {
+              currencyCode
+              value
+              formatted
+            }
+          }
+          salePriceWithTax: prices(includeTax: false, currencyCode: $activeCurrencyCode)  {
+            salePrice {
+              currencyCode
+              value
+              formatted
+            }
+          }
+          reviewSummary {
+            summationOfRatings
+            numberOfReviews
+          }
+          defaultImage {
+            url80wide: url(width: 80)
+            url160wide: url(width: 160)
+            url320wide: url(width: 320)
+            url640wide: url(width: 640)
+            url960wide: url(width: 960)
+            url1280wide: url(width: 1280)
+            url1920wide: url(width: 1920)
+          }
+          categories {
+            edges{
+                node{
+                    name
+                }
+            }
+          }
+        }
+      }
+    }
+  }
+}

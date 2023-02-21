@@ -1,0 +1,60 @@
+{
+  "product": {
+    "type": "manual",
+    "value": []
+  },
+  "productCardContentAlignment": {
+    "horizontal": "center"
+  },
+  "productsPerSlide": 4,
+  "productImage": {
+    "visibility": "show",
+    "imageFit": "fill"
+  },
+  "brand": {
+    "visibility": "show",
+    "textStyle": "default",
+    "color": "#444444",
+    "fontFamily": "inherit",
+    "fontWeight": "400",
+    "fontSize": {
+      "value": 36,
+      "type": "px"
+    }
+  },
+  "productName": {
+    "visibility": "show",
+    "textStyle": "default",
+    "color": "#444444",
+    "fontFamily": "inherit",
+    "fontWeight": "400",
+    "fontSize": {
+      "value": 36,
+      "type": "px"
+    }
+  },
+  "price": {
+    "visibility": "show",
+    "textStyle": "default",
+    "color": "#444444",
+    "fontFamily": "inherit",
+    "fontWeight": "400",
+    "fontSize": {
+      "value": 36,
+      "type": "px"
+    }
+  },
+  "productRating": {
+    "visibility": "hide",
+    "starColorFilled": "#3C64F4",
+    "starColorEmpty": "#ECEEF5",
+    "reviewsColor": "#8C93AD"
+  },
+  "button": {
+    "visibility": "hide",
+    "shape": "round",
+    "buttonColor": "rgba(68,68,68,1)",
+    "buttonTextColor": "rgba(255,255,255,1)",
+    "buttonActionType": "addToCart"
+  }
+}

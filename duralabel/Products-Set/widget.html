@@ -1,0 +1,182 @@
+<ul class="productGrid productGrid--maxCol{{ columns }}" data-product-type="featured" >
+    {{#each _.data.site.products.edges}}
+        <li class="product">
+            <article
+                class="card
+                {{#or node.salePriceWithoutTax.salePrice node.salePriceWithTax.salePrice}} has-sale-price{{/or}}"
+                data-name="{{node.name}}"
+                data-product-category="
+                {{#each node.categories.edges}}
+                    {{#if @last}}
+                        {{node.name}}
+                    {{else}}
+                        {{node.name}}, 
+                    {{/if}}
+                {{/each}}"
+                data-product-brand="{{node.brand.name}}"
+                >
+                <figure class="card-figure">
+                    {{#or node.salePriceWithoutTax.salePrice.value node.salePriceWithTax.salePrice.value}}
+                        <div class="sale-flag-side">
+                            <span class="sale-text">Sale</span>
+                        </div>
+                    {{/or}}
+
+                    <a href="{{node.path}}" 
+                    class="card-figure__link"
+                    aria-label="{{node.name}}"
+                    {{#if settings.data_tag_enabled}} data-event-type="product-click" {{/if}}
+                    >
+                        <div class="card-img-container">
+                            <img class="card-image lazyload" data-sizes="auto" src="{{node.defaultImage.url80wide}}" data-src="{{node.defaultImage.url80wide}}" alt="{{node.name}}" title="{{node.name}}">
+                        </div>
+                    </a>
+                    <figcaption class="card-figcaption">
+                        <div class="card-figcaption-body">
+                            <div class="card-figcaption--action-buttons">
+                                {{#or customer (if theme_settings.restrict_to_login '!==' true)}}
+                                    {{#if show_cart_action}}
+                                        {{#if has_options}}
+                                            <a href="{{ode.path}}" data-event-type="product-click" class="button button--small card-figcaption-button" data-product-id="{{id}}">View Options</a>
+                                        {{/if}}
+                                        {{#if pre_order}}
+                                            <a href="{{pre_order_add_to_cart_url}}" data-event-type="product-click" class="button button--small card-figcaption-button">Pre-Order Now</a>
+                                        {{/if}}
+                                        {{#if add_to_cart_url }}
+                                            <a href="{{node.addToCartUrl}}" data-event-type="product-click" class="button button--small card-figcaption-button">Add to Cart</a>
+                                        {{/if}}
+                                        {{#if out_of_stock_message }}
+                                            <a href="{{node.path}}" data-event-type="product-click" class="button button--small card-figcaption-button" data-product-id="{{id}}">{{out_of_stock_message}}</a>
+                                        {{/if}}
+                                    {{/if}}
+                                {{/or}}
+                                {{#unless hide_product_quick_view}}
+                                    {{#if theme_settings.show_product_quick_view}}
+                                        {{#if settings.data_tag_enabled}}
+                                            <a class="button button--secondary button--small card-figcaption-button quickview" data-event-type="product-click" data-product-id="{{id}}">Quick View</a>
+                                        {{else}}
+                                            <a class="button button--secondary button--small card-figcaption-button quickview" data-product-id="{{id}}">Quick View</a>
+                                        {{/if}}
+                                    {{/if}}
+                                {{/unless}}
+                            </div>
+                        </div>
+                    </figcaption>
+                </figure>
+                <div class="card-body">
+                    <div>
+                        <h4 class="card-title">
+                            <a aria-label="{{node.name}}" 
+                                href="{{node.path}}"
+                                {{#if settings.data_tag_enabled}} data-event-type="product-click" {{/if}}
+                            >
+                                {{node.name}}
+                            </a>
+                        </h4>
+
+                        <div class="card-text price" data-test-info-type="price">
+                            {{#or customer (if theme_settings.restrict_to_login '!==' true)}}
+                            <div class="price-section price-section--withoutTax {{#if node.priceWithTax}}price-section--minor{{/if}}"  {{#if schema_org}}itemprop="offers" itemscope itemtype="http://schema.org/Offer"{{/if}}>
+                                <span class="price-section price-section--withoutTax non-sale-price--withoutTax{{#if node.priceWithTax}} price-section--minor{{/if}}" {{#unless node.salePriceWithoutTax}}style="display: none;"{{/unless}}>
+                                    <span data-product-non-sale-price-without-tax class="price price--non-sale">
+                                        {{node.priceWithoutTax.price.formatted}}
+                                    </span>
+                                </span>
+                                <span data-product-price-without-tax class="price price--withoutTax{{#if node.priceWithTax}} price-section--minor{{/if}}">{{node.priceWithoutTax.price.formatted}}</span>
+                                <div class="price-section price-section--withoutTax rrp-price--withoutTax{{#if node.priceWithTax}} price-section--minor{{/if}}" {{#unless node.salePriceWithoutTax}}style="display: none;"{{/unless}}>
+                                    <span data-product-rrp-without-tax class="price price--rrp">{{node.salePriceWithoutTax.formatted}}</span>
+                                </div>
+                                {{#if node.priceWithTax}}
+                                    <abbr title="Excluding Tax">Excluding Tax</abbr>
+                                {{/if}}
+                            </div>
+                            {{else}}
+                                <p translate>Log in for pricing</p>
+                            {{/or}}
+
+                            <div class="card-text rating" data-test-info-type="productRating">
+                                <span class="rating--small">
+                                    {{#if (eq node.reviewSummary.numberOfReviews 0)}}
+                                    {{assignVar "rating" 0}}
+                                    {{else}}
+                                    {{assignVar "rating" (divide node.reviewSummary.summationOfRatings node.reviewSummary.numberOfReviews)}}
+                                    {{/if}}
+                                    <span role="img"
+                                        aria-label="Product rating is {{getVar 'rating'}} of 5"
+                                    >
+                                    {{#for 1 5}}
+                                        {{#if (getVar 'rating') '>=' $index}}
+                                            <span class="icon icon--ratingFull">
+                                                <svg viewBox="0 0 26 28"> 
+                                                    <path d="M0 10.109q0-0.578 0.875-0.719l7.844-1.141 3.516-7.109q0.297-0.641 0.766-0.641t0.766 0.641l3.516 7.109 7.844 1.141q0.875 0.141 0.875 0.719 0 0.344-0.406 0.75l-5.672 5.531 1.344 7.812q0.016 0.109 0.016 0.313 0 0.328-0.164 0.555t-0.477 0.227q-0.297 0-0.625-0.187l-7.016-3.687-7.016 3.687q-0.344 0.187-0.625 0.187-0.328 0-0.492-0.227t-0.164-0.555q0-0.094 0.031-0.313l1.344-7.812-5.688-5.531q-0.391-0.422-0.391-0.75z"/> 
+                                                </svg>
+                                            </span>
+                                        {{else}}
+                                            <span class="icon icon--ratingEmpty">
+                                                <svg viewBox="0 0 26 28"> 
+                                                    <path d="M0 10.109q0-0.578 0.875-0.719l7.844-1.141 3.516-7.109q0.297-0.641 0.766-0.641t0.766 0.641l3.516 7.109 7.844 1.141q0.875 0.141 0.875 0.719 0 0.344-0.406 0.75l-5.672 5.531 1.344 7.812q0.016 0.109 0.016 0.313 0 0.328-0.164 0.555t-0.477 0.227q-0.297 0-0.625-0.187l-7.016-3.687-7.016 3.687q-0.344 0.187-0.625 0.187-0.328 0-0.492-0.227t-0.164-0.555q0-0.094 0.031-0.313l1.344-7.812-5.688-5.531q-0.391-0.422-0.391-0.75z"/> 
+                                                </svg>
+                                            </span>
+                                        {{/if}}
+                                    {{/for}}
+                                    </span>
+                                </span>
+                            </div>
+                        </div>
+                        {{#if theme_settings.card-show-brand}}
+                            {{#if node.brand.name}}
+                                <p class="card-text brand-name" data-test-info-type="brandName">{{node.brand.name}}</p>
+                            {{else}}
+                                <p></p>
+                            {{/if}}
+                        {{/if}}
+                    </div>
+
+                    <div class="card-details">
+                        {{!--{{> components/products/bulk-discount-rates}}--}}
+                    </div>
+                </div>
+            </article>
+
+        </li>
+    {{/each}}
+</ul>
+
+<script type="text/javascript">
+    console.log({{{json .}}})
+    //data-src based on viewport width
+</script>
+{{#each _.data.site.products.edges as |productResource|}}
+
+    {{#if productResource.node.entityId "==" product.productId}}
+        <script type="application/ld+json">
+        {
+            "@context": "https://schema.org/",
+            "@type": "Product",
+            "name": "{{productResource.node.name}}",
+            "image": "{{productResource.node.defaultImage.url}}",
+            "description": "{{product.productDescription}}",
+            "sku": "{{productResource.node.sku}}",
+            "aggregateRating": {
+            "@type": "AggregateRating",
+            {{#if productResource.node.reviewSummary.summationOfRatings "==" 0}}
+            "ratingValue": "0",
+            {{else}}
+            "ratingValue": "{{divide productResource.node.reviewSummary.summationOfRatings productResource.node.reviewSummary.numberOfReviews}}",
+            {{/if}}
+            "reviewCount": "{{productResource.node.reviewSummary.numberOfReviews}}"
+            },
+            "offers": {
+            "@type": "Offer",
+            "priceCurrency": "{{productResource.node.prices.price.currencyCode}}",
+            "price": "{{productResource.node.prices.price.value}}",
+            "seller": {
+                "@type": "Organization",
+                "name": "{{../../../_.data.site.settings.storeName}}"
+            }
+            }
+        }
+        </script>
+    {{/if}}
+{{/each}}
+
