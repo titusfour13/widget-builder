@@ -1,0 +1,31 @@
+[
+	{
+		"type": "tab",
+		"label": "Content",
+		"sections": [
+			{
+				"label" : "Button",
+				"settings": [
+					{
+						"type": "text",
+						"id" : "btnTxt",
+						"label": "Button Text",
+						"default": "Learn More"
+					},
+					{
+						"type": "color",
+						"id" : "fillColor",
+						"label": "Icon Fill Color",
+						"default": "#000"
+					},
+					{
+						"type": "input",
+						"id": "url",
+						"label": "Button Link",
+						"default": "https://www.graphicproducts.com/support/"
+					}
+				]
+			}
+		]
+	}
+]

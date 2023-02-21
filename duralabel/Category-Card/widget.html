@@ -1,0 +1,92 @@
+
+<style>
+    .db-featured-category-{{_.id}}{
+        flex: 45%;
+    }
+
+    .db-featured-category-{{_.id}} .categoryCard {
+        background-position: center;
+        background-size: cover;
+        flex: 45%;
+        height: 300px;
+        position: relative;
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        gap: 20px;
+    }
+
+    .db-featured-category-{{_.id}} .innerContainer {
+        left: 0;
+        margin: auto;
+        padding: 5px;
+    }
+    
+    .db-featured-category-{{_.id}} .buttonContainer {
+        margin: 1rem;
+    }
+
+    .db-featured-category-{{_.id}} .buttonContainer a {
+        padding: 0;
+        background: none;
+        text-decoration: none;
+        text-align: {{categoryNameAlignment.horizontal}};
+    }
+
+    .db-featured-category-{{_.id}} .buttonContainer a:hover span{
+        color: #ff4e00;
+        border-bottom: 1px solid #ff4e00;
+    }
+
+
+    .db-featured-category-{{_.id}} .buttonContainer a span {
+        font-family: "Helvetica Neue";
+        transition: all .15s ease;
+        font-style: normal;
+        margin: 0;
+        line-height: 16px;
+        border-bottom: 1px solid #fff;
+        font-size: {{btnFontSize.value}}px;
+        font-weight: {{btnFontWeight}};
+        color: {{btnTextColor}};
+    }
+
+    .db-featured-category-{{_.id}} svg {
+        fill: #ff4e00;
+    }
+
+    .db-featured-category-{{_.id}} span.categoryName {
+        font-family: "Helvetica Neue";
+        font-style: normal;
+        line-height: 35px;
+        text-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
+        font-size: {{fontSize.value}}px;
+        font-weight: {{fontWeight}};
+        color: {{categoryNameColor}}
+    }
+</style>
+
+<section class="db-featured-category db-featured-category-{{_.id}}">
+    <div class="categoryCard lazyload" style="background-image: linear-gradient(0deg, rgba(56, 58, 54, 0.5), rgba(56, 58, 54, 0.5)), url({{bgImage.src}})" data-sizes="auto" data-src="{{bgImage.src}}">
+        <div class="innerContainer">
+            <span class="categoryName">
+                {{categoryName}}
+            </span>
+            <div class="buttonContainer">
+                <a class="button" href="{{#startsWith 'http' url}}{{btnUrl}}{{else}}..{{btnUrl}}{{/startsWith}}">
+                    <span>{{btnText}}</span>
+                    &nbsp;
+                    <svg width="8" height="13" viewBox="0 0 8 13" fill="white" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M7.29297 6.71484C7.53906 6.46875 7.53906 6.05859 7.29297 5.8125L1.98828 0.480469C1.71484 0.234375 1.30469 0.234375 1.05859 0.480469L0.429688 1.10938C0.183594 1.35547 0.183594 1.76562 0.429688 2.03906L4.64062 6.25L0.429688 10.4883C0.183594 10.7617 0.183594 11.1719 0.429688 11.418L1.05859 12.0469C1.30469 12.293 1.71484 12.293 1.98828 12.0469L7.29297 6.71484Z"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script>
+    console.log({{{json .}}})
+</script>

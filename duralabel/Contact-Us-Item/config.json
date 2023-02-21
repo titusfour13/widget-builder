@@ -1,0 +1,105 @@
+{
+  "contactItems": [
+    {
+      "itemText": "LIVE CHAT",
+      "fontColor": "red",
+      "bgColor": "unset",
+      "isNewLine": false,
+      "fontSize": {
+        "value": 24,
+        "type": "px"
+      },
+      "fontWeight": "500",
+      "textAlign": {
+        "horizontal": "center",
+        "vertical": "middle"
+      },
+      "margin": {
+        "top": {
+          "value": "0",
+          "type": "px"
+        },
+        "right": {
+          "value": "0",
+          "type": "px"
+        },
+        "bottom": {
+          "value": "200",
+          "type": "px"
+        },
+        "left": {
+          "value": "0",
+          "type": "px"
+        }
+      },
+      "padding": {
+        "top": {
+          "value": "0",
+          "type": "px"
+        },
+        "right": {
+          "value": "0",
+          "type": "px"
+        },
+        "bottom": {
+          "value": "0",
+          "type": "px"
+        },
+        "left": {
+          "value": "0",
+          "type": "px"
+        }
+      }
+    },
+    {
+      "itemText": "Our knowledgeable support specialists are happy to help during business hours. Monday-Friday 5:30am-4:00pm PT",
+      "color": "#000",
+      "bgColor": "unset",
+      "fontSize": {
+        "value": 24,
+        "type": "px"
+      },
+      "fontWeight": "500",
+      "textAlign": {
+        "horizontal": "left",
+        "vertical": "middle"
+      },
+      "margin": {
+        "top": {
+          "value": "0",
+          "type": "px"
+        },
+        "right": {
+          "value": "0",
+          "type": "px"
+        },
+        "bottom": {
+          "value": "0",
+          "type": "px"
+        },
+        "left": {
+          "value": "0",
+          "type": "px"
+        }
+      },
+      "padding": {
+        "top": {
+          "value": "0",
+          "type": "px"
+        },
+        "right": {
+          "value": "0",
+          "type": "px"
+        },
+        "bottom": {
+          "value": "0",
+          "type": "px"
+        },
+        "left": {
+          "value": "0",
+          "type": "px"
+        }
+      }
+    }
+  ]
+}

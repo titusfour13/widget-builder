@@ -1,0 +1,240 @@
+[
+  {
+      "type": "tab",
+      "label": "Content",
+      "sections": [
+          {
+              "settings": [
+                  {
+                      "type": "input",
+                      "id": "title",
+                      "label": "Title",
+                      "default": "Why Choose Koi CBD Wholesale"
+                  },
+                  {
+                      "type": "text",
+                      "id": "subtitle",
+                      "label": "Subtitle",
+                      "default": "At Koi, our mission is simple: to create the standard of quality for CBD users everywhere. We source hemp extract through a strict vendor validation process. All products are infused with hemp grown and extracted in the USA, which enables us to provide the most consistent and finest CBD oil on the market."
+                  },
+                  {
+                      "type": "input",
+                      "id": "button_text",
+                      "label": "Button Text",
+                      "default": "Learn More About Us"
+                  },
+                  {
+                      "type": "input",
+                      "label": "Banner Link",
+                      "id": "button_link",
+                      "typeMeta": {
+                          "placeholder": "https://"
+                      }
+                  },
+                  {
+                      "type": "boolean",
+                      "label": "Show Cards?",
+                      "id": "show_cards",
+                      "default": true
+                  }
+              ]
+          }
+      ]
+  },
+  {
+      "type": "array",
+      "label": "Card",
+      "id": "cards",
+      "defaultCount": 4,
+      "entryLabel": "Card",
+      "thumbnail": {
+          "type": "image",
+          "valueKey": "image.src"
+      },
+      "schema": [
+          {
+              "type": "tab",
+              "label": "Card",
+              "sections": [
+                  {
+                      "label": "Display",
+                      "settings": [
+                          {
+                              "type": "imageManager",
+                              "label": "Image",
+                              "id": "image",
+                              "typeMeta": {
+                                  "reference": "title"
+                              },
+                              "default": {
+                                  "src": "https://dummyimage.com/344x184.jpg&text=Image",
+                                  "type": "SRC"
+                              }
+                          },
+                          {
+                              "type": "input",
+                              "id": "img_alt",
+                              "label": "Image Description",
+                              "default": "Feel Better"
+                          },
+                          {
+                              "type": "input",
+                              "id": "header",
+                              "label": "Header",
+                              "default": "Feel Better"
+                          },
+                          {
+                              "type": "text",
+                              "id": "subheader",
+                              "label": "Subheader",
+                              "default": "Encourage your body and mind to perform at their best."
+                          }
+                      ]
+                  }
+              ]
+          }
+      ]
+  },
+  {
+      "type": "tab",
+      "label": "Design",
+      "sections": [
+          {
+              "settings": [
+                  {
+                      "type": "number",
+                      "label": "Image Width",
+                      "id": "image_width",
+                      "default": {
+                          "value": 344,
+                          "type": "px"
+                      },
+                      "typeMeta": {
+                          "parseType": "integer"
+                      }
+                  },
+                  {
+                      "type": "number",
+                      "label": "Image Height",
+                      "id": "image_height",
+                      "default": {
+                          "value": 184,
+                          "type": "px"
+                      },
+                      "typeMeta": {
+                          "parseType": "integer"
+                      }
+                  },
+                  {
+                      "type": "number",
+                      "label": "Title Margin Bottom",
+                      "id": "title_margin_bottom",
+                      "default": {
+                          "value": 12,
+                          "type": "px"
+                      },
+                      "typeMeta": {
+                          "parseType": "integer"
+                      }
+                  },
+                  {
+                      "type": "number",
+                      "label": "Description Margin Bottom",
+                      "id": "description_margin_bottom",
+                      "default": {
+                          "value": 35,
+                          "type": "px"
+                      },
+                      "typeMeta": {
+                          "parseType": "integer"
+                      }
+                  },
+                  {
+                      "type": "number",
+                      "label": "Description Max Width",
+                      "id": "description_max_width",
+                      "default": {
+                          "value": 802,
+                          "type": "px"
+                      },
+                      "typeMeta": {
+                          "parseType": "integer"
+                      }
+                  },
+                  {
+                      "type": "select",
+                      "label": "Button action",
+                      "id": "button_style",
+                      "default": "button--secondary",
+                      "typeMeta": {
+                          "selectOptions": [
+                              {
+                                  "label": "Primary Button",
+                                  "value": "button--primary"
+                              },
+                              {
+                                  "label": "Secondary Button",
+                                  "value": "button--secondary"
+                              }
+                          ]
+                      }
+                  },
+                  {
+                      "type": "boolean",
+                      "label": "Has Wrapper?",
+                      "id": "has_wrapper",
+                      "default": true
+                  },
+                  {
+                      "type": "number",
+                      "label": "Section Top Space",
+                      "id": "section_top_space",
+                      "default": {
+                          "value": 0,
+                          "type": "px"
+                      },
+                      "typeMeta": {
+                          "parseType": "integer"
+                      }
+                  },
+                  {
+                      "type": "number",
+                      "label": "Section Bottom Space",
+                      "id": "section_bottom_space",
+                      "default": {
+                          "value": 0,
+                          "type": "px"
+                      },
+                      "typeMeta": {
+                          "parseType": "integer"
+                      }
+                  },
+                  {
+                      "type": "number",
+                      "label": "Section Top Space Mobile",
+                      "id": "section_top_space_mobile",
+                      "default": {
+                          "value": 0,
+                          "type": "px"
+                      },
+                      "typeMeta": {
+                          "parseType": "integer"
+                      }
+                  },
+                  {
+                      "type": "number",
+                      "label": "Section Bottom Space Mobile",
+                      "id": "section_bottom_space_mobile",
+                      "default": {
+                          "value": 0,
+                          "type": "px"
+                      },
+                      "typeMeta": {
+                          "parseType": "integer"
+                      }
+                  }
+              ]
+          }
+      ]
+  }
+]

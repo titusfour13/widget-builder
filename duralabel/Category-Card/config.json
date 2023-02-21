@@ -1,0 +1,21 @@
+{
+  "categoryName": "Category Name",
+  "btnText": "SHOP NOW",
+  "btnUrl": "../",
+  "bgImage": {
+    "src": "https://cdn11.bigcommerce.com/s-qoju4pdqc/images/stencil/400x400/j/industrial-printers__40976.original.png",
+    "type": "IMAGE_MANAGER"
+  },
+  "categoryNameColor": "#fff",
+  "fontSize": {
+    "value": 40,
+    "type": "px"
+  },
+  "fontWeight": "700",
+  "btnTextColor": "#fff",
+  "btnFontSize": {
+    "value": 20,
+    "type": "px"
+  },
+  "btnFontWeight": "700"
+}

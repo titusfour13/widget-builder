@@ -1,0 +1,62 @@
+<style>
+    .db-csi-{{_.id}} {
+        display:flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    .db-csi-{{_.id}} .break {
+        flex-basis: 100%;
+        height: 0;
+        margin: 0;
+    }
+</style>
+<section class="db-csi-{{_.id}} db-csi">
+    {{assignVar "_id" _.id}}
+        {{#each contactItems}}
+            <style>
+                .db-csi-{{getVar "_id"}} .db-csi-content-container-{{@index}}{
+                    text-align: {{textAlign.horizontal}};
+                    flex-grow: 1;
+                }
+                
+                .db-csi-{{getVar "_id"}} .db-csi-text-{{@index}}{
+                    display: inline-block;
+                    color: {{fontColor}};
+                    background-color: {{bgColor}};
+                    font-size: {{fontSize.value}}{{fontSize.type}};
+                    font-weight: {{fontWeight}};
+                    padding-top: {{padding.top.value}}{{padding.top.type}};
+                    padding-right: {{padding.right.value}}{{padding.right.type}};
+                    padding-bottom: {{padding.bottom.value}}{{padding.bottom.type}};
+                    padding-left: {{padding.left.value}}{{padding.left.type}};
+                    margin-top: {{margin.top.value}}{{margin.top.type}};
+                    margin-right: {{margin.right.value}}{{margin.right.type}};
+                    margin-bottom: {{margin.bottom.value}}{{margin.bottom.type}};
+                    margin-left: {{margin.left.value}}{{margin.left.type}};
+                }
+            </style>
+            <div class="db-csi-content-container-{{@index}}">
+                <p class="db-csi-text-{{@index}}">
+                    {{#if url}}
+                        <a href="{{#startsWith '/' url}}{{url}}{{else}}..{{url}}{{/startsWith}}">
+                            {{#if isHtmlParsingEnabled}}
+                                {{{itemText}}}
+                            {{else}}
+                                {{itemText}}
+                            {{/if}}
+                        </a>
+                    {{else}}          
+                        {{#if isHtmlParsingEnabled}}
+                            {{{itemText}}}
+                        {{else}}
+                            {{itemText}}
+                        {{/if}}          
+                    {{/if}}
+                </p>
+            </div>
+            {{#if isNewLine}}
+                <div class="break"></div> <!-- break to a new row -->
+            {{/if}}
+        {{/each}}
+    </div>
+</section>

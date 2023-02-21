@@ -1,0 +1,67 @@
+
+<style>
+    .about-{{_.id}} {
+        padding-top: {{section_top_space_mobile.value}}px;
+        margin-bottom: {{section_bottom_space_mobile.value}}px;
+    }
+    .about-{{_.id}} .page-heading {
+        margin-bottom: {{title_margin_bottom.value}}px;
+    }
+    .about-{{_.id}} .page-subeheading {
+        max-width: {{description_max_width.value}}px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: {{description_margin_bottom.value}}px;
+    }
+    .about-{{_.id}} .image-wrapper {
+        position: relative;
+        height: 0;
+        padding-top: calc({{image_height.value}} / {{image_width.value}} * 100%);
+    }
+    .about-{{_.id}} .image-wrapper img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+    @media screen and (min-width: 991px) {
+        .about-{{_.id}} {
+            padding-top: {{section_top_space.value}}px;
+            margin-bottom: {{section_bottom_space.value}}px;
+        }
+    }
+</style>
+
+<section class="about-section about-benefits about-{{_.id}}">
+    <div{{#if has_wrapper}} class="wrapper"{{/if}}>
+        {{#if title}}<h2 class="page-heading">{{title}}</h2>{{/if}}
+        {{#if subtitle}}<p class="page-subeheading text-center">{{subtitle}}</p>{{/if}}
+        {{#if show_cards}}
+        <div class="grid justify-content-center">
+            {{#each cards}}
+                <div class="grid__item small-up--one-half large-up--one-quarter">
+                    <div class="benefit-block{{#if ../card_content_center}} text-center{{/if}}">
+                        <div class="image-wrapper">
+                            <img class="lazyload opacity" data-src="{{image.src}}" alt="{{#if img_alt}}{{img_alt}}{{else}}{{header}}{{/if}}" />
+                        </div>
+                        <div class="benefit-block-content">
+                            {{#if header}}
+                                <h4 class="h6 benefit-header">{{header}}</h4>
+                            {{/if}}
+                            {{#if subheader}}
+                                <p class="benefit-subheader">{{{subheader}}}</p>
+                            {{/if}}
+                        </div>
+                    </div>
+                </div>
+            {{/each}}
+        </div>
+        {{/if}}
+        {{#if button_text}}
+            <div class="button--wrapper text-center">
+                <a href="{{button_link}}" class="button {{button_style}}">{{button_text}}</a>
+            </div>
+        {{/if}}
+    </div>
+</section>

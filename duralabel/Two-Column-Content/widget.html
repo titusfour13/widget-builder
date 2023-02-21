@@ -1,0 +1,28 @@
+<style>
+    .dl-content-main-container-{{_.id}} .list-container{
+        list-style: none;
+        column-count: 2;
+        padding: {{contentListPadding.top.value}}px {{contentListPadding.right.value}}px {{contentListPadding.bottom.value}}px {{contentListPadding.left.value}}px ;
+        margin: {{contentListMargin.top.value}}px {{contentListMargin.right.value}}px {{contentListMargin.bottom.value}}px {{contentListMargin.left.value}}px ;
+    }
+
+    .dl-content-main-container-{{_.id}} .list-container a{
+        text-decoration: none;
+    }
+
+    .dl-content-main-container-{{_.id}} .list-container a:hover{
+        color: #a5a5a5 !important;
+    }
+</style>
+<section class='dl-content-main-container-{{_.id}}'>
+    <ul class='list-container'>
+        {{#each contentList}}
+            <li>
+                <a href='{{#startsWith "http" url}}{{url}}{{else}}..{{url}}{{/startsWith}}' style='color:{{fontColor}}; font-size:{{fontSize.value}}px;'>
+                    {{contentItem}}
+                </a>
+            </li>
+        {{/each}}
+    </ul>
+</section>
+

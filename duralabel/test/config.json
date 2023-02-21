@@ -1,0 +1,82 @@
+{
+  "title": "Why Choose Koi CBD Wholesale",
+  "subtitle": "At Koi, our mission is simple: to create the standard of quality for CBD users everywhere. We source hemp extract through a strict vendor validation process. All products are infused with hemp grown and extracted in the USA, which enables us to provide the most consistent and finest CBD oil on the market.",
+  "button_text": "Learn More About Us",
+  "show_cards": true,
+  "cards": [
+    {
+      "image": {
+        "src": "https://dummyimage.com/344x184.jpg&text=Image",
+        "type": "SRC"
+      },
+      "img_alt": "Feel Better",
+      "header": "Feel Better",
+      "subheader": "Encourage your body and mind to perform at their best."
+    },
+    {
+      "image": {
+        "src": "https://dummyimage.com/344x184.jpg&text=Image",
+        "type": "SRC"
+      },
+      "img_alt": "Feel Better",
+      "header": "Feel Better",
+      "subheader": "Encourage your body and mind to perform at their best."
+    },
+    {
+      "image": {
+        "src": "https://dummyimage.com/344x184.jpg&text=Image",
+        "type": "SRC"
+      },
+      "img_alt": "Feel Better",
+      "header": "Feel Better",
+      "subheader": "Encourage your body and mind to perform at their best."
+    },
+    {
+      "image": {
+        "src": "https://dummyimage.com/344x184.jpg&text=Image",
+        "type": "SRC"
+      },
+      "img_alt": "Feel Better",
+      "header": "Feel Better",
+      "subheader": "Encourage your body and mind to perform at their best."
+    }
+  ],
+  "image_width": {
+    "value": 344,
+    "type": "px"
+  },
+  "image_height": {
+    "value": 184,
+    "type": "px"
+  },
+  "title_margin_bottom": {
+    "value": 12,
+    "type": "px"
+  },
+  "description_margin_bottom": {
+    "value": 35,
+    "type": "px"
+  },
+  "description_max_width": {
+    "value": 802,
+    "type": "px"
+  },
+  "button_style": "button--secondary",
+  "has_wrapper": true,
+  "section_top_space": {
+    "value": 0,
+    "type": "px"
+  },
+  "section_bottom_space": {
+    "value": 0,
+    "type": "px"
+  },
+  "section_top_space_mobile": {
+    "value": 0,
+    "type": "px"
+  },
+  "section_bottom_space_mobile": {
+    "value": 0,
+    "type": "px"
+  }
+}

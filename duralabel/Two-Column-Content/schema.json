@@ -1,0 +1,108 @@
+[
+	{
+		"type": "tab",
+		"label": "Content",
+		"sections": [
+			{
+				"settings": [
+					{
+						"type": "boxModel",
+						"id": "contentListPadding",
+						"label": "Padding",
+						"default": {
+							"top": {
+								"value": "0",
+								"type": "px"
+							},
+							"right": {
+								"value": "0",
+								"type": "px"
+							},
+							"bottom": {
+								"value": "0",
+								"type": "px"
+							},
+							"left": {
+								"value": "0",
+								"type": "px"
+							}
+						}
+					},
+					{
+						"type": "boxModel",
+						"id": "contentListMargin",
+						"label": "Margin",
+						"default": {
+							"top": {
+								"value": "0",
+								"type": "px"
+							},
+							"right": {
+								"value": "0",
+								"type": "px"
+							},
+							"bottom": {
+								"value": "0",
+								"type": "px"
+							},
+							"left": {
+								"value": "0",
+								"type": "px"
+							}
+						}
+					}
+				]
+			}
+		]
+	},
+	{
+		"type": "array",
+		"label": "Content List",
+		"id": "contentList",
+		"defaultCount": 3,
+		"entryLabel": "Content",
+		"thumbnail": "",
+		"schema": [
+			{
+				"type": "tab",
+				"label": "Content",
+				"sections": [
+					{
+						"settings": [
+							{
+								"type": "input",
+								"id": "contentItem",
+								"label": "Content",
+								"default": "Lorem Ipsum"
+							},
+							{
+								"type": "input",
+								"id": "url",
+								"label": "Url",
+								"default": "/"
+							},
+							{
+								"type": "color",
+								"id": "fontColor",
+								"label": "Font Color",
+								"default": "#000"
+							},
+							{
+								"type": "number",
+								"id": "fontSize",
+								"label": "Font Size",
+								"default": {
+									"value": "16",
+									"type": "px"
+								},
+								"typeMeta": {
+									"parseType": "integer"
+								}
+							}
+						]
+					}
+				]
+			}
+		]
+	}
+]

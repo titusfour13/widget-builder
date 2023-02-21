@@ -1,0 +1,67 @@
+{
+  "contentListPadding": {
+    "top": {
+      "value": "50",
+      "type": "px"
+    },
+    "right": {
+      "value": "50",
+      "type": "px"
+    },
+    "bottom": {
+      "value": "50",
+      "type": "px"
+    },
+    "left": {
+      "value": "50",
+      "type": "px"
+    }
+  },
+  "contentListMargin": {
+    "top": {
+      "value": "50",
+      "type": "px"
+    },
+    "right": {
+      "value": "50",
+      "type": "px"
+    },
+    "bottom": {
+      "value": "50",
+      "type": "px"
+    },
+    "left": {
+      "value": "50",
+      "type": "px"
+    }
+  },
+  "contentList": [
+    {
+      "contentItem": "Lorem Ipsum",
+      "url": "/",
+      "fontColor": "#000",
+      "fontSize": {
+        "value": "16",
+        "type": "px"
+      }
+    },
+    {
+      "contentItem": "Lorem Ipsum",
+      "url": "/",
+      "fontColor": "#000",
+      "fontSize": {
+        "value": "16",
+        "type": "px"
+      }
+    },
+    {
+      "contentItem": "Lorem Ipsum",
+      "url": "/",
+      "fontColor": "#000",
+      "fontSize": {
+        "value": "26",
+        "type": "px"
+      }
+    }
+  ]
+}
