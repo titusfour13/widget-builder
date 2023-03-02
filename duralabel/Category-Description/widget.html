@@ -1,0 +1,98 @@
+<style>
+    #dl-category-detail-description-{{_.id}}{
+        border-top:  1px solid #FF4E00;
+        width: {{bgWidth}}%;
+        {{#if bannerBg '==' "image"}}
+            background-size: cover;                      
+            background-repeat: no-repeat;
+            background-position: center center; 
+            background-image: url({{bgImage.src}});
+        {{else if bannerBg '==' "color"}}
+            background-color: {{bgColor}};
+        {{else}}
+            background: none;
+        {{/if}}
+
+        padding-top: {{bgPadding.top.value}}px;
+        padding-right: {{bgPadding.right.value}}px;
+        padding-bottom: {{bgPadding.bottom.value}}px;
+        padding-left: {{bgPadding.left.value}}px;
+
+        margin-top: {{bgMargin.top.value}}px;
+        margin-right: {{bgMargin.right.value}}px;
+        margin-bottom: {{bgMargin.bottom.value}}px;
+        margin-left: {{bgMargin.left.value}}px;
+    }
+
+    .dl-hr-{{_.id}}{
+        background-color: #FF4E00;
+        border: none;
+        height: 1px;
+        margin: 0.5rem 0;
+    }
+</style>
+<hr class="dl-hr-{{_.id}}"/>
+<div id="dl-category-detail-description-{{_.id}}">
+    This is an editor mode detailed description placeholder.
+</div>
+<script>
+    (function() {
+        const widgetConfig = {{{json .}}}
+        console.log(widgetConfig)
+        if(!widgetConfig._.context.isEditorMode)
+            placeWidgetContent()
+
+        try {
+            setTimeout(()=>{
+                const jsContext = window.jsContext;
+                const categoryId = jsContext.categoryId
+                const token = jsContext.settings.storefront_api.token
+                if(!widgetConfig._.context.isEditorMode && categoryId)
+                    fetchCategoryDetails(categoryId, token)
+            },300)
+        } catch (error) {
+            console.error(error)
+        }
+
+
+        function fetchCategoryDetails(id, token){
+            const query = 
+                `query Category($categoryId: Int!) {
+                    site {
+                        category(entityId: $categoryId) {
+                            description
+                        }
+                    }
+                }`
+            const variables = {categoryId: id}
+
+            // Fetch data from the GraphQL Storefront API
+            var storefrontApiRequest = new XMLHttpRequest(); // IE compatible
+            storefrontApiRequest.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                placeWidgetContent(JSON.parse(this.response).data);
+            }
+            };
+    
+            storefrontApiRequest.open('POST', `/graphql`, true);
+            storefrontApiRequest.setRequestHeader('Authorization', `Bearer ${token}`);
+            storefrontApiRequest.setRequestHeader('Content-type', 'application/json');
+            storefrontApiRequest.send(JSON.stringify({ query, variables}));
+        }
+
+        function placeWidgetContent(data){
+            const descriptionEl = document.getElementById("dl-category-detail-description-{{_.id}}")
+
+            try {
+                if(data){
+                    const description = data.site.category.description
+                    descriptionEl.innerHTML = description
+                }else{
+                    descriptionEl.innerHTML = "--"
+                }
+            } catch (error) {
+                console.error(error)
+            }
+        }
+    })();
+</script>

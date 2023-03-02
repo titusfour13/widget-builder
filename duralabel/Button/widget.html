@@ -1,3 +1,23 @@
+<style>
+    .db-btn-{{_.id}}{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: {{btnColor}};
+        gap: {{gap.value}}px;
+        background-color: {{btnBgColor}};
+        padding: {{btnPadding.top.value}}px {{btnPadding.right.value}}px {{btnPadding.bottom.value}}px {{btnPadding.left.value}}px ;
+    }
+    
+    .db-btn-{{_.id}} span{
+        font-size: {{fontSize.value}}px;
+    }
+
+    .db-btn-{{_.id}} svg{
+        width: {{fontSize.value}}px;
+        height: {{fontSize.value}}px;
+    }
+</style>
 <button class="button learnMore db-btn-{{_.id}}" onclick="window.location.href='{{#startsWith "http" url}}{{url}}{{else}}..{{url}}{{/startsWith}}';">
     <span>
         {{btnTxt}}

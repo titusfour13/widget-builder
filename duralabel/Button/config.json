@@ -1,5 +1,33 @@
 {
   "btnTxt": "Learn More",
-  "fillColor": "#000",
+  "btnColor": "#fff",
+  "fontSize": {
+    "value": 20,
+    "type": "px"
+  },
+  "btnBgColor": "#ff4e00",
+  "btnPadding": {
+    "top": {
+      "value": "24",
+      "type": "px"
+    },
+    "right": {
+      "value": "24",
+      "type": "px"
+    },
+    "bottom": {
+      "value": "24",
+      "type": "px"
+    },
+    "left": {
+      "value": "24",
+      "type": "px"
+    }
+  },
+  "fillColor": "#fff",
+  "gap": {
+    "value": 5,
+    "type": "px"
+  },
   "url": "https://www.graphicproducts.com/support/"
 }

@@ -1,0 +1,127 @@
+[
+	{
+		"type": "tab",
+		"label": "Design",
+		"sections": [
+			{
+				"label": "Container",
+				"settings": [
+					{
+						"type": "select",
+						"label": "Background",
+						"id": "bannerBg",
+						"default": "none",
+						"typeMeta": {
+							"selectOptions": [
+								{
+									"label": "None",
+									"value": "none"
+								},
+								{
+									"label": "Image",
+									"value": "image"
+								},
+								{
+									"label": "Color",
+									"value": "color"
+								}
+							]
+						}
+					},
+					{
+						"type": "imageManager",
+						"label": "Image",
+						"id": "bgImage",
+						"typeMeta": {
+							"reference": "title"
+						},
+						"default": {
+							"src": "https://www.graphicproducts.com/media/24267/pipe-marking-basics.jpg",
+							"type": "SRC"
+						},
+						"conditional": {
+							"key": "bannerBg",
+							"operator": "IN",
+							"value": [
+								"image"
+							]
+						}
+					},
+					{
+						"type": "color",
+						"label": "Background Color",
+						"id": "bgColor",
+						"default": "rgb(0,0,0,0)",
+						"conditional": {
+							"key": "bannerBg",
+							"operator": "IN",
+							"value": [
+								"color"
+							]
+						}
+					},
+					{
+						"type": "range",
+						"label": "Width",
+						"id": "bgWidth",
+						"default": 100,
+						"typeMeta": {
+							"rangeValues": {
+								"min": 0,
+								"max": 100,
+								"step": 1,
+								"unit": "%"
+							}
+						}
+					},
+					{
+						"type": "boxModel",
+						"label": "Margin",
+						"id": "bgMargin",
+						"default": {
+							"top": {
+								"value": "0",
+								"type": "px"
+							},
+							"right": {
+								"value": "0",
+								"type": "px"
+							},
+							"bottom": {
+								"value": "0",
+								"type": "px"
+							},
+							"left": {
+								"value": "0",
+								"type": "px"
+							}
+						}
+					},
+					{
+						"type": "boxModel",
+						"label": "Padding",
+						"id": "bgPadding",
+						"default": {
+							"top": {
+								"value": "25",
+								"type": "px"
+							},
+							"right": {
+								"value": "0",
+								"type": "px"
+							},
+							"bottom": {
+								"value": "25",
+								"type": "px"
+							},
+							"left": {
+								"value": "0",
+								"type": "px"
+							}
+						}
+					}
+				]
+			}
+		]
+	}
+]

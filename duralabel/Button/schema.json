@@ -4,19 +4,77 @@
 		"label": "Content",
 		"sections": [
 			{
-				"label" : "Button",
+				"label": "Button",
 				"settings": [
 					{
-						"type": "text",
-						"id" : "btnTxt",
+						"type": "input",
+						"id": "btnTxt",
 						"label": "Button Text",
 						"default": "Learn More"
 					},
 					{
 						"type": "color",
-						"id" : "fillColor",
+						"id": "btnColor",
+						"label": "Text Color",
+						"default": "#fff"
+					},
+					{
+						"type": "number",
+						"id": "fontSize",
+						"label": "Font Size",
+						"default": {
+							"value": 20,
+							"type": "px"
+						},
+						"typeMeta": {
+							"parseType": "float"
+						}
+					},
+					{
+						"type": "color",
+						"id": "btnBgColor",
+						"label": "Button Background Color",
+						"default": "#ff4e00"
+					},{
+						"type": "boxModel",
+						"id": "btnPadding",
+						"label": "Padding",
+						"default": {
+							"top": {
+								"value": "24",
+								"type": "px"
+							},
+							"right": {
+								"value": "24",
+								"type": "px"
+							},
+							"bottom": {
+								"value": "24",
+								"type": "px"
+							},
+							"left": {
+								"value": "24",
+								"type": "px"
+							}
+						}
+					},
+					{
+						"type": "color",
+						"id": "fillColor",
 						"label": "Icon Fill Color",
 						"default": "#000"
+					},
+					{
+						"type": "number",
+						"id": "gap",
+						"label": "Text to Icon Space",
+						"default": {
+							"value": 5,
+							"type": "px"
+						},
+						"typeMeta": {
+							"parseType": "float"
+						}
 					},
 					{
 						"type": "input",

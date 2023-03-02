@@ -1,0 +1,180 @@
+<style>
+    .dl-category-banner-{{_.id}}{
+        width: {{bgWidth}}%;
+        {{#if bannerBg '==' "image"}}
+            background-size: cover;                      
+            background-repeat: no-repeat;
+            background-position: center center; 
+            background-image: url({{bgImage.src}});
+        {{else if bannerBg '==' "color"}}
+            background-color: {{bgColor}};
+        {{else}}
+            background: none;
+        {{/if}}
+
+        padding-top: {{bgPadding.top.value}}px;
+        padding-right: {{bgPadding.right.value}}px;
+        padding-bottom: {{bgPadding.bottom.value}}px;
+        padding-left: {{bgPadding.left.value}}px;
+
+        margin-top: {{bgMargin.top.value}}px;
+        margin-right: {{bgMargin.right.value}}px;
+        margin-bottom: {{bgMargin.bottom.value}}px;
+        margin-left: {{bgMargin.left.value}}px;
+    }
+
+    
+    .dl-category-banner-{{_.id}} .heading-container {
+        width: 100%;
+        text-align: {{categoryName.textAlign.horizontal}};
+        padding-top: {{categoryName.textPadding.top.value}}px;
+        padding-right: {{categoryName.textPadding.right.value}}px;
+        padding-bottom: {{categoryName.textPadding.bottom.value}}px;
+        padding-left: {{categoryName.textPadding.left.value}}px;
+
+        margin-top: {{categoryName.textMargin.top.value}}px;
+        margin-right: {{categoryName.textMargin.right.value}}px;
+        margin-bottom: {{categoryName.textMargin.bottom.value}}px;
+        margin-left: {{categoryName.textMargin.left.value}}px;
+    }
+    
+    .dl-category-banner-{{_.id}} .inner-container{
+
+        {{#if innerBg '==' "image"}}
+            background-size: cover;                      
+            background-repeat: no-repeat;
+            background-position: center center; 
+            background-image: url({{innerBgImage.src}});
+        {{else if innerBg '==' "color"}}
+            background-color: {{innerBgColor}};
+        {{else}}
+            background: none;
+        {{/if}}
+
+        width: {{innerWidth}}%;
+        padding-top: {{innerPadding.top.value}}px;
+        padding-right: {{innerPadding.right.value}}px;
+        padding-bottom: {{innerPadding.bottom.value}}px;
+        padding-left: {{innerPadding.left.value}}px;
+
+        margin-top: {{innerMargin.top.value}}px;
+        margin-right: {{innerMargin.right.value}}px;
+        margin-bottom: {{innerMargin.bottom.value}}px;
+        margin-left: {{innerMargin.left.value}}px;
+    }
+
+    .dl-category-banner-{{_.id}} .heading-container>p {
+        margin: 0;
+        text-transform: uppercase;
+        font-family: {{categoryName.fontFamily}};
+        font-weight: {{categoryName.fontWeight}};
+        font-size: {{categoryName.fontSize.value}}px;
+        color: {{categoryName.color}};
+    }
+
+    
+    .dl-category-banner-{{_.id}} .description-container {
+        width: 100%;
+        text-align: {{categoryDescription.catTextAlign.horizontal}};
+        padding-top: {{categoryDescription.catTextPadding.top.value}}px;
+        padding-right: {{categoryDescription.catTextPadding.right.value}}px;
+        padding-bottom: {{categoryDescription.catTextPadding.bottom.value}}px;
+        padding-left: {{categoryDescription.catTextPadding.left.value}}px;
+
+        margin-top: {{categoryDescription.catTextMargin.top.value}}px;
+        margin-right: {{categoryDescription.catTextMargin.right.value}}px;
+        margin-bottom: {{categoryDescription.catTextMargin.bottom.value}}px;
+        margin-left: {{categoryDescription.catTextMargin.left.value}}px;
+    }
+
+    .dl-category-banner-{{_.id}} .description-container>p {
+        margin: 0;
+        font-family: {{categoryDescription.catFontFamily}};
+        font-weight: {{categoryDescription.catFontWeight}};
+        font-size: {{categoryDescription.catFontSize.value}}px;
+        color: {{categoryDescription.catColor}};
+    }
+</style>
+<div class="dl-category-banner-{{_.id}}">
+    <div class="inner-container">
+        {{#if categoryName.visibility '==' "show"}}
+            <div class="heading-container">
+                <p id="category-heading-{{_.id}}">This is an editor mode title placeholder.</p>
+            </div>
+        {{/if}}
+        {{#if categoryDescription.visibility '==' "show"}}
+            <div class="description-container">
+                <p id="category-description-{{_.id}}">
+                    This is an editor mode description placeholder.
+                </p>
+            </div>
+        {{/if}}
+    </div>
+</div>
+<script>
+    (function() {
+        const widgetConfig = {{{json .}}}
+        console.log(widgetConfig)
+        if(!widgetConfig._.context.isEditorMode)
+            placeWidgetContent()
+
+        try {
+            setTimeout(()=>{
+                const jsContext = window.jsContext;
+                const categoryId = jsContext.categoryId
+                const token = jsContext.settings.storefront_api.token
+                if(!widgetConfig._.context.isEditorMode && categoryId)
+                    fetchCategoryDetails(categoryId, token)
+            },300)
+        } catch (error) {
+            console.error(error)
+        }
+
+
+        function fetchCategoryDetails(id, token){
+            const query = 
+                `query Category($categoryId: Int!) {
+                    site {
+                        category(entityId: $categoryId) {
+                            name
+                            seo{
+                                metaDescription
+                            }
+                        }
+                    }
+                }`
+            const variables = {categoryId: id}
+
+            // Fetch data from the GraphQL Storefront API
+            var storefrontApiRequest = new XMLHttpRequest(); // IE compatible
+            storefrontApiRequest.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                placeWidgetContent(JSON.parse(this.response).data);
+            }
+            };
+    
+            storefrontApiRequest.open('POST', `/graphql`, true);
+            storefrontApiRequest.setRequestHeader('Authorization', `Bearer ${token}`);
+            storefrontApiRequest.setRequestHeader('Content-type', 'application/json');
+            storefrontApiRequest.send(JSON.stringify({ query, variables}));
+        }
+
+        function placeWidgetContent(data){
+            const titleEl = document.getElementById("category-heading-{{_.id}}")
+            const descriptionEl = document.getElementById("category-description-{{_.id}}")
+
+            try {
+                if(data){
+                    const {name , seo} = data.site.category
+                    titleEl.innerText = name
+                    descriptionEl.innerText = seo.metaDescription
+                }else{
+                    titleEl.innerText = "--"
+                    descriptionEl.innerText = "--"
+                }
+            } catch (error) {
+                console.error(error)
+            }
+        }
+    })();
+</script>

@@ -1,60 +1,56 @@
 {
-  "product": {
+  "products": {
     "type": "manual",
     "value": []
   },
-  "productCardContentAlignment": {
-    "horizontal": "center"
-  },
-  "productsPerSlide": 4,
+  "productCardContentAlignment": "flex-start",
   "productImage": {
     "visibility": "show",
     "imageFit": "fill"
   },
   "brand": {
-    "visibility": "show",
-    "textStyle": "default",
-    "color": "#444444",
-    "fontFamily": "inherit",
+    "visibility": "hide",
+    "textStyle": "custom",
+    "color": "#4e4e4e",
+    "fontFamily": "Roboto",
     "fontWeight": "400",
     "fontSize": {
-      "value": 36,
+      "value": 14,
       "type": "px"
     }
   },
   "productName": {
     "visibility": "show",
-    "textStyle": "default",
-    "color": "#444444",
-    "fontFamily": "inherit",
-    "fontWeight": "400",
+    "textStyle": "custom",
+    "color": "#000",
+    "fontFamily": "Roboto Condensed",
+    "fontWeight": "700",
     "fontSize": {
-      "value": 36,
+      "value": 15,
       "type": "px"
     }
   },
   "price": {
     "visibility": "show",
-    "textStyle": "default",
-    "color": "#444444",
+    "textStyle": "custom",
+    "color": "#103248",
     "fontFamily": "inherit",
-    "fontWeight": "400",
+    "fontWeight": "700",
     "fontSize": {
-      "value": 36,
+      "value": 16,
       "type": "px"
     }
   },
   "productRating": {
-    "visibility": "hide",
-    "starColorFilled": "#3C64F4",
-    "starColorEmpty": "#ECEEF5",
-    "reviewsColor": "#8C93AD"
+    "visibility": "show",
+    "starColorFilled": "#FEC01D",
+    "starColorEmpty": "#fff",
+    "starStrokeColor": "#FEC01D"
   },
   "button": {
-    "visibility": "hide",
-    "shape": "round",
-    "buttonColor": "rgba(68,68,68,1)",
-    "buttonTextColor": "rgba(255,255,255,1)",
+    "visibility": "show",
+    "buttonColor": "#FF4E00",
+    "buttonTextColor": "#fff",
     "buttonActionType": "addToCart"
   }
 }

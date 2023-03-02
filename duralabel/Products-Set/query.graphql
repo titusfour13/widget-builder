@@ -27,32 +27,15 @@ query ProductSet($productIds: [Int!], $activeCurrencyCode: currencyCode!) {
           addToWishlistUrl
           path
           sku
-          priceWithTax: prices(includeTax: true, currencyCode: $activeCurrencyCode)  {
-            price {
-              currencyCode
-              value
-              formatted
+          prices: prices(includeTax: false, currencyCode: $activeCurrencyCode)  {
+          	price{
+              ...PriceFields
             }
-          }
-          priceWithoutTax: prices(includeTax: false, currencyCode: $activeCurrencyCode)  {
-            price {
-              currencyCode
-              value
-              formatted
+            salePrice{
+              ...PriceFields
             }
-          }
-          salePriceWithoutTax: prices(includeTax: false, currencyCode: $activeCurrencyCode)  {
-            salePrice {
-              currencyCode
-              value
-              formatted
-            }
-          }
-          salePriceWithTax: prices(includeTax: false, currencyCode: $activeCurrencyCode)  {
-            salePrice {
-              currencyCode
-              value
-              formatted
+            retailPrice{
+              ...PriceFields
             }
           }
           reviewSummary {
@@ -60,13 +43,8 @@ query ProductSet($productIds: [Int!], $activeCurrencyCode: currencyCode!) {
             numberOfReviews
           }
           defaultImage {
-            url80wide: url(width: 80)
-            url160wide: url(width: 160)
-            url320wide: url(width: 320)
-            url640wide: url(width: 640)
             url960wide: url(width: 960)
-            url1280wide: url(width: 1280)
-            url1920wide: url(width: 1920)
+            urlOriginal
           }
           categories {
             edges{
@@ -75,8 +53,19 @@ query ProductSet($productIds: [Int!], $activeCurrencyCode: currencyCode!) {
                 }
             }
           }
+          availabilityV2{
+            status
+            __typename
+            description
+          }
+          condition
         }
       }
     }
   }
+}
+fragment PriceFields on Money {
+  value
+  currencyCode
+  formatted
 }
