@@ -1,0 +1,42 @@
+<style>
+        .container-{{_.id}}{
+            display: flex;
+            -ms-flex-direction: row;
+            flex-direction: row;
+        }
+        .image-column-{{_.id}}, .text-column-{{_.id}} {
+          width:48%;
+          height:300px;
+          text-align:center;
+        }
+        .image-column-{{_.id}} img{
+            width: auto;
+            height: 100%;
+        }
+        @media (max-width: 481px) {
+            .container-{{_.id}} {
+                -ms-flex-direction: column;
+                flex-direction: column;
+            }
+            .image-column-{{_.id}}, .text-column-{{_.id}} {
+                width:100%;
+            }
+        }
+        
+    </style>
+    
+    <div class="container-{{_.id}}">
+        <div class="image-column-{{_.id}}">
+            <img src="{{image.src}}" alt="Image" />
+        </div>
+        <div class="text-column-{{_.id}}">
+            {{#each texts}}
+            <p style="font-size:{{fontSize.value}}px; 
+                margin:{{textMargin.top.value}}px {{textMargin.right.value}}px {{textMargin.bottom.value}}px {{textMargin.left.value}}px; 
+                padding:{{textPadding.top.value}}px {{textPadding.right.value}}px {{textPadding.bottom.value}}px {{textPadding.left.value}}px;
+                font-weight:{{fontWeight}};
+                color:{{textColor}};
+                text-align:{{textAlignment.horizontal}}">{{text}}</p>
+            {{/each}}
+        </div>
+    </div>

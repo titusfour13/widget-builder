@@ -1,0 +1,155 @@
+{
+  "texts": [
+    {
+      "text": "Please Enter Text",
+      "textColor": "#1D1D1D",
+      "textMargin": {
+        "top": {
+          "value": "0",
+          "type": "px"
+        },
+        "right": {
+          "value": "10.5",
+          "type": "px"
+        },
+        "bottom": {
+          "value": " 0",
+          "type": " px"
+        },
+        "left": {
+          "value": "10.5",
+          "type": "px"
+        }
+      },
+      "textPadding": {
+        "top": {
+          "value": "0",
+          "type": "px"
+        },
+        "right": {
+          "value": "10.5",
+          "type": "px"
+        },
+        "bottom": {
+          "value": " 0",
+          "type": " px"
+        },
+        "left": {
+          "value": "10.5",
+          "type": "px"
+        }
+      },
+      "fontWeight": "500",
+      "imageAlignment": {
+        "horizontal": "left",
+        "vertical": "top"
+      },
+      "fontSize": {
+        "value": "24",
+        "type": "px"
+      }
+    },
+    {
+      "text": "Please Enter Text",
+      "textColor": "#1D1D1D",
+      "textMargin": {
+        "top": {
+          "value": "0",
+          "type": "px"
+        },
+        "right": {
+          "value": "10.5",
+          "type": "px"
+        },
+        "bottom": {
+          "value": " 0",
+          "type": " px"
+        },
+        "left": {
+          "value": "10.5",
+          "type": "px"
+        }
+      },
+      "textPadding": {
+        "top": {
+          "value": "0",
+          "type": "px"
+        },
+        "right": {
+          "value": "10.5",
+          "type": "px"
+        },
+        "bottom": {
+          "value": " 0",
+          "type": " px"
+        },
+        "left": {
+          "value": "10.5",
+          "type": "px"
+        }
+      },
+      "fontWeight": "500",
+      "imageAlignment": {
+        "horizontal": "left",
+        "vertical": "top"
+      },
+      "fontSize": {
+        "value": "24",
+        "type": "px"
+      }
+    },
+    {
+      "text": "Please Enter Text",
+      "textColor": "#1D1D1D",
+      "textMargin": {
+        "top": {
+          "value": "0",
+          "type": "px"
+        },
+        "right": {
+          "value": "10.5",
+          "type": "px"
+        },
+        "bottom": {
+          "value": " 0",
+          "type": " px"
+        },
+        "left": {
+          "value": "10.5",
+          "type": "px"
+        }
+      },
+      "textPadding": {
+        "top": {
+          "value": "0",
+          "type": "px"
+        },
+        "right": {
+          "value": "10.5",
+          "type": "px"
+        },
+        "bottom": {
+          "value": " 0",
+          "type": " px"
+        },
+        "left": {
+          "value": "10.5",
+          "type": "px"
+        }
+      },
+      "fontWeight": "500",
+      "imageAlignment": {
+        "horizontal": "left",
+        "vertical": "top"
+      },
+      "fontSize": {
+        "value": "24",
+        "type": "px"
+      }
+    }
+  ],
+  "image": {
+    "src": "https://cdn11.bigcommerce.com/s-n0i50vy/images/stencil/1280x1280/products/109/361/kinfolkessentialissue_1024x1024__22507.1456436715.jpg?c=2&imbypass=on",
+    "type": "IMAGE_MANAGER"
+  }
+}
