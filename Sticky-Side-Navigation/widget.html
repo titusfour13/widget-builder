@@ -1,0 +1,81 @@
+
+<style>
+        .sticky-nav-container-{{_.id}} {
+            {{#if height '==' auto}}
+                height: 1500px;
+            {{else}}
+                height: {{containerHeight.value}}px;
+            {{/if}}
+        }
+        .sticky-container-{{_.id}}{
+            position: sticky;
+            margin:0px auto;
+            top:55px;
+        }
+        .sticky-side-nav-{{_.id}}{
+            background-color:white;
+        }
+        .sticky-side-nav-list-{{_.id}}{
+            list-style-type: none;
+            color:black;
+        }
+        .nav-title-{{_.id}} {
+            padding: 15px 19px 18px;
+            border-bottom: 1px solid #ecedf1;
+            background-color:white;
+        }
+        .nav-title-{{_.id}} span{
+            font-family: {{titleStyle}};
+            font-weight: {{titleFontWeight}};
+            font-size: {{titleFontSize.value}}px;
+            color:{{titleColor}};
+        }
+        .sticky-nav-active-page a{
+            border-bottom: 3px solid #F26327;
+            font-weight: bold;
+            padding-bottom: 3px;
+        }
+        #sticky-nav-list-{{_.id}} a{
+            color:black;
+            text-decoration: none;
+        }
+        .sticky-side-nav-list-{{_.id}} li{
+            margin-bottom: 12px;
+        }
+        .sticky-side-nav-{{_.id}} ul{
+            padding: 16px 19px;
+            margin:0;
+            width: 100%;
+        }
+        @media (max-width: 481px) {
+            .sticky-nav-container-{{_.id}} {
+                height: auto;
+            }
+        }
+    </style>
+    
+    <div class="sticky-nav-container-{{_.id}}">
+        <div class="sticky-container-{{_.id}}">
+            <div class="nav-title-{{_.id}}">
+                <span>{{title}}</span>
+            </div>
+            <div class="sticky-side-nav-{{_.id}}">
+                <ul class="sticky-side-nav-list-{{_.id}}" id="sticky-nav-list-{{_.id}}">
+                    {{#each links}}
+                            <li class="sticky-side-nav-list 
+                                {{#if isActive '==' true}}sticky-nav-active-page{{else}} {{/if}}">
+                                <a href="{{link}}" 
+                                    style="
+                                        font-weight: {{linkFontWeight}};
+                                        font-size: {{linkFontSize.value}}px; 
+                                        font-family: {{linkStyle}};
+                                        color:{{linkColor}}
+                                        "
+                                    >{{link_name}}
+                                </a>
+                            </li>
+                    {{/each}}
+                </ul>
+            </div>
+        </div>
+    </div>
