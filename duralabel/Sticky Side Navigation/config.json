@@ -1,0 +1,18 @@
+{
+  "title": "Title",
+  "navContainerHeight": 1500,
+  "links": [
+    {
+      "link": "Please Enter URL",
+      "link_name": "Please Enter Name of the link"
+    },
+    {
+      "link": "Please Enter URL",
+      "link_name": "Please Enter Name of the link"
+    },
+    {
+      "link": "Please Enter URL",
+      "link_name": "Please Enter Name of the link"
+    }
+  ]
+}

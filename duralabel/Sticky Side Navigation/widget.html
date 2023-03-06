@@ -1,0 +1,75 @@
+
+<style>
+        #bc-simple-text-{{_.id}} {
+            color: {{color}};
+            background: {{background_color}};
+            font-size: {{font_size.value}}{{font_size.type}};
+            font-weight: {{font_weight}};
+            text-align: {{text_align.horizontal}};
+            padding-top: {{padding.top.value}}{{padding.top.type}};
+            padding-right: {{padding.right.value}}{{padding.right.type}};
+            padding-bottom: {{padding.bottom.value}}{{padding.bottom.type}};
+            padding-left: {{padding.left.value}}{{padding.left.type}};
+            margin-top: {{margin.top.value}}{{margin.top.type}};
+            margin-right: {{margin.right.value}}{{margin.right.type}};
+            margin-bottom: {{margin.bottom.value}}{{margin.bottom.type}};
+            margin-left: {{margin.left.value}}{{margin.left.type}};
+        }
+        .sticky-nav-container{
+            height: {{navContainerHeight}}px;
+        }
+        .sticky-container{
+            position: sticky;
+            margin:0px auto;
+            top:0;
+        }
+        .sticky-side-nav-list-{{_.id}}{
+            list-style-type: none;
+            color:black;
+        }
+        .nav-title-{{_.id}} {
+            padding: 15px 19px 18px;
+            border-bottom: 1px solid #ecedf1;
+        }
+        .sticky-nav-active-page a{
+            border-bottom: 3px solid #F26327;
+            font-weight: bold;
+            padding-bottom: 3px;
+        }
+        #sticky-nav-list-{{_.id}} a{
+            color:black;
+            text-decoration: none;
+        }
+        .sticky-side-nav-list-{{_.id}} li{
+            margin-bottom: 12px;
+        }
+        .sticky-side-nav ul{
+            padding: 16px 19px;
+            margin:0;
+        }
+        @media (max-width: 481px) {
+            .sticky-nav-container {
+                height: auto;
+            }
+        }
+    </style>
+    
+    <div class="sticky-nav-container">
+        <div class="sticky-container">
+            <div class="nav-title-{{_.id}}">
+                <span>{{title}}</span>
+                <!-- <span>About Us</span> -->
+            </div>
+            <div class="sticky-side-nav">
+                <ul class="sticky-side-nav-list-{{_.id}}" id="sticky-nav-list-{{_.id}}">
+                    {{#each links}}
+                        {{#if isActive '==' true}}
+                            <li class="sticky-side-nav-list sticky-nav-active-page"><a href="{{link}}">{{link_name}}</a></li>
+                        {{else}}
+                            <li class="sticky-side-nav-list"><a href="{{link}}">{{link_name}}</a></li>
+                        {{/if}}
+                    {{/each}}
+                </ul>
+            </div>
+        </div>
+    </div>

@@ -1,0 +1,49 @@
+{
+  "containerHeight": {
+    "value": "1500",
+    "type": "px"
+  },
+  "title": "Title",
+  "titleFontSize": {
+    "value": "22",
+    "type": "px"
+  },
+  "titleFontWeight": "500",
+  "titleStyle": "default",
+  "titleColor": "#1D1D1D",
+  "links": [
+    {
+      "link": "Please Enter URL",
+      "link_name": "Please Enter Name of the link",
+      "linkFontSize": {
+        "value": "22",
+        "type": "px"
+      },
+      "linkFontWeight": "500",
+      "linkStyle": "default",
+      "linkColor": "#1D1D1D"
+    },
+    {
+      "link": "Please Enter URL",
+      "link_name": "Please Enter Name of the link",
+      "linkFontSize": {
+        "value": "22",
+        "type": "px"
+      },
+      "linkFontWeight": "500",
+      "linkStyle": "default",
+      "linkColor": "#1D1D1D"
+    },
+    {
+      "link": "Please Enter URL",
+      "link_name": "Please Enter Name of the link",
+      "linkFontSize": {
+        "value": "22",
+        "type": "px"
+      },
+      "linkFontWeight": "500",
+      "linkStyle": "default",
+      "linkColor": "#1D1D1D"
+    }
+  ]
+}

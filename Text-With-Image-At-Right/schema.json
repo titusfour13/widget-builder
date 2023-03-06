@@ -1,0 +1,162 @@
+[
+    {
+        "type": "array",
+        "label": "Content",
+        "id":"texts",
+        "defaultCount": 3,
+        "schema": [
+            {
+                "type":"tab",
+                "label": "Content",
+                "sections": [
+                    {
+                        "settings": [
+                            {
+                                "type": "input",
+                                "id": "text",
+                                "label": "Text",
+                                "default": "Please Enter Text"
+                            },{
+                                "type": "color",
+                                "id": "textColor",
+                                "label": "Text Color",
+                                "default": "#1D1D1D"
+                            },
+                            {
+                                "type": "boxModel",
+                                "label": "Margin",
+                                "id": "textMargin",
+                                "default": {
+                                    "top": {
+                                    "value": "0",
+                                    "type": "px"
+                                    },
+                                    "right": {
+                                    "value": "10.5",
+                                    "type": "px"
+                                    },
+                                    "bottom": {
+                                    "value": " 0",
+                                    "type": " px"
+                                    },
+                                    "left": {
+                                    "value": "10.5",
+                                    "type": "px"
+                                    }
+                                }
+                            },
+                            {
+                                "type": "boxModel",
+                                "label": "Padding",
+                                "id": "textPadding",
+                                "default": {
+                                    "top": {
+                                        "value": "0",
+                                        "type": "px"
+                                    },
+                                    "right": {
+                                        "value": "10.5",
+                                        "type": "px"
+                                    },
+                                    "bottom": {
+                                        "value": "0",
+                                        "type": " px"
+                                    },
+                                    "left": {
+                                        "value": "10.5",
+                                        "type": "px"
+                                    }
+                                }
+                            },{
+                                "type": "select",
+                                "id": "fontWeight",
+                                "label": "Font Weight",
+                                "default": "500",
+                                "typeMeta": {
+                                    "selectOptions": [
+                                        {
+                                        "label": "Thin",
+                                        "value": "100"
+                                        },
+                                        {
+                                        "label": "Extra Light (Ultra Light)",
+                                        "value": "200"
+                                        },
+                                        {
+                                        "label": "Light",
+                                        "value": "300"
+                                        },
+                                        {
+                                        "label": "Normal",
+                                        "value": "400"
+                                        },
+                                        {
+                                        "label": "Medium",
+                                        "value": "500"
+                                        },
+                                        {
+                                        "label": "Semi Bold (Demi Bold)",
+                                        "value": "600"
+                                        },
+                                        {
+                                        "label": "Bold",
+                                        "value": "700"
+                                        },
+                                        {
+                                        "label": "Extra Bold (Ultra Bold)",
+                                        "value": "800"
+                                        },
+                                        {
+                                        "label": "Black (Heavy)",
+                                        "value": "900"
+                                        }
+                                    ]
+                                }
+                            },
+                            {
+                                "type": "alignment",
+                                "label": "Image alignment",
+                                "id": "textAlignment",
+                                "default": {
+                                    "horizontal": "left",
+                                    "vertical": "top"
+                                },
+                                "typeMeta": {
+                                    "display": "both"
+                                }
+                            },{
+                                "type": "number",
+                                "label": "Font size",
+                                "id": "fontSize",
+                                "default": {
+                                    "value": "24",
+                                    "type": "px"
+                                }
+                            }
+                            
+                        ]
+                    }
+                ]
+            }
+                
+        ]
+    },
+    {
+        "type": "tab",
+        "label": "Image",
+        "sections": [
+            {
+                "settings": [
+                    {
+                        "type": "imageManager",
+                        "id": "image",
+                        "default": {
+                            "src": "https://cdn11.bigcommerce.com/s-n0i50vy/images/stencil/1280x1280/products/109/361/kinfolkessentialissue_1024x1024__22507.1456436715.jpg?c=2&imbypass=on",
+                            "type": "IMAGE_MANAGER"
+                        }
+                    }
+                ]
+            }
+        ]
+    }
+]

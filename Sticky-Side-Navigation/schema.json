@@ -1,0 +1,234 @@
+[
+    {
+        "type": "tab",
+        "label": "Title",
+        "sections": [
+            {
+                "settings": [
+                    {
+                        "type": "select",
+                        "label": "Navigation Height",
+                        "id": "height",
+                        "default": {
+                            "value": "auto"
+                        },"typeMeta": {
+                            "selectOptions": [
+                            {
+                            "label": "Auto",
+                            "value": "auto"
+                            },
+                            {
+                            "label": "Custom",
+                            "value": "custom"
+                            }
+                        ]
+                        }
+                    },
+                    {
+                        "type": "number",
+                        "label": "Custom Height",
+                        "id": "containerHeight",
+                        "default": {
+                            "value": "1500",
+                            "type": "px"
+                        },
+                        "typeMeta": {
+                            "parseType": "integer"
+                        },
+                        "conditional": {
+                            "key": "height",
+                            "operator": "IN",
+                            "value": [
+                                "custom"
+                            ]
+                        }
+                    },
+                    {
+                        "type": "input",
+                        "label": "Navigation Header",
+                        "id": "title",
+                        "default": "Title"
+                    },{
+                        "type": "number",
+                        "label": "Font size",
+                        "id": "titleFontSize",
+                        "default": {
+                            "value": "22",
+                            "type": "px"
+                        }
+                    },{
+                        "type": "select",
+                        "id": "titleFontWeight",
+                        "label": "Font Weight",
+                        "default": "500",
+                        "typeMeta": {
+                            "selectOptions": [
+                                {
+                                "label": "Thin",
+                                "value": "100"
+                                },
+                                {
+                                "label": "Extra Light (Ultra Light)",
+                                "value": "200"
+                                },
+                                {
+                                "label": "Light",
+                                "value": "300"
+                                },
+                                {
+                                "label": "Normal",
+                                "value": "400"
+                                },
+                                {
+                                "label": "Medium",
+                                "value": "500"
+                                },
+                                {
+                                "label": "Semi Bold (Demi Bold)",
+                                "value": "600"
+                                },
+                                {
+                                "label": "Bold",
+                                "value": "700"
+                                },
+                                {
+                                "label": "Extra Bold (Ultra Bold)",
+                                "value": "800"
+                                },
+                                {
+                                "label": "Black (Heavy)",
+                                "value": "900"
+                                }
+                            ]
+                        }
+                    },{
+                        "type": "typography",
+                        "label": "Header style",
+                        "id": "titleStyle",
+                        "default": "default",
+                        "typeMeta": {
+                            "conditionalSettings": [
+                            {
+                                "settings": []
+                            }
+                            ]
+                        }
+                    },{
+                        "type": "color",
+                        "id": "titleColor",
+                        "label": "Text Color",
+                        "default": "#1D1D1D"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "type": "array",
+        "label": "Content",
+        "id":"links",
+        "defaultCount": 3,
+        "entryLabel":"Navigation Link",
+        "schema": [
+            {
+                "type":"tab",
+                "label": "Content",
+                "sections": [
+                    {
+                        "settings": [
+                            {
+                                "type": "boolean",
+                                "label": "Set as Active Page",
+                                "id": "isActive",
+                                "default": false
+                            },
+                            {
+                                "type": "input",
+                                "id": "link",
+                                "label": "Link",
+                                "default": "Please Enter URL"
+                            },
+                            {
+                                "type": "input",
+                                "id": "link_name",
+                                "label": "Link Name",
+                                "default": "Please Enter Name of the link"
+                            },{
+                                "type": "number",
+                                "label": "Font size",
+                                "id": "linkFontSize",
+                                "default": {
+                                    "value": "22",
+                                    "type": "px"
+                                }
+                            },{
+                                "type": "select",
+                                "id": "linkFontWeight",
+                                "label": "Font Weight",
+                                "default": "500",
+                                "typeMeta": {
+                                    "selectOptions": [
+                                        {
+                                        "label": "Thin",
+                                        "value": "100"
+                                        },
+                                        {
+                                        "label": "Extra Light (Ultra Light)",
+                                        "value": "200"
+                                        },
+                                        {
+                                        "label": "Light",
+                                        "value": "300"
+                                        },
+                                        {
+                                        "label": "Normal",
+                                        "value": "400"
+                                        },
+                                        {
+                                        "label": "Medium",
+                                        "value": "500"
+                                        },
+                                        {
+                                        "label": "Semi Bold (Demi Bold)",
+                                        "value": "600"
+                                        },
+                                        {
+                                        "label": "Bold",
+                                        "value": "700"
+                                        },
+                                        {
+                                        "label": "Extra Bold (Ultra Bold)",
+                                        "value": "800"
+                                        },
+                                        {
+                                        "label": "Black (Heavy)",
+                                        "value": "900"
+                                        }
+                                    ]
+                                }
+                            },{
+                                "type": "typography",
+                                "label": "Header style",
+                                "id": "linkStyle",
+                                "default": "default",
+                                "typeMeta": {
+                                    "conditionalSettings": [
+                                    {
+                                        "settings": []
+                                    }
+                                    ]
+                                }
+                            },{
+                                "type": "color",
+                                "id": "linkColor",
+                                "label": "Text Color",
+                                "default": "#1D1D1D"
+                            }
+                        ]
+                    }
+                ]
+            }
+                
+        ]
+    }
+]

@@ -1,0 +1,61 @@
+[
+    {
+        "type": "tab",
+        "label": "Title",
+        "sections": [
+            {
+                "settings": [
+                    {
+                        "type": "input",
+                        "label": "Button Url",
+                        "id": "title",
+                        "default": "Title"
+                    },
+                    {
+                        "type": "number",
+                        "id": "navContainerHeight",
+                        "label": "Navigation Height",
+                        "default": 1500
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "type": "array",
+        "label": "Content",
+        "id":"links",
+        "defaultCount": 3,
+        "schema": [
+                {
+                    "type":"tab",
+                    "label": "Content",
+                    "sections": [
+                        {
+                            "settings": [
+                                {
+                                    "type": "boolean",
+                                    "label": "Set as Active Page",
+                                    "id": "isActive",
+                                    "default": false
+                                },
+                                {
+                                    "type": "input",
+                                    "id": "link",
+                                    "label": "Link",
+                                    "default": "Please Enter URL"
+                                },
+                                {
+                                    "type": "input",
+                                    "id": "link_name",
+                                    "label": "Link Name",
+                                    "default": "Please Enter Name of the link"
+                                }
+                            ]
+                        }
+                    ]
+                }
+                
+        ]
+    }
+]
