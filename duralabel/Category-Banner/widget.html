@@ -94,6 +94,33 @@
         font-size: {{categoryDescription.catFontSize.value}}px;
         color: {{categoryDescription.catColor}};
     }
+
+    @media only screen and (max-width: 800px) {
+        .dl-category-banner-{{_.id}} #category-heading-{{_.id}}{
+            font-size: calc(max(2.5vw, 26px));
+        }
+
+        .dl-category-banner-{{_.id}} #category-description-{{_.id}}{
+            font-size: calc(max(1.25vw, 12px));
+        }
+
+        .dl-category-banner-{{_.id}}{
+            padding-top: {{bgPadding.top.value}}px;
+            padding-right: 5vw;
+            padding-bottom: {{bgPadding.bottom.value}}px;
+            padding-left: 5vw;
+        }
+    }
+
+    @media only screen and (max-width: 480px) {
+        .dl-category-banner-{{_.id}}{
+            padding:0;
+        }
+
+        .dl-category-banner-{{_.id}} .inner-container{
+            padding: 20px;
+        }
+    }
 </style>
 <div class="dl-category-banner-{{_.id}}">
     <div class="inner-container">
