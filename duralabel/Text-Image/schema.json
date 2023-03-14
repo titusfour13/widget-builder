@@ -1,0 +1,375 @@
+[
+    {
+        "type": "tab",
+        "label": "Image",
+        "sections": [
+            {
+                "label": "Image",
+                "settings": [
+                    {
+                        "type": "imageManager",
+                        "id": "image",
+                        "default": {
+                            "src": "https://www.graphicproducts.com/media/images/accounting-icon.svg",
+                            "type": "IMAGE_MANAGER"
+                        }
+                    },
+                    {
+                        "type": "select",
+                        "label": "Image dimensions",
+                        "id": "imgDim",
+                        "default": "custom",
+                        "typeMeta": {
+                            "selectOptions": [
+                                {
+                                    "label": "Auto",
+                                    "value": "auto"
+                                },
+                                {
+                                    "label": "Custom",
+                                    "value": "custom"
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "type": "number",
+                        "label": "Image height",
+                        "id": "imgHeight",
+                        "default": {
+                            "value": 50,
+                            "type": "px"
+                        },
+                        "typeMeta": {
+                            "parseType": "float"
+                        },
+                        "conditional": {
+                            "key": "imgDim",
+                            "operator": "IN",
+                            "value": [
+                                "custom"
+                            ]
+                        }
+                    },
+                    {
+                        "type": "select",
+                        "label": "Image fit",
+                        "id": "imgFit",
+                        "default": "contain",
+                        "typeMeta": {
+                            "selectOptions": [
+                                {
+                                    "label": "Fill to box",
+                                    "value": "cover"
+                                },
+                                {
+                                    "label": "Fit to box",
+                                    "value": "contain"
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "type": "range",
+                        "label": "Image opacity",
+                        "id": "imgOpacity",
+                        "default": 100,
+                        "typeMeta": {
+                            "rangeValues": {
+                                "min": 0,
+                                "max": 100,
+                                "step": 1,
+                                "unit": "%"
+                            }
+                        }
+                    },
+                    {
+                        "type": "alignment",
+                        "label": "Image alignment",
+                        "id": "imgAlignment",
+                        "default": {
+                            "horizontal": "center",
+                            "vertical": "middle"
+                        },
+                        "typeMeta": {
+                            "display": "both"
+                        }
+                    },
+                    {
+                        "type": "boxModel",
+                        "label": "Margin (px)",
+                        "id": "imgMargin",
+                        "default": {
+                            "top": {
+                                "value": "0",
+                                "type": "px"
+                            },
+                            "right": {
+                                "value": "0",
+                                "type": "px"
+                            },
+                            "bottom": {
+                                "value": " 0",
+                                "type": " px"
+                            },
+                            "left": {
+                                "value": "0",
+                                "type": "px"
+                            }
+                        }
+                    },
+                    {
+                        "type": "boxModel",
+                        "label": "Padding (px)",
+                        "id": "imgPadding",
+                        "default": {
+                            "top": {
+                                "value": "0",
+                                "type": "px"
+                            },
+                            "right": {
+                                "value": "0",
+                                "type": "px"
+                            },
+                            "bottom": {
+                                "value": "0",
+                                "type": " px"
+                            },
+                            "left": {
+                                "value": "0",
+                                "type": "px"
+                            }
+                        }
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "type": "array",
+        "label": "Content",
+        "id": "texts",
+        "entryLabel": "Paragraph",
+        "defaultCount": 1,
+        "schema": [
+            {
+                "type": "tab",
+                "label": "Content",
+                "sections": [
+                    {
+                        "settings": [
+                            {
+                                "type": "input",
+                                "id": "text",
+                                "label": "Text",
+                                "default": "Please enter text"
+                            },
+                            {
+                                "type": "typography",
+                                "label": "Text",
+                                "id": "textStyle",
+                                "default": "custom"
+                            },
+                            {
+                                "type": "select",
+                                "label": "Font family",
+                                "id": "fontFamily",
+                                "default": "Roboto",
+                                "typeMeta": {
+                                    "selectOptions": [
+                                        {
+                                            "label": "Theme Default",
+                                            "value": "inherit"
+                                        },
+                                        {
+                                            "label": "Arial",
+                                            "value": "Arial, sans-serif"
+                                        },
+                                        {
+                                            "label": "Tahoma",
+                                            "value": "Tahoma, sans-serif"
+                                        },
+                                        {
+                                            "label": "Verdana",
+                                            "value": "Verdana, sans-serif"
+                                        },
+                                        {
+                                            "label": "Lucida",
+                                            "value": "Lucida, sans-serif"
+                                        },
+                                        {
+                                            "label": "Times New Roman",
+                                            "value": "Times New Roman, serif"
+                                        },
+                                        {
+                                            "label": "Courier",
+                                            "value": "Courier, serif"
+                                        },
+                                        {
+                                            "label": "Georgia",
+                                            "value": "Georgia, serif"
+                                        },
+                                        {
+                                            "label": "Roboto",
+                                            "value": "Roboto"
+                                        },
+                                        {
+                                            "label": "Roboto Condensed",
+                                            "value": "Roboto Condensed"
+                                        }
+                                    ]
+                                },
+                                "conditional": {
+                                    "key": "textStyle",
+                                    "operator": "IN",
+                                    "value": [
+                                        "custom"
+                                    ]
+                                }
+                            },
+                            {
+                                "type": "select",
+                                "id": "fontWeight",
+                                "label": "Font Weight",
+                                "default": "400",
+                                "typeMeta": {
+                                    "selectOptions": [
+                                        {
+                                            "label": "Thin",
+                                            "value": "100"
+                                        },
+                                        {
+                                            "label": "Extra Light (Ultra Light)",
+                                            "value": "200"
+                                        },
+                                        {
+                                            "label": "Light",
+                                            "value": "300"
+                                        },
+                                        {
+                                            "label": "Normal",
+                                            "value": "400"
+                                        },
+                                        {
+                                            "label": "Medium",
+                                            "value": "500"
+                                        },
+                                        {
+                                            "label": "Semi Bold (Demi Bold)",
+                                            "value": "600"
+                                        },
+                                        {
+                                            "label": "Bold",
+                                            "value": "700"
+                                        },
+                                        {
+                                            "label": "Extra Bold (Ultra Bold)",
+                                            "value": "800"
+                                        },
+                                        {
+                                            "label": "Black (Heavy)",
+                                            "value": "900"
+                                        }
+                                    ]
+                                },
+                                "conditional": {
+                                    "key": "textStyle",
+                                    "operator": "IN",
+                                    "value": [
+                                        "custom"
+                                    ]
+                                }
+                            },
+                            {
+                                "type": "number",
+                                "label": "Font size",
+                                "id": "fontSize",
+                                "default": {
+                                    "value": 18,
+                                    "type": "px"
+                                },
+                                "conditional": {
+                                    "key": "textStyle",
+                                    "operator": "IN",
+                                    "value": [
+                                        "custom"
+                                    ]
+                                }
+                            },
+                            {
+                                "type": "color",
+                                "id": "textColor",
+                                "label": "Text Color",
+                                "default": "#303030",
+                                "conditional": {
+                                    "key": "textStyle",
+                                    "operator": "IN",
+                                    "value": [
+                                        "custom"
+                                    ]
+                                }
+                            },
+                            {
+                                "type": "alignment",
+                                "label": "Text alignment",
+                                "id": "textAlignment",
+                                "default": {
+                                    "horizontal": "left"
+                                },
+                                "typeMeta": {
+                                    "display": "horizontal"
+                                }
+                            },
+                            {
+                                "type": "boxModel",
+                                "label": "Margin (px)",
+                                "id": "textMargin",
+                                "default": {
+                                    "top": {
+                                        "value": "0",
+                                        "type": "px"
+                                    },
+                                    "right": {
+                                        "value": "0",
+                                        "type": "px"
+                                    },
+                                    "bottom": {
+                                        "value": "0",
+                                        "type": " px"
+                                    },
+                                    "left": {
+                                        "value": "20",
+                                        "type": "px"
+                                    }
+                                }
+                            },
+                            {
+                                "type": "boxModel",
+                                "label": "Padding (px)",
+                                "id": "textPadding",
+                                "default": {
+                                    "top": {
+                                        "value": "0",
+                                        "type": "px"
+                                    },
+                                    "right": {
+                                        "value": "0",
+                                        "type": "px"
+                                    },
+                                    "bottom": {
+                                        "value": "0",
+                                        "type": " px"
+                                    },
+                                    "left": {
+                                        "value": "0",
+                                        "type": "px"
+                                    }
+                                }
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+]

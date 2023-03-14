@@ -35,7 +35,8 @@
 						"id": "btnBgColor",
 						"label": "Button Background Color",
 						"default": "#ff4e00"
-					},{
+					},
+					{
 						"type": "boxModel",
 						"id": "btnPadding",
 						"label": "Padding",

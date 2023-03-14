@@ -1,0 +1,104 @@
+{
+  "text_align": {
+    "horizontal": "left",
+    "vertical": "middle"
+  },
+  "margin": {
+    "top": {
+      "value": "0",
+      "type": "px"
+    },
+    "right": {
+      "value": "0",
+      "type": "px"
+    },
+    "bottom": {
+      "value": "0",
+      "type": "px"
+    },
+    "left": {
+      "value": "0",
+      "type": "px"
+    }
+  },
+  "padding": {
+    "top": {
+      "value": "20",
+      "type": "px"
+    },
+    "right": {
+      "value": "30",
+      "type": "px"
+    },
+    "bottom": {
+      "value": "16",
+      "type": "px"
+    },
+    "left": {
+      "value": "30",
+      "type": "px"
+    }
+  },
+  "texts": [
+    {
+      "content": "I am a sample text",
+      "textStyle": "custom",
+      "fontFamily": "Roboto",
+      "fontWeight": "400",
+      "fontSize": {
+        "value": 18,
+        "type": "px"
+      },
+      "lineHeight": {
+        "value": 1.6,
+        "type": ""
+      },
+      "color": "#000"
+    },
+    {
+      "content": "I am a sample text",
+      "textStyle": "custom",
+      "fontFamily": "Roboto",
+      "fontWeight": "400",
+      "fontSize": {
+        "value": 18,
+        "type": "px"
+      },
+      "lineHeight": {
+        "value": 1.6,
+        "type": ""
+      },
+      "color": "#000"
+    },
+    {
+      "content": "I am a sample text",
+      "textStyle": "custom",
+      "fontFamily": "Roboto",
+      "fontWeight": "400",
+      "fontSize": {
+        "value": 18,
+        "type": "px"
+      },
+      "lineHeight": {
+        "value": 1.6,
+        "type": ""
+      },
+      "color": "#000"
+    },
+    {
+      "content": "I am a sample text",
+      "textStyle": "custom",
+      "fontFamily": "Roboto",
+      "fontWeight": "400",
+      "fontSize": {
+        "value": 18,
+        "type": "px"
+      },
+      "lineHeight": {
+        "value": 1.6,
+        "type": ""
+      },
+      "color": "#000"
+    }
+  ]
+}

@@ -10,13 +10,13 @@
 						"type": "text",
 						"label": "Category Name",
 						"id": "categoryName",
-						"default": "Category Name"
+						"default": "Printers & Supplies"
 					},
 					{
 						"type": "text",
 						"label": "Button Text",
 						"id": "btnText",
-						"default": "SHOP NOW"
+						"default": "BROWSE"
 					},
 					{
 						"type": "input",
@@ -36,13 +36,76 @@
 				]
 			},
 			{
-				"label": "Styles",
+				"label": "Category Name Styles",
 				"settings": [
 					{
 						"type": "color",
-						"label": "Category Name Color",
+						"label": "Color",
 						"id": "categoryNameColor",
 						"default": "#fff"
+					},
+					{
+						"type": "typography",
+						"label": "Text",
+						"id": "textStyle",
+						"default": "custom"
+					},
+					{
+						"type": "select",
+						"label": "Font family",
+						"id": "fontFamily",
+						"default": "Roboto",
+						"typeMeta": {
+							"selectOptions": [
+								{
+									"label": "Theme Default",
+									"value": "inherit"
+								},
+								{
+									"label": "Arial",
+									"value": "Arial, sans-serif"
+								},
+								{
+									"label": "Tahoma",
+									"value": "Tahoma, sans-serif"
+								},
+								{
+									"label": "Verdana",
+									"value": "Verdana, sans-serif"
+								},
+								{
+									"label": "Lucida",
+									"value": "Lucida, sans-serif"
+								},
+								{
+									"label": "Times New Roman",
+									"value": "Times New Roman, serif"
+								},
+								{
+									"label": "Courier",
+									"value": "Courier, serif"
+								},
+								{
+									"label": "Georgia",
+									"value": "Georgia, serif"
+								},
+								{
+									"label": "Roboto",
+									"value": "Roboto"
+								},
+								{
+									"label": "Roboto Condensed",
+									"value": "Roboto Condensed"
+								}
+							]
+						},
+						"conditional": {
+							"key": "textStyle",
+							"operator": "IN",
+							"value": [
+								"custom"
+							]
+						}
 					},
 					{
 						"type": "number",
@@ -51,6 +114,13 @@
 						"default": {
 							"value": 40,
 							"type": "px"
+						},
+						"conditional": {
+							"key": "textStyle",
+							"operator": "IN",
+							"value": [
+								"custom"
+							]
 						}
 					},
 					{
@@ -97,27 +167,115 @@
 									"value": "900"
 								}
 							]
+						},
+						"conditional": {
+							"key": "textStyle",
+							"operator": "IN",
+							"value": [
+								"custom"
+							]
 						}
-					},
+					}
+				]
+			},
+			{
+				"label": "Button Styles",
+				"settings": [
 					{
 						"type": "color",
-						"label": "Button Text Color",
+						"label": "Text Color",
 						"id": "btnTextColor",
 						"default": "#fff"
 					},
 					{
+						"type": "color",
+						"label": "Icon Color",
+						"id": "iconColor",
+						"default": "#ff4e00"
+					},
+					{
+						"type": "typography",
+						"label": "Text",
+						"id": "btnTextStyle",
+						"default": "custom"
+					},
+					{
+						"type": "select",
+						"label": "Font family",
+						"id": "btnFontFamily",
+						"default": "Roboto",
+						"typeMeta": {
+							"selectOptions": [
+								{
+									"label": "Theme Default",
+									"value": "inherit"
+								},
+								{
+									"label": "Arial",
+									"value": "Arial, sans-serif"
+								},
+								{
+									"label": "Tahoma",
+									"value": "Tahoma, sans-serif"
+								},
+								{
+									"label": "Verdana",
+									"value": "Verdana, sans-serif"
+								},
+								{
+									"label": "Lucida",
+									"value": "Lucida, sans-serif"
+								},
+								{
+									"label": "Times New Roman",
+									"value": "Times New Roman, serif"
+								},
+								{
+									"label": "Courier",
+									"value": "Courier, serif"
+								},
+								{
+									"label": "Georgia",
+									"value": "Georgia, serif"
+								},
+								{
+									"label": "Roboto",
+									"value": "Roboto"
+								},
+								{
+									"label": "Roboto Condensed",
+									"value": "Roboto Condensed"
+								}
+							]
+						},
+						"conditional": {
+							"key": "btnTextStyle",
+							"operator": "IN",
+							"value": [
+								"custom"
+							]
+						}
+					},
+					{
 						"type": "number",
 						"id": "btnFontSize",
-						"label": "Button Text Font Size",
+						"label": "Font Size",
 						"default": {
 							"value": 20,
 							"type": "px"
+						},
+						"conditional": {
+							"key": "btnTextStyle",
+							"operator": "IN",
+							"value": [
+								"custom"
+							]
 						}
 					},
 					{
 						"type": "select",
 						"id": "btnFontWeight",
-						"label": "Button Text Font Weight",
+						"label": "Font Weight",
 						"default": "700",
 						"typeMeta": {
 							"selectOptions": [
@@ -158,6 +316,98 @@
 									"value": "900"
 								}
 							]
+						},
+						"conditional": {
+							"key": "btnTextStyle",
+							"operator": "IN",
+							"value": [
+								"custom"
+							]
+						}
+					}
+				]
+			},
+			{
+				"label": "Container Styles",
+				"settings": [
+					{
+						"type": "select",
+						"label": "Dimension",
+						"id": "height",
+						"default": "custom",
+						"typeMeta": {
+							"selectOptions": [
+								{
+									"label": "Custom",
+									"value": "custom"
+								},
+								{
+									"label": "Auto",
+									"value": "auto"
+								}
+							]
+						}
+					},
+					{
+						"type": "number",
+						"id": "divHeight",
+						"label": "Height",
+						"default": {
+							"value": 250,
+							"type": "px"
+						},
+						"conditional": {
+							"key": "height",
+							"operator": "IN",
+							"value": [
+								"custom"
+							]
+						}
+					},
+					{
+						"type": "boxModel",
+						"label": "Margin",
+						"id": "margin",
+						"default": {
+							"top": {
+								"value": "0",
+								"type": "px"
+							},
+							"right": {
+								"value": "0",
+								"type": "px"
+							},
+							"bottom": {
+								"value": "0",
+								"type": "px"
+							},
+							"left": {
+								"value": "0",
+								"type": "px"
+							}
+						}
+					},
+					{
+						"type": "boxModel",
+						"label": "Padding",
+						"id": "padding",
+						"default": {
+							"top": {
+								"value": "0",
+								"type": "px"
+							},
+							"right": {
+								"value": "0",
+								"type": "px"
+							},
+							"bottom": {
+								"value": "0",
+								"type": "px"
+							},
+							"left": {
+								"value": "0",
+								"type": "px"
+							}
 						}
 					}
 				]

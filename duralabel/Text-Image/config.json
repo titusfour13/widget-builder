@@ -1,0 +1,105 @@
+{
+  "texts": [
+    {
+      "text": "Please enter text",
+      "textStyle": "custom",
+      "fontFamily": "Roboto",
+      "fontWeight": "400",
+      "fontSize": {
+        "value": 18,
+        "type": "px"
+      },
+      "textColor": "#303030",
+      "textAlignment": {
+        "horizontal": "left"
+      },
+      "textMargin": {
+        "top": {
+          "value": "0",
+          "type": "px"
+        },
+        "right": {
+          "value": "0",
+          "type": "px"
+        },
+        "bottom": {
+          "value": "0",
+          "type": " px"
+        },
+        "left": {
+          "value": "20",
+          "type": "px"
+        }
+      },
+      "textPadding": {
+        "top": {
+          "value": "0",
+          "type": "px"
+        },
+        "right": {
+          "value": "0",
+          "type": "px"
+        },
+        "bottom": {
+          "value": "0",
+          "type": " px"
+        },
+        "left": {
+          "value": "0",
+          "type": "px"
+        }
+      }
+    }
+  ],
+  "image": {
+    "src": "https://www.graphicproducts.com/media/images/accounting-icon.svg",
+    "type": "IMAGE_MANAGER"
+  },
+  "imgDim": "custom",
+  "imgHeight": {
+    "value": 50,
+    "type": "px"
+  },
+  "imgFit": "contain",
+  "imgOpacity": 100,
+  "imgAlignment": {
+    "horizontal": "center",
+    "vertical": "middle"
+  },
+  "imgMargin": {
+    "top": {
+      "value": "0",
+      "type": "px"
+    },
+    "right": {
+      "value": "0",
+      "type": "px"
+    },
+    "bottom": {
+      "value": " 0",
+      "type": " px"
+    },
+    "left": {
+      "value": "0",
+      "type": "px"
+    }
+  },
+  "imgPadding": {
+    "top": {
+      "value": "0",
+      "type": "px"
+    },
+    "right": {
+      "value": "0",
+      "type": "px"
+    },
+    "bottom": {
+      "value": "0",
+      "type": " px"
+    },
+    "left": {
+      "value": "0",
+      "type": "px"
+    }
+  }
+}

@@ -69,9 +69,9 @@
             // Fetch data from the GraphQL Storefront API
             var storefrontApiRequest = new XMLHttpRequest(); // IE compatible
             storefrontApiRequest.onreadystatechange = function() {
-            if (this.readyState == 4 && this.status == 200) {
-                placeWidgetContent(JSON.parse(this.response).data);
-            }
+                if (this.readyState == 4 && this.status == 200) {
+                    placeWidgetContent(JSON.parse(this.response).data);
+                }
             };
     
             storefrontApiRequest.open('POST', `/graphql`, true);

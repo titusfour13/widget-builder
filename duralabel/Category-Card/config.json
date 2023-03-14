@@ -1,21 +1,67 @@
 {
-  "categoryName": "Category Name",
-  "btnText": "SHOP NOW",
+  "categoryName": "Printers & Supplies",
+  "btnText": "BROWSE",
   "btnUrl": "../",
   "bgImage": {
     "src": "https://cdn11.bigcommerce.com/s-qoju4pdqc/images/stencil/400x400/j/industrial-printers__40976.original.png",
     "type": "IMAGE_MANAGER"
   },
   "categoryNameColor": "#fff",
+  "textStyle": "custom",
+  "fontFamily": "Roboto",
   "fontSize": {
     "value": 40,
     "type": "px"
   },
   "fontWeight": "700",
   "btnTextColor": "#fff",
+  "iconColor": "#ff4e00",
+  "btnTextStyle": "custom",
+  "btnFontFamily": "Roboto",
   "btnFontSize": {
     "value": 20,
     "type": "px"
   },
-  "btnFontWeight": "700"
+  "btnFontWeight": "700",
+  "height": "custom",
+  "divHeight": {
+    "value": 250,
+    "type": "px"
+  },
+  "margin": {
+    "top": {
+      "value": "0",
+      "type": "px"
+    },
+    "right": {
+      "value": "0",
+      "type": "px"
+    },
+    "bottom": {
+      "value": "0",
+      "type": "px"
+    },
+    "left": {
+      "value": "0",
+      "type": "px"
+    }
+  },
+  "padding": {
+    "top": {
+      "value": "0",
+      "type": "px"
+    },
+    "right": {
+      "value": "0",
+      "type": "px"
+    },
+    "bottom": {
+      "value": "0",
+      "type": "px"
+    },
+    "left": {
+      "value": "0",
+      "type": "px"
+    }
+  }
 }

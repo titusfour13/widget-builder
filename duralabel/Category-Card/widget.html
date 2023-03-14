@@ -1,21 +1,27 @@
 
 <style>
     .db-featured-category-{{_.id}}{
-        flex: 45%;
     }
 
     .db-featured-category-{{_.id}} .categoryCard {
         background-position: center;
         background-size: cover;
-        flex: 45%;
-        height: 300px;
         position: relative;
         display: flex;
         flex-flow: column wrap;
         justify-content: center;
         align-items: center;
         text-align: center;
-        gap: 20px;
+        height: {{#if height '==' "custom"}}{{divHeight.value}}px{{else}}{{height}}{{/if}};
+        
+        padding-top: {{padding.top.value}}{{padding.top.type}};
+        padding-right: {{padding.right.value}}{{padding.right.type}};
+        padding-bottom: {{padding.bottom.value}}{{padding.bottom.type}};
+        padding-left: {{padding.left.value}}{{padding.left.type}};
+        margin-top: {{margin.top.value}}{{margin.top.type}};
+        margin-right: {{margin.right.value}}{{margin.right.type}};
+        margin-bottom: {{margin.bottom.value}}{{margin.bottom.type}};
+        margin-left: {{margin.left.value}}{{margin.left.type}};
     }
 
     .db-featured-category-{{_.id}} .innerContainer {
@@ -25,14 +31,17 @@
     }
     
     .db-featured-category-{{_.id}} .buttonContainer {
-        margin: 1rem;
+        margin: 1rem 1rem 0;
     }
 
     .db-featured-category-{{_.id}} .buttonContainer a {
         padding: 0;
         background: none;
         text-decoration: none;
-        text-align: {{categoryNameAlignment.horizontal}};
+        text-transform: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 
     .db-featured-category-{{_.id}} .buttonContainer a:hover span{
@@ -42,29 +51,43 @@
 
 
     .db-featured-category-{{_.id}} .buttonContainer a span {
-        font-family: "Roboto";
         transition: all .15s ease;
         font-style: normal;
         margin: 0;
         line-height: 16px;
         border-bottom: 1px solid #fff;
-        font-size: {{btnFontSize.value}}px;
-        font-weight: {{btnFontWeight}};
-        color: {{btnTextColor}};
+        {{#if btnTextStyle '==' "custom"}}
+            font-size: {{btnFontSize.value}}px;
+            font-weight: {{btnFontWeight}};
+            color: {{btnTextColor}};
+            font-family: {{btnFontFamily}};
+        {{/if}}
     }
 
     .db-featured-category-{{_.id}} svg {
-        fill: #ff4e00;
+        fill: {{iconColor}};
     }
 
     .db-featured-category-{{_.id}} span.categoryName {
-        font-family: "Roboto";
         font-style: normal;
         line-height: 35px;
         text-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
-        font-size: {{fontSize.value}}px;
-        font-weight: {{fontWeight}};
-        color: {{categoryNameColor}}
+        {{#if textStyle '==' "custom"}}
+            font-size: {{fontSize.value}}px;
+            font-weight: {{fontWeight}};
+            color: {{categoryNameColor}};
+            font-family: {{fontFamily}};
+        {{/if}}
+    }
+
+    @media screen and (min-width: 700px) and (max-width: 850px) {
+        .db-featured-category-{{_.id}} span.categoryName {
+            font-size: calc({{fontSize.value}}px - 50%);
+        }
+
+        .db-featured-category-{{_.id}} .buttonContainer a span {
+            font-size: calc({{btnFontSize.value}}px - 50%);
+        }
     }
 </style>
 
@@ -86,7 +109,3 @@
         </div>
     </div>
 </section>
-
-<script>
-    console.log({{{json .}}})
-</script>

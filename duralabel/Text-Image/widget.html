@@ -1,0 +1,67 @@
+<style>
+    .container-{{_.id}},
+    .container-{{_.id}} *{
+        box-sizing: border-box;
+    }
+    .container-{{_.id}}{
+        display: flex;
+        -ms-flex-direction: row;
+        flex-direction: row;
+        width: 100%;
+        align-items: center;
+    }
+
+
+    .text-column-{{_.id}}{
+        width: 100%;
+    }
+
+    .image-column-{{_.id}}{
+        display: flex;
+        align-items: center;
+        background: url({{image.src}}) no-repeat;
+        opacity: calc({{imgOpacity}} / 100);
+        background-size: {{imgFit}};
+        height: {{#if imgDim '==' "custom"}}{{imgHeight.value}}px{{else}}auto{{/if}};
+        background-position: {{imgAlignment.horizontal}} {{#if imgAlignment.vertical '==' "middle"}}center{{else}}{{imgAlignment.vertical}}{{/if}};
+        margin: {{imgMargin.top.value}}px {{imgMargin.right.value}}px {{imgMargin.bottom.value}}px {{imgMargin.left.value}}px; 
+        padding: {{imgPadding.top.value}}px {{imgPadding.right.value}}px {{imgPadding.bottom.value}}px {{imgPadding.left.value}}px;
+    }
+
+    .image-column-{{_.id}} img{
+        width: auto;
+        opacity: 0;
+        height: 100%;
+    }
+    
+</style>
+<div class="container-{{_.id}}">
+    <div class="image-column-{{_.id}}">
+        <img src="{{image.src}}" alt="Image" />
+    </div>
+    <div class="text-column-{{_.id}}">
+        {{assignVar "_id" _.id}}
+        {{#each texts}}
+            <style>
+                .text-column-{{getVar "_id"}} .dl-container-{{@index}}{
+                    width: 100%;
+                    text-align: {{textAlignment.horizontal}};
+                }
+
+                .text-column-{{getVar "_id"}} .dl-p-{{@index}}{
+                    {{#if textStyle '==' "custom"}}
+                        font-family: {{fontFamily}};
+                        font-size: {{fontSize.value}}px; ;
+                        font-weight: {{fontWeight}};
+                        color: {{textColor}};
+                    {{/if}}
+                    margin: {{textMargin.top.value}}px {{textMargin.right.value}}px {{textMargin.bottom.value}}px {{textMargin.left.value}}px; 
+                    padding: {{textPadding.top.value}}px {{textPadding.right.value}}px {{textPadding.bottom.value}}px {{textPadding.left.value}}px
+                }
+            </style>
+            <div class="dl-container-{{@index}}">
+                <p class="dl-p-{{@index}}">{{text}}</p>
+            </div>
+        {{/each}}
+    </div>
+</div>

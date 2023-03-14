@@ -1,0 +1,41 @@
+<style>
+    .db-list-{{_.id}}{
+        text-align: {{text_align.horizontal}};
+        padding-top: {{padding.top.value}}{{padding.top.type}};
+        padding-right: {{padding.right.value}}{{padding.right.type}};
+        padding-bottom: {{padding.bottom.value}}{{padding.bottom.type}};
+        padding-left: {{padding.left.value}}{{padding.left.type}};
+        margin-top: {{margin.top.value}}{{margin.top.type}};
+        margin-right: {{margin.right.value}}{{margin.right.type}};
+        margin-bottom: {{margin.bottom.value}}{{margin.bottom.type}};
+        margin-left: {{margin.left.value}}{{margin.left.type}};
+    }
+</style>
+<section class="db-list-{{_.id}}">
+    {{#if isOrdered}}
+        <ol class="db-list-container">
+    {{else}}
+        <ul class="db-list-container">
+    {{/if}}
+        {{#each texts}}
+            <style>
+                .db-list-item-{{@index}}{
+                    {{#if textStyle '==' "custom"}}
+                        font-family: {{fontFamily}};
+                        font-size: {{fontSize.value}}px; ;
+                        font-weight: {{fontWeight}};
+                        line-height: {{lineHeight.value}};
+                    {{/if}}
+                    color: {{color}};
+                }
+            </style>
+            <li class="db-list-item-{{@index}}">
+                {{content}}
+            </li>
+        {{/each}}
+    {{#if isOrdered}}
+        <ol>
+    {{else}}
+        </ul>
+    {{/if}}
+</section>

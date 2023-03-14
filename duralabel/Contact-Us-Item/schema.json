@@ -12,7 +12,7 @@
 				"label": "Contents",
 				"sections": [
 					{
-						"label": "Sample Text",
+						"label": "Content",
 						"settings": [
 							{
 								"type": "text",
@@ -37,7 +37,12 @@
 								"id": "url",
 								"label": "Hyperlink",
 								"default": ""
-							},
+							}
+						]
+					},
+					{
+						"label": "Styles",
+						"settings": [
 							{
 								"type": "color",
 								"id": "fontColor",
