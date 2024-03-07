@@ -1,0 +1,63 @@
+[
+
+    {
+        "type": "array",
+        "label": "Content",
+        "id":"columns",
+        "defaultCount": 4,
+        "entryLabel":"Card",
+        "schema": [
+            {
+                "type": "tab",
+                "label": "Image",
+                "sections": [
+                    {
+                        "settings": [
+                            {
+                                "type": "imageManager",
+                                "id": "image",
+                                "default": {
+                                    "src": "https://cdn11.bigcommerce.com/s-n0i50vy/images/stencil/1280x1280/products/109/361/kinfolkessentialissue_1024x1024__22507.1456436715.jpg?c=2&imbypass=on",
+                                    "type": "IMAGE_MANAGER"
+                                }
+                            },{
+                                "type": "number",
+                                "label": "Height",
+                                "id": "imageHeight",
+                                "default": {
+                                    "value": "100",
+                                    "type": "px"
+                                }
+                            },{
+                                "type": "number",
+                                "label": "Width",
+                                "id": "imageWidth",
+                                "default": {
+                                    "value": "100",
+                                    "type": "px"
+                                }
+                            }
+
+                        ]
+                    }
+                ]
+            },{
+                "type":"tab",
+                "label": "Content",
+                "sections": [
+                    {
+                        "settings": [
+                            {
+                                "type": "input",
+                                "id": "caption",
+                                "label": "Caption / Text",
+                                "default": "Caption"
+                            }
+                        ]
+                    }
+                ]
+            }
+                
+        ]
+    }
+]

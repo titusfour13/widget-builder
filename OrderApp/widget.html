@@ -1,0 +1,105 @@
+
+<style>
+        .homemapge-order-app-container {
+            background: var(--unnamed-color-f9f9fa) 0% 0% no-repeat padding-box;
+            background: #F9F9FA 0% 0% no-repeat padding-box;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin: 20px 0px 20px 0px;
+        }
+        .order-app-widget-container{
+            display: flex;
+            flex-direction: column;
+        }
+        .order-app-right-image{
+            max-width: 90px;
+        }
+        .order-app-mid-text{
+            margin:0px 15px;
+        }
+        .order-app-right-image img{
+            height: auto;
+            width: 100%;
+            top:-10px;
+            position: relative;
+        }
+        .buttom-h4-order-app{
+            text-align: center;
+            margin: 0px;
+            font-size: 12px;
+            font-weight: 500;
+        }
+        .order-app-mid-text p{
+            font-size: 12px;
+        }
+        .right-order-app-container{
+            display: flex;
+            flex-direction: column;
+            max-width: 120px;
+        }
+        .width-40{
+            width: 40%;
+        }
+        .top-h4-order-app{
+            margin: 0px;
+            font-size: 12px;
+            font-weight: 500;
+        }
+        .right-order-app-container a{
+            color:#634a66;
+            text-decoration: none;
+            margin-top: 10px;
+        }
+ 
+        @media (min-width: 1024px) {
+
+            .order-app-mid-text p{
+                font-size: 18px;
+            }
+            .homemapge-order-app-container{  
+                padding-left: 40px;
+                width: 48%;
+                 margin:0px 10px;
+            }
+            .order-app-right-image{
+                max-width: 165px;
+            }
+            .top-h4-order-app, .buttom-h4-order-app{
+                font-size: 22px;
+            }
+            .right-order-app-container{
+                max-width: 65%;
+            }
+
+            .order-app-widget-container{
+                flex-direction: row;
+            }
+        }
+    </style>
+    <div class="order-app-widget-container">
+        <div class="homemapge-order-app-container">
+            <div class="right-order-app-container width-40">
+                <img src="{{leftAppImage.src}}" alt="">
+                <h4 class="buttom-h4-order-app">{{bottom}}</h4>
+            </div>
+            <div class="order-app-mid-text width-40">
+                <p>{{mid}}</p>
+            </div>
+            <div class="order-app-right-image ">
+                <img src="{{leftLogoImage.src}}" alt="">
+            </div>
+        </div>
+        <div class="homemapge-order-app-container">
+            <div class="right-order-app-container">
+                <h4 class="top-h4-order-app">{{top}}</h4>
+                <img src="{{appImage.src}}" alt="">
+                <a href="{{linked}}">Learn More &#x2BC8;</a>
+            </div>
+            <div class="order-app-right-image ">
+                <img src="{{logoImage.src}}" alt="">
+            </div>
+        </div>
+    </div>
+    
+

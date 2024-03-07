@@ -1,0 +1,71 @@
+
+<style>
+        .spotlight-homepage-container {
+            background-image: url('{{image.src}}');
+            background-size: cover;
+            background-repeat: no-repeat;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+            padding: 40px;
+        }
+        .spotlight-homepage-container-image{
+            top:-70px;
+            position:relative
+        }
+        .spotlight-homepage-container-image img{
+            display: inline-block;
+            height: auto;
+            max-width: 100%;
+            vertical-align: middle;
+        }
+        .spotlight-homepage-container-content p{
+            margin-bottom: 20px;
+        }
+        .spotlight-homepage-container-content a{
+            padding: 12px 20px;
+            background-color: #634a66;
+            border-radius:50px;
+            color: white;
+            text-decoration: none;
+            font-size: 14px;
+            margin:20px 0;
+        }
+        .spotlight-homepage-container-content h3{
+            font-size: 15px;
+            margin-top: 5px;
+        }
+        .spotlight-homepage-container-content h2{
+            font-size: 28px;
+        }
+        @media (min-width: 1024px) {
+            .spotlight-homepage-container{
+                flex-direction: row;
+                justify-content: left;
+                text-align: left;
+            }
+            .spotlight-homepage-container-image{
+                width: 35%;
+            }
+            .spotlight-homepage-container-content{
+                justify-content: left;
+                padding-left: 40px;
+            }
+        }
+    </style>
+    <div class="spotlight-homepage-container">
+        <div class="spotlight-homepage-container-image">
+            <img src="{{imageSpotlight.src}}" alt="">
+        </div>
+        <div class="spotlight-homepage-container-content">
+            <h3 id='widget-template-title'>PRODUCT SPOTLIGHT</h3>
+            <h2 id='widget-template-title'>{{content}}</h2>
+            <p id='bc-simple-text-{{_.id}}'>{{label}}</p>
+            <a href="{{url}}">Shop Now ></a>
+        </div>
+        
+    </div>
+    
+

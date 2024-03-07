@@ -1,0 +1,45 @@
+
+<style>
+    .image-field-{{_.id}} img{
+        {{#if heightSettings.value "==" "custom"}}
+            height: 100%; 
+        {{else}}
+            height: auto; 
+        {{/if}}
+        width: auto;
+        opacity: 0;
+    }
+    .image-field-{{_.id}}{
+        background-image: url({{image.src}});
+        background-size: contain; 
+        width: 100%; 
+        {{#if heightSettings.value "==" "custom"}}
+            height: {{imageHeight.value}}px;
+        {{else}}
+            height: auto; 
+        {{/if}}
+        background-repeat: no-repeat;
+        background-position: center center;
+    }
+    @media (max-width: 481px) {
+        .mobile-hidden-{{_.id}} {
+            {{#if mobile}}
+                display:none;
+            {{/if}}
+        }
+    }
+    @media (max-width: 970px) {
+        .tablet-hidden-{{_.id}}{
+            {{#if tablet}}
+                display:none;
+            {{/if}}
+        }
+    }
+</style>
+
+<div style="height: 200px;">
+    asdasds
+</div>
+<div class="image-field-{{_.id}} mobile-hidden-{{_.id}} tablet-hidden-{{_.id}}" >
+    <img src="{{image.src}}">
+</div>

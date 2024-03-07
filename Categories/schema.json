@@ -1,0 +1,69 @@
+[
+    {
+        "type": "tab",
+        "label": "Image",
+        "sections": [
+            {
+                "settings": [
+                    {
+                        "type": "imageManager",
+                        "id": "image",
+                        "default": {
+                                "src": "https://cdn11.bigcommerce.com/s-n0i50vy/images/stencil/1280x1280/products/109/361/kinfolkessentialissue_1024x1024__22507.1456436715.jpg?c=2&imbypass=on",
+                                "type": "IMAGE_MANAGER"
+                        }
+                    },{
+                        "type": "select",
+                        "label": "Image dimensions",
+                        "id": "heightSettings",
+                        "default": {
+                            "value": "custom"
+                        },"typeMeta": {
+                            "selectOptions": [
+                            {
+                            "label": "Auto",
+                            "value": "auto"
+                            },
+                            {
+                            "label": "Custom",
+                            "value": "custom"
+                            }
+                        ]
+                        }
+                    },
+                    {
+                        "type": "number",
+                        "label": "Custom Height",
+                        "id": "imageHeight",
+                        "default": {
+                            "value": "200",
+                            "type": "px"
+                        },
+                        "typeMeta": {
+                            "parseType": "integer"
+                        },
+                        "conditional": {
+                            "key": "height",
+                            "operator": "IN",
+                            "value": [
+                                "custom"
+                            ]
+                        }
+                    },
+                    {
+                        "type": "boolean",
+                        "label": "Hide in Mobile",
+                        "id": "mobile",
+                        "default": true
+                    },
+                    {
+                        "type": "boolean",
+                        "label": "Hide in Tablet",
+                        "id": "tablet",
+                        "default": false
+                    }
+                ]
+            }
+        ]
+    }
+]

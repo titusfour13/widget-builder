@@ -1,0 +1,86 @@
+{
+  "image": {
+    "src": "https://www.graphicproducts.com/media/2881/onsite-support.png?width=457&height=437&mode=max",
+    "type": "IMAGE_MANAGER"
+  },
+  "text": "Simple Text",
+  "color": "black",
+  "background_color": "white",
+  "font_size": {
+    "value": 24,
+    "type": "px"
+  },
+  "font_weight": "500",
+  "text_align": {
+    "horizontal": "center",
+    "vertical": "middle"
+  },
+  "margin": {
+    "top": {
+      "value": "0",
+      "type": "px"
+    },
+    "right": {
+      "value": "0",
+      "type": "px"
+    },
+    "bottom": {
+      "value": "0",
+      "type": "px"
+    },
+    "left": {
+      "value": "0",
+      "type": "px"
+    }
+  },
+  "padding": {
+    "top": {
+      "value": "8",
+      "type": "px"
+    },
+    "right": {
+      "value": "24",
+      "type": "px"
+    },
+    "bottom": {
+      "value": "8",
+      "type": "px"
+    },
+    "left": {
+      "value": "24",
+      "type": "px"
+    }
+  },"texts": [
+    {
+      "text": "Please Enter URL",
+      "isBulleted":false,
+      "fontSize": {
+        "value": "22",
+        "type": "px"
+      },
+      "fontWeight": "500",
+      "style": "default",
+      "color": "#1D1D1D"
+    },
+    {
+      "text": "Please Enter URL",
+      "fontSize": {
+        "value": "22",
+        "type": "px"
+      },
+      "fontWeight": "500",
+      "style": "default",
+      "color": "#1D1D1D"
+    },
+    {
+      "text": "Please Enter URL",
+      "fontSize": {
+        "value": "22",
+        "type": "px"
+      },
+      "fontWeight": "500",
+      "style": "default",
+      "color": "#1D1D1D"
+    }
+  ]
+}

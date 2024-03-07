@@ -1,0 +1,19 @@
+[
+	{
+		"type": "tab",
+		"label": "Design",
+		"sections": [
+			{
+				"label": "Container",
+				"settings": [
+					{
+						"type": "input",
+						"label": "Input Castegory Name",
+						"id": "categoryName",
+						"default": "none"
+					}
+				]
+			}
+		]
+	}
+]

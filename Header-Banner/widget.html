@@ -1,0 +1,118 @@
+
+<style>
+    .image-field-{{_.id}}{
+        background-image: url({{image.src}});
+        width: 100%; 
+        background-repeat: no-repeat;
+        background-position: center;
+        min-height: {{imageHeight.value}}px;
+        padding: 1rem 2rem;
+        color: white;
+        background-clip: padding-box;
+        box-sizing: border-box;
+        background-size:cover;
+    }
+    div[data-widget-id="{{_.id}}"]::before, div[data-widget-id="{{_.id}}"]::after {
+        box-sizing:border-box;
+    }
+    .header-btn-reg-printer-{{_.id}} a, .header-btn-{{_.id}} a{
+        text-decoration: none;
+        border: 2px solid #f26327;
+        padding: 20px 8px;
+        white-space: nowrap;
+        font-weight: bold;
+    }
+    .header-btn-reg-printer-{{_.id}} , .header-btn-{{_.id}} {
+        display:inline-block;
+        padding:20px 10px;
+        height:auto;
+        margin: 10px 0px;
+    }
+    .header-btn-{{_.id}} a{
+        color: white;
+        background: #f26327;
+    }
+    .header-btn-reg-printer-{{_.id}} a{
+        color: black;
+        background: white;
+    }
+    .button-container-{{_.id}}{
+        text-align:left
+    }
+    .text-container-{{_.id}}{
+        max-width: 58.3333333333%;
+    }
+    
+    .text-container-{{_.id}} p{
+        margin-bottom: 30px;
+    }
+    .caption-{{_.id}}{
+        font-size:20px;
+    }
+    .title-{{_.id}}{
+        text-transform: uppercase;
+        font-size: 40px;
+        font-weight:bold;
+    }
+    @media (max-width: 481px) {
+        .title-{{_.id}}{
+            font-size: 25px;
+        }
+        .header-btn-{{_.id}} a, .header-btn-reg-printer-{{_.id}} a{
+            font-size: 16px;
+        }
+        .mobile-hidden-{{_.id}}{
+            color:black;
+            background-image: none;
+        }
+        .image-field-{{_.id}}{
+            padding:1rem;
+            background-position: unset;
+        }
+    }
+    @media (max-width: 770px) {
+        .button-container-{{_.id}}{
+            text-align:center
+        }
+        .tablet-hidden-{{_.id}}{
+            background-image: none;
+            color:black;
+        }  
+        .header-btn-reg-printer-{{_.id}} , .header-btn-{{_.id}} {
+            display:block;
+            padding:10px;
+        }
+        .header-btn-{{_.id}} a, .header-btn-reg-printer-{{_.id}} a{
+            display: block;
+            text-align: center;
+            width:100%;
+        }
+        .image-field-{{_.id}}{
+            padding:1rem;
+            background-position: unset;
+        }
+        .text-container-{{_.id}}{
+        max-width: 100%;
+    }
+    }
+</style>
+
+<div class="image-field-{{_.id}} {{#if mobile}}mobile-hidden-{{_.id}}{{/if}} {{#if tablet}}tablet-hidden-{{_.id}}{{/if}}" >
+    <div class="text-container-{{_.id}}">
+        <p class="title-{{_.id}}">{{title}}</p>
+        <p class="caption-{{_.id}}">{{{caption}}}</p>
+        <div class="button-container-{{_.id}}">
+{{#if showButton}}          
+            <div class="header-btn-{{_.id}}">
+                <a href="{{link}}">{{btnCaption}}</a>
+            </div>
+{{/if}}            
+{{#if showReg}}
+            <div class="header-btn-reg-printer-{{_.id}}">
+                <a href="{{regLink}}">{{regCaption}}</a>
+            </div>
+{{/if}}
+        </div>
+        
+    </div>
+</div>

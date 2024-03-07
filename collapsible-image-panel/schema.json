@@ -1,0 +1,333 @@
+[
+    {
+        "type": "tab",
+        "label": "Design",
+        "sections":[
+            {
+                "label": "Settings",
+                "settings": [
+                    {
+                      "type": "input",
+                      "id": "text",
+                      "label": "Caption",
+                      "default": "Where do I find the serial number?"
+                    },{
+                        "type": "color",
+                        "id": "captionTextColor",
+                        "label": "Text Color",
+                        "default": "#015f9c"
+                    },{
+                        "type": "number",
+                        "label": "Font size",
+                        "id": "captionFontSize",
+                        "default": {
+                            "value": "16",
+                            "type": "px"
+                        }
+                    },{
+                        "type": "select",
+                        "id": "captionFontWeight",
+                        "label": "Font Weight",
+                        "default": "500",
+                        "typeMeta": {
+                            "selectOptions": [
+                                {
+                                "label": "Thin",
+                                "value": "100"
+                                },
+                                {
+                                "label": "Extra Light (Ultra Light)",
+                                "value": "200"
+                                },
+                                {
+                                "label": "Light",
+                                "value": "300"
+                                },
+                                {
+                                "label": "Normal",
+                                "value": "400"
+                                },
+                                {
+                                "label": "Medium",
+                                "value": "500"
+                                },
+                                {
+                                "label": "Semi Bold (Demi Bold)",
+                                "value": "600"
+                                },
+                                {
+                                "label": "Bold",
+                                "value": "700"
+                                },
+                                {
+                                "label": "Extra Bold (Ultra Bold)",
+                                "value": "800"
+                                },
+                                {
+                                "label": "Black (Heavy)",
+                                "value": "900"
+                                }
+                            ]
+                        }
+                    },{
+                        "type": "alignment",
+                        "label": "Image alignment",
+                        "id": "captionTextAlignment",
+                        "default": {
+                            "horizontal": "center",
+                            "vertical": "top"
+                        },
+                        "typeMeta": {
+                            "display": "both"
+                        }
+                    },{
+                        "type": "boxModel",
+                        "label": "Margin",
+                        "id": "captionTextMargin",
+                        "default": {
+                            "top": {
+                            "value": "0",
+                            "type": "px"
+                            },
+                            "right": {
+                            "value": "0",
+                            "type": "px"
+                            },
+                            "bottom": {
+                            "value": " 0",
+                            "type": " px"
+                            },
+                            "left": {
+                            "value": "0",
+                            "type": "px"
+                            }
+                        }
+                    },{
+                        "type": "boxModel",
+                        "label": "Padding",
+                        "id": "captionTextPadding",
+                        "default": {
+                            "top": {
+                                "value": "0",
+                                "type": "px"
+                            },
+                            "right": {
+                                "value": "0",
+                                "type": "px"
+                            },
+                            "bottom": {
+                                "value": "0",
+                                "type": " px"
+                            },
+                            "left": {
+                                "value": "0",
+                                "type": "px"
+                            }
+                        }
+                    }
+                ]
+            }
+        ]
+    },
+    {
+      "type": "array",
+      "label": "Image",
+      "id":"images",
+      "defaultCount": 3,
+      "entryLabel":"Card",
+      "schema": [
+          {
+              "type": "tab",
+              "label": "Image",
+              "sections": [
+                  {
+                      "settings": [
+                          {
+                              "type": "imageManager",
+                              "id": "image",
+                              "default": {
+                                  "src": "https://www.graphicproducts.com/media/24694/kodiak.jpg",
+                                  "type": "IMAGE_MANAGER"
+                              }
+                          },{
+                              "type": "imageManager",
+                              "id": "imageWSerial",
+                              "default": {
+                                  "src": "https://www.graphicproducts.com/media/2459/kodiak-serial.jpg",
+                                  "type": "IMAGE_MANAGER"
+                              }
+                          },{
+                                "type": "boxModel",
+                                "label": "Margin",
+                                "id": "containerMargin",
+                                "default": {
+                                    "top": {
+                                    "value": "0",
+                                    "type": "px"
+                                    },
+                                    "right": {
+                                    "value": "0",
+                                    "type": "px"
+                                    },
+                                    "bottom": {
+                                    "value": " 0",
+                                    "type": " px"
+                                    },
+                                    "left": {
+                                    "value": "0",
+                                    "type": "px"
+                                    }
+                                }
+                            },{
+                                "type": "boxModel",
+                                "label": "Padding",
+                                "id": "containerPadding",
+                                "default": {
+                                    "top": {
+                                        "value": "0",
+                                        "type": "px"
+                                    },
+                                    "right": {
+                                        "value": "0",
+                                        "type": "px"
+                                    },
+                                    "bottom": {
+                                        "value": "0",
+                                        "type": " px"
+                                    },
+                                    "left": {
+                                        "value": "0",
+                                        "type": "px"
+                                    }
+                                }
+                            },{
+                                "type": "input",
+                                "id": "printerName",
+                                "label": "Printer Name",
+                                "default": "Printer Name"
+                            },{
+                                "type": "input",
+                                "id": "uniqueID",
+                                "label": "Unique ID(no space)",
+                                "default": "Unique ID here"
+                            },{
+                                  "type": "color",
+                                  "id": "captionTextColor",
+                                  "label": "Text Color",
+                                  "default": "#000000"
+                            },{
+                                "type": "number",
+                                "label": "Font size",
+                                "id": "captionFontSize",
+                                "default": {
+                                    "value": "24",
+                                    "type": "px"
+                                }
+                            },{
+                                "type": "select",
+                                "id": "captionFontWeight",
+                                "label": "Font Weight",
+                                "default": "500",
+                                "typeMeta": {
+                                    "selectOptions": [
+                                        {
+                                        "label": "Thin",
+                                        "value": "100"
+                                        },
+                                        {
+                                        "label": "Extra Light (Ultra Light)",
+                                        "value": "200"
+                                        },
+                                        {
+                                        "label": "Light",
+                                        "value": "300"
+                                        },
+                                        {
+                                        "label": "Normal",
+                                        "value": "400"
+                                        },
+                                        {
+                                        "label": "Medium",
+                                        "value": "500"
+                                        },
+                                        {
+                                        "label": "Semi Bold (Demi Bold)",
+                                        "value": "600"
+                                        },
+                                        {
+                                        "label": "Bold",
+                                        "value": "700"
+                                        },
+                                        {
+                                        "label": "Extra Bold (Ultra Bold)",
+                                        "value": "800"
+                                        },
+                                        {
+                                        "label": "Black (Heavy)",
+                                        "value": "900"
+                                        }
+                                    ]
+                                }
+                            },{
+                                "type": "alignment",
+                                "label": "Image alignment",
+                                "id": "captionTextAlignment",
+                                "default": {
+                                    "horizontal": "center",
+                                    "vertical": "top"
+                                },
+                                "typeMeta": {
+                                    "display": "both"
+                                }
+                            },{
+                                "type": "boxModel",
+                                "label": "Margin",
+                                "id": "captionTextMargin",
+                                "default": {
+                                    "top": {
+                                    "value": "0",
+                                    "type": "px"
+                                    },
+                                    "right": {
+                                    "value": "0",
+                                    "type": "px"
+                                    },
+                                    "bottom": {
+                                    "value": " 0",
+                                    "type": " px"
+                                    },
+                                    "left": {
+                                    "value": "0",
+                                    "type": "px"
+                                    }
+                                }
+                            },{
+                                "type": "boxModel",
+                                "label": "Padding",
+                                "id": "captionTextPadding",
+                                "default": {
+                                    "top": {
+                                        "value": "0",
+                                        "type": "px"
+                                    },
+                                    "right": {
+                                        "value": "0",
+                                        "type": "px"
+                                    },
+                                    "bottom": {
+                                        "value": "0",
+                                        "type": " px"
+                                    },
+                                    "left": {
+                                        "value": "0",
+                                        "type": "px"
+                                    }
+                                }
+                            }
+                      ]
+                  }
+              ]
+          }
+        ]
+    }
+]

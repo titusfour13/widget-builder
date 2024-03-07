@@ -1,0 +1,67 @@
+{
+  "columns": [
+    {
+      "image": {
+        "src": "https://cdn11.bigcommerce.com/s-qy08dii6dm/images/stencil/original/image-manager/tag-icon-2x.png",
+        "type": "IMAGE_MANAGER"
+      },
+      "imageHeight": {
+        "value": "100",
+        "type": "px"
+      },
+      "imageWidth": {
+        "value": "100",
+        "type": "px"
+      },
+      "caption": "Caption"
+    },
+    {
+      "image": {
+        "src": "https://cdn11.bigcommerce.com/s-qy08dii6dm/images/stencil/original/image-manager/tag-icon-2x.png",
+        "type": "IMAGE_MANAGER"
+      },
+      "imageHeight": {
+        "value": "100",
+        "type": "px"
+      },
+      "imageWidth": {
+        "value": "100",
+        "type": "px"
+      },
+      "caption": "Caption"
+    },
+    {
+      "image": {
+        "src": "https://cdn11.bigcommerce.com/s-qy08dii6dm/images/stencil/original/image-manager/tag-icon-2x.png",
+        "type": "IMAGE_MANAGER"
+      },
+      "imageHeight": {
+        "value": "100",
+        "type": "px"
+      },
+      "imageWidth": {
+        "value": "100",
+        "type": "px"
+      },
+      "caption": "Caption"
+    },
+    {
+      "image": {
+        "src": "https://cdn11.bigcommerce.com/s-qy08dii6dm/images/stencil/original/image-manager/tag-icon-2x.png",
+        "type": "IMAGE_MANAGER"
+      },
+      "imageHeight": {
+        "value": "100",
+        "type": "px"
+      },
+      "imageWidth": {
+        "value": "100",
+        "type": "px"
+      },
+      "caption": "Caption"
+    }
+  ],
+  "title": "Title",
+  "caption": "Caption",
+  "caption2": "Text"
+}

@@ -1,0 +1,99 @@
+[
+  {
+    "type": "tab",
+    "label": "Left",
+    "sections": [
+      {
+        "label": "Left",
+        "settings": [
+          {
+            "type": "imageManager",
+            "id": "leftAppImage",
+            "label":"Logo Image",
+            "default": {
+                "src": "https://cdn11.bigcommerce.com/s-pzmikw7v7m/images/stencil/original/image-manager/easy-2x.png?t=1708341824",
+                "type": "IMAGE_MANAGER"
+            }
+          },{
+            "type": "imageManager",
+            "id": "leftLogoImage",
+            "label":"OrderApp Image",
+            "default": {
+                "src": "https://cdn11.bigcommerce.com/s-qy08dii6dm/product_images/uploaded_images/holiday-gifts-image.png",
+                "type": "IMAGE_MANAGER"
+            }
+          },
+          {
+            "type": "input",
+            "id": "top",
+            "label": "Top Text",
+            "default": "Top"
+          },{
+            "type": "input",
+            "id": "bottom",
+            "label": "Linked",
+            "default": "Bottom"
+          },{
+            "type": "input",
+            "id": "mid",
+            "label": "Midde Text",
+            "default": "Mid"
+          }
+        ]
+      },{
+        "label": "Right",
+        "settings": [
+          {
+            "type": "imageManager",
+            "id": "appImage",
+            "label":"Logo Image",
+            "default": {
+                "src": "https://cdn11.bigcommerce.com/s-pzmikw7v7m/images/stencil/original/image-manager/maywoodstudio.png?t=1708342080",
+                "type": "IMAGE_MANAGER"
+            }
+          },{
+            "type": "imageManager",
+            "id": "logoImage",
+            "label":"OrderApp Image",
+            "default": {
+                "src": "https://cdn11.bigcommerce.com/s-qy08dii6dm/product_images/uploaded_images/holiday-gifts-image.png",
+                "type": "IMAGE_MANAGER"
+            }
+          },
+          {
+            "type": "input",
+            "id": "top",
+            "label": "Top Text",
+            "default": "Top"
+          },{
+            "type": "boolean",
+            "id": "linked",
+            "label": "URL",
+            "default": false
+          },{
+            "type": "input",
+            "id": "linked",
+            "label": "Linked",
+            "default": "Bottom"
+          },{
+            "type": "input",
+            "id": "link",
+            "label": "URL",
+            "default": "#"
+          },{
+            "type": "boolean",
+            "id": "midText",
+            "label": "Middle Text",
+            "default": false
+          },
+          {
+            "type": "input",
+            "id": "mid",
+            "label": "Midde Text",
+            "default": "Mid"
+          }
+        ]
+      }
+    ]
+  }
+]

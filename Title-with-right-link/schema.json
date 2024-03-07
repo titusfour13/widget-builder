@@ -1,0 +1,30 @@
+[
+  {
+    "type": "tab",
+    "label": "Design",
+    "sections": [
+      {
+        "label": "Spotlight",
+        "settings": [
+          {
+            "type": "input",
+            "id": "title",
+            "label": "Title",
+            "default": "Title"
+          },
+          {
+            "type": "input",
+            "id": "caption",
+            "label": "Link Caption",
+            "default": "Text"
+          },{
+            "type": "input",
+            "id": "url",
+            "label": "Button Link",
+            "default": "Link"
+          }
+        ]
+      }
+    ]
+  }
+]

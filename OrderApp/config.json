@@ -1,0 +1,23 @@
+{
+  "leftAppImage": {
+    "src": "https://cdn11.bigcommerce.com/s-pzmikw7v7m/images/stencil/original/image-manager/easy-2x.png?t=1708341824",
+    "type": "IMAGE_MANAGER"
+  },
+  "leftLogoImage": {
+    "src": "https://cdn11.bigcommerce.com/s-qy08dii6dm/product_images/uploaded_images/holiday-gifts-image.png",
+    "type": "IMAGE_MANAGER"
+  },
+  "top": "Top",
+  "bottom": "Bottom",
+  "mid": "Mid",
+  "appImage": {
+    "src": "https://cdn11.bigcommerce.com/s-pzmikw7v7m/images/stencil/original/image-manager/maywoodstudio.png?t=1708342080",
+    "type": "IMAGE_MANAGER"
+  },
+  "logoImage": {
+    "src": "https://cdn11.bigcommerce.com/s-qy08dii6dm/product_images/uploaded_images/holiday-gifts-image.png",
+    "type": "IMAGE_MANAGER"
+  },
+  "linked": "Bottom",
+  "link": "#"
+}

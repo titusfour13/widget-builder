@@ -1,0 +1,234 @@
+<style>
+        /* Style the select element */
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none; 
+    background: url('https://www.graphicproducts.com/assets/images/dropdown-arrow.png')  no-repeat 98% center #fff;
+    padding: 5px 22px;
+    width: 100%;
+    border: 1px solid silver;
+    height: 50px;
+    font-size: 16px;
+    line-height: 2;
+    border: 1px solid #e2e2e2;
+    outline: 0;
+    border-radius: 0;
+    margin: 0px;
+}
+
+
+/* Style the arrow-down icon */
+select::-ms-expand {
+    display: none;
+}
+
+select::-webkit-select-placeholder {
+    color: #999;
+}
+
+select::-moz-placeholder {
+    color: #999;
+}
+
+select:-ms-input-placeholder {
+    color: #999;
+}
+
+select:hover, select:focus {
+    border-color: #aaa;
+    outline: none;
+}
+.caption-{{_.id}}{
+    font-weight: bold;
+    font-size: 1.17em;
+    margin:10px 0
+}
+.container-{{_.id}}{
+    padding:20px
+}
+.container-{{_.id}} a{
+    color:#015f9c;
+}
+.answer-q-and-a{
+    font-weight: bold;
+    font-size: 1.4rem;
+    margin:10px 0
+}
+
+</style>
+<script type="text/javascript">
+window.addEventListener("load", function() {
+    // Get the select boxes and text div
+    const level1 = document.getElementById('level1');
+    const level2 = document.getElementById('level2');
+    const level3 = document.getElementById('level3');
+    const text = document.getElementById('text');
+
+    // Define the options for the second select box
+    const options = {
+            option1: {
+                a1:{
+                    caption:"I'm not ready to print because...",
+                    text:"",
+                },
+                a2:{
+                    caption:"Nothing happens when I try to print and...",
+                    text:"",
+                }
+            },
+            option2: {
+                a1:{
+                    issue1:{
+                        caption:"I need to see how to load supplies",
+                        text:`<p>You can watch a video of the loading process to get started.</p>`,
+                    },
+                    issue2:{
+                        caption:"I need help with label design.",
+                        text:`<p>We offer free support for the lifetime of our printers, and free labeling advice and assistance for all of our customers. 
+                            Depending on the software you are using, we may have a quick answer for you — or we may know who will. 
+                            Please <a href="/videos/">check our selection of online videos</a>, or <a href="/support/" title="click 
+                            here to contact our support team">contact our support team</a> for help.</p>`,
+                    },
+                    issue3:{
+                        caption:"I have a different question.",
+                        text:`<p>We offer free support for the lifetime of our printers. Please <a href="/support/">contact our support team</a> for help.</p>`,
+                    },
+                },
+                a2:{
+                    issue1:{
+                        caption:`The printer's screen shows "Ready."`,
+                        text:`<p>
+                                The printer hasn’t received any printing instructions. This  is a communication problem; we’ll need to check each part of the connection  between your computer and the printer.<br>
+                                <br>
+                                <strong><u>Step 1: Check the  Physical Connection</u></strong><br>
+                                <br>
+                                First, turn off the printer and check the USB cord to make  sure that it hasn’t come loose at either end. If the cord is secure, turn the  printer on again. This may be all it takes to start printing again. If not,  then continue to the next step.<br>
+                                <br>
+                                <strong><u>Step 2: Check for  the “Use Printer Offline” Setting</u></strong><br>
+                                <br>
+                                Save your label design and close the design program. Then,  access the printer controls:
+                            </p>
+                            <ul>
+                                <li>If you use <strong>Windows  XP</strong>, go through your computer’s Start Menu to the Control Panel, and open  the “Printers and Faxes” window.</li>
+                                <li>If you use <strong>Windows  Vista</strong> or <strong>Windows 7</strong>, go through  your computer’s Start Menu to the Control Panel, and open the “Devices and  Printers” window.</li>
+                                <li>If you use <strong>Windows  8</strong> or <strong>Windows 8.1</strong>, go through  your computer’s Charms Bar to the Control Panel, and open the “Devices and  Printers” window.</li>
+                                <li>If you are using a <strong>Mobile Print Station</strong>, go through the “Programs” menu in the main  screen toolbar and select “Printer Panel.”</li>
+                            </ul>
+                            <p>
+                                Find the entry in this window for your DuraLabel 7000. If  you see more than one entry for the same printer, stop, and <a href="/support/#contactHeader" class="js-scroll" title="click here to contact our support team">contact our support team</a>  for help.<br>
+                                <br>
+                                Double-click on the printer icon to open the <strong>Print Queue</strong>, and look in the Printer  menu in the top left for an option to <strong>Use  Printer Offline</strong>. If that option is checked, click on it to remove the  checkmark. Any jobs in the queue will be re-sent, and may print out correctly.  If there are no jobs in the queue, reopen your label program and your label  design, and try printing again.<br>
+                                <br>
+                                If the printer still does not respond, then continue to the  next step.<br>
+                                <br>
+                                <strong><u>Step 3: Check the  Port Setting</u></strong><br>
+                                <br>
+                                Back in the “Printers and Faxes” or “Devices and Printers”  window, right-click on the entry for your DuraLabel printer, and choose <strong>Properties</strong> or <strong>Printer Properties</strong>. (These are the advanced controls for your  printer.) Go to the <strong>Ports</strong> tab, and  look for the port that is currently selected in that list. The port name should  begin with “USB,” followed by a number. Select an available USB port, if one  was not already selected. Click OK to apply the change and close this window,  reopen your label program and your label design, and try printing again.<br>
+                                <br>
+                                If you are still unable to print, there may be a problem in  the part of Windows that controls the printer. Simply restart the computer to  correct this. After restarting, try printing your label once more.<br>
+                                <br>
+                                If you are still unable to print after restarting your  computer, please contact  our support team for help.
+                            </p>`,
+                    },
+                    issue2:{
+                        caption:`The printer's screen shows "Contact Customer Service."`,
+                        text:`<p>
+                                This message usually means that one of the printer’s  internal sensors is having trouble detecting the label stock. This is usually a  very quick fix, especially if the label stock was changed while the printer was  still on. (That's the most common cause for this problem.)<br>
+                                Remove any other rolls of label stock from the area of the  printer. Then, turn off the printer, give it a few seconds, and turn it on  again. Try to print a few labels. If you encounter the same error again, please  <a href="/support/#contactHeader" class="js-scroll" title="click here to contact our support team">contact our support team</a>  for help.
+                            </p>`,
+                    },
+                    issue3:{
+                        caption:"I have a different question.",
+                        text:`<p>We offer free support for the lifetime of our printers. Please <a href="/support/">contact our support team</a> for help.</p>`,
+                    }
+                },
+
+            },  
+    };
+    level1.innerHTML = `<option disabled selected hidden value="">What issues are you running into?</option>`;
+    for (let key in options.option1) {
+        level1.innerHTML += `<option value="${key}">${options.option1[key].caption}</option>`
+        console.log(`${key}: ${options.option1[key]}`);
+    }
+
+    //When an option is selected in the first select box
+    level1.addEventListener('change', function() {
+            
+            text.style.display = 'none';
+            level3.style.display = 'none'
+            // If option has no 2nd level option, show the text for the selected option
+            if(options.option1[level1.value].text.trim().length > 0){
+                text.innerHTML = `<p class="answer-q-and-a">Answer:</p>`;
+                text.innerHTML += options.option1[level1.value].text;
+                level2.style.display = 'none';
+                text.style.display = 'block';
+            } 
+            // Show the second select box and populate it with options
+            else {
+                level2.style.display = 'block';
+                level2.innerHTML = '<option disabled selected hidden value="-1">Select an issue</option>';
+                const selectedOptions = options.option2[level1.value];
+                for (let key in selectedOptions) {
+                    level2.innerHTML += `<option value="${key}">${selectedOptions[key].caption}</option>`
+                }
+            }
+            
+    });
+
+    // When an option is selected in the second select box
+    level2.addEventListener('change', function() {
+            // Show the text div and populate it with text based on the selected option
+            const textToDisplay = options.option2[level1.value][level2.value].text;
+            level3.style.display = "none"
+            text.style.display = 'none';
+            if(textToDisplay.trim().length != 0){
+                text.style.display = 'block';
+                text.innerHTML = `<p class="answer-q-and-a">Answer:</p>`
+                text.innerHTML += textToDisplay;
+            } // Show the third select box and populate it with options
+            else{
+                level3.style.display = 'block';
+                level3.innerHTML = '<option disabled selected hidden value="-1">Select an issue</option>';
+                const selectedOptions = options.option3[options.option2[level1.value][level2.value].option];
+                console.log(selectedOptions)
+                for (let key in selectedOptions) {
+                    level3.innerHTML += `<option value="${key}">${selectedOptions[key].caption}</option>`
+                }
+            }
+            
+    });
+    level3.addEventListener('change', function() {
+            // Show the text div and populate it with text based on the selected option
+            const textToDisplay = options.option3[options.option2[level1.value][level2.value].option][level3.value].text;
+            if(textToDisplay.trim().length != 0){
+                text.style.display = 'block';
+                text.innerHTML = `<p class="answer-q-and-a">Answer:</p>`
+                text.innerHTML += textToDisplay;
+            } // Show the third select box and populate it with options
+            else{
+                level3.style.display = 'block';
+                level3.innerHTML = '<option disabled selected hidden value="-1">Select an issue</option>';
+                console.log(selectedOptions)
+                for (let key in selectedOptions) {
+                    level3.innerHTML += `<option value="${key}">${selectedOptions[key].caption}</option>`
+                }
+            }
+            
+    });
+})
+</script>
+<div class="container-{{_.id}}">
+    <p class="caption-{{_.id}}">{{caption}}</p>
+    <select id='level1' style='display:block'>
+    <option disabled selected hidden value=''>What issues are you running into?</option>
+    </select>
+    <br>
+    <select id='level2' style='display:none'>
+        <option value=''>--Select--</option>
+    </select>
+    <br>
+    <select id='level3' style='display:none'>
+        <option value=''>--Select--</option>
+    </select>
+    <div id='text' style='display:none'></div>
+</div>

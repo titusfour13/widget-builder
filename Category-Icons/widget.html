@@ -1,0 +1,87 @@
+<style>
+
+    .column-container--category-icons-homepage{
+        width:100%;
+    }
+    .column-container--category-icons-homepage li{
+        padding: 15px 12px;
+        text-align: center;
+    }  
+    .card-wrapper-category-icons-homepage{
+        transition: transform 0.3s ease;
+    }
+    .card-wrapper-category-icons-homepage:hover{
+        transform: scale(1.05);
+        cursor: pointer;
+    }
+    .image-container-category-icons-homepage{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 60px;
+    }
+    .column-container--category-icons-homepage ul{
+        list-style-type: none;
+        display:flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-left: 0px;
+    } 
+    .inner-li-category-icons-homepage{
+        height: 115px;
+        width: 115px;
+        display: flex;
+        padding-top: 10px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 0 4px 6px rgba(0,0,0,.17);
+        border-radius: 28px;
+    }
+    .image-category-icons-homepage{
+        width:79px;
+        height: auto;
+    }
+    .p-category-icons-homepage{
+        margin-top: 16px;
+    }
+    @media (max-width: 481px) {
+        .column-container-{{_.id}} .card-wrapper{
+            width: 100%;
+            display: block;
+            margin:0px;
+            /* padding:40px 17px; */
+        }
+    }
+    @media (max-width: 970px) {
+        .column-container-{{_.id}} .card-wrapper{
+            width: 100%;
+            display: block;
+            margin:0px;
+            /* padding:40px 17px; */
+        }
+    }
+    @media (min-width: 971px) {
+        .column-container-{{_.id}} .card-wrapper{
+            width: calc({{divide 96 columns.length}}% - 40px);
+            display: inline-block;
+            vertical-align: top;
+            margin:20px
+        }
+    }
+    </style>
+        
+    <div class="column-container--category-icons-homepage">
+        <ul>
+        {{#each columns}}
+            <li class="card-wrapper-category-icons-homepage">
+                <div class="inner-li-category-icons-homepage"> 
+                    <div class="image-container-category-icons-homepage">
+                        <img class="image-category-icons-homepage"src="{{image.src}}" style="height: {{imageHeight}}px; width:{{imageWidth}}px">
+                    </div>
+                    <p class="p-category-icons-homepage">{{caption}}</p>
+                </div>
+            </li>
+        {{/each}}
+        </ul>
+    </div>

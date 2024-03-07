@@ -1,0 +1,71 @@
+<style>
+    .column-container-{{_.id}}{
+        width:100%;
+    }
+    .column-container-{{_.id}} .card-image-with-text {
+        width: 100%; 
+        background-color: #f2f2f2;
+        text-align: center;
+        display: inline-block;
+        height: 215px;
+        padding: 40px 17px;
+    }
+    .column-container-{{_.id}} .card-wrapper .card-image-with-text img{
+        /* object-fit: cover; */
+        height: auto;
+        max-width: 100%;
+    }
+    .column-container-{{_.id}} .card-wrapper{
+        width: calc(33% - 40px);
+        display: inline-block;
+        vertical-align: top;
+        margin:20px
+    }
+    
+    @media (max-width: 481px) {
+        .column-container-{{_.id}} .card-wrapper{
+            width: 100%;
+            display: block;
+            margin:0px;
+            padding:40px 17px;
+        }
+    }
+    @media (max-width: 970px) {
+        .column-container-{{_.id}} .card-wrapper{
+            width: 100%;
+            display: block;
+            margin:0px;
+            padding:40px 17px;
+        }
+    }
+    @media (min-width: 971px) {
+        .column-container-{{_.id}} .card-wrapper{
+            width: calc(33% - 40px);
+            display: inline-block;
+            vertical-align: top;
+            margin:20px
+        }
+    }
+</style>
+    <div class="column-container-{{_.id}}">
+        {{#each columns}}
+            <div class="card-wrapper">
+                <div class="card-image-with-text">
+                    <img src="{{image.src}}">
+                    <h4 style="font-size:{{titleFontSize.value}}px; 
+                        margin:{{titleTextMargin.top.value}}px {{titleTextMargin.right.value}}px {{titleTextMargin.bottom.value}}px {{titleTextMargin.left.value}}px; 
+                        padding:{{titleTextPadding.top.value}}px {{titleTextPadding.right.value}}px {{titleTextPadding.bottom.value}}px {{titleTextPadding.left.value}}px;
+                        font-weight:{{titleFontWeight}};
+                        color:{{titleTextColor}};
+                        text-align:{{titleTextAlignment.horizontal}}">{{title}}</h4>
+                    <p style="font-size:{{descFontSize.value}}px; 
+                        margin:{{descTextMargin.top.value}}px {{descTextMargin.right.value}}px {{descTextMargin.bottom.value}}px {{descTextMargin.left.value}}px; 
+                        padding:{{descTextPadding.top.value}}px {{descTextPadding.right.value}}px {{descTextPadding.bottom.value}}px {{descTextPadding.left.value}}px;
+                        font-weight:{{descFontWeight}};
+                        color:{{descTextColor}};
+                        text-align:{{descTextAlignment.horizontal}}">{{description}}</p>
+                </div>
+            </div>
+        {{/each}}
+    </div>
+    

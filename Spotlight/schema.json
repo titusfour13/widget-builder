@@ -1,0 +1,48 @@
+[
+  {
+    "type": "tab",
+    "label": "Design",
+    "sections": [
+      {
+        "label": "Spotlight",
+        "settings": [
+          {
+            "type": "imageManager",
+            "id": "image",
+            "label":"Background Image",
+            "default": {
+                "src": "https://cdn11.bigcommerce.com/s-qy08dii6dm/product_images/uploaded_images/holiday-gifts-image.png",
+                "type": "IMAGE_MANAGER"
+            }
+          },{
+            "type": "imageManager",
+            "id": "imageSpotlight",
+            "label":"SpotLight Image",
+            "default": {
+                "src": "https://cdn11.bigcommerce.com/s-qy08dii6dm/product_images/uploaded_images/holiday-gifts-image.png",
+                "type": "IMAGE_MANAGER"
+            }
+          },
+          {
+            "type": "input",
+            "id": "content",
+            "label": "Content",
+            "default": "APPLIPOPS"
+          },
+          {
+            "type": "input",
+            "id": "label",
+            "label": "Label",
+            "default": "Muti Vendors"
+          },
+          {
+            "type": "input",
+            "id": "url",
+            "label": "URL",
+            "default": "link"
+          }
+        ]
+      }
+    ]
+  }
+]

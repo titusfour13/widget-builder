@@ -1,0 +1,81 @@
+[
+    {
+        "type": "tab",
+        "label": "Image",
+        "sections": [
+            {
+                "settings": [
+                    {
+                        "type": "imageManager",
+                        "id": "image",
+                        "default": {
+                                "src": "https://www.graphicproducts.com/media/24640/toro-max-support-page-header.png",
+                                "type": "IMAGE_MANAGER"
+                        }
+                    },{
+                        "type": "boolean",
+                        "label":"Show Button",
+                        "id": "showButton",
+                        "default": true
+                    },{
+                        "type": "boolean",
+                        "label":"Register Your Printer Button",
+                        "id": "showReg",
+                        "default": true
+                    },{
+                        "type": "text",
+                        "label":"Header Title",
+                        "id": "title",
+                        "default": "DURALABEL TORO MAX PRINTER"
+                    },{
+                        "type": "text",
+                        "label":"Caption",
+                        "id": "caption",
+                        "default": "Find user documentation, software downloads, and how-to videos for your portable Toro Max label and sign printer."
+                    },{
+                        "type": "text",
+                        "label":"Button Caption",
+                        "id": "btnCaption",
+                        "default": "SHOP DURALABEL TORO MAX SUPPLIES"
+                    },{
+                        "type": "text",
+                        "label":"Link/URL",
+                        "id": "link",
+                        "default": "#"
+                    },{
+                        "type": "text",
+                        "label":"2nd Button",
+                        "id": "regCaption",
+                        "default": "REGISTER YOUR PRINTER"
+                    },{
+                        "type": "text",
+                        "label":"Link/URL",
+                        "id": "regLink",
+                        "default": "#"
+                    },
+                    {
+                        "type": "number",
+                        "label": "Custom Height",
+                        "id": "imageHeight",
+                        "default": {
+                            "value": "320",
+                            "type": "px"
+                        }
+                    },
+                    {
+                        "type": "boolean",
+                        "label": "Hide BG Image in Mobile",
+                        "id": "mobile",
+                        "default": true
+                    },
+                    {
+                        "type": "boolean",
+                        "label": "Hide BG Image in Tablet",
+                        "id": "tablet",
+                        "default": false
+                    }
+                ]
+            }
+        ]
+    }
+]

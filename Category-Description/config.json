@@ -1,0 +1,45 @@
+{
+  "bannerBg": "none",
+  "bgImage": {
+    "src": "https://www.graphicproducts.com/media/24267/pipe-marking-basics.jpg",
+    "type": "SRC"
+  },
+  "bgColor": "rgb(0,0,0,0)",
+  "bgWidth": 100,
+  "bgMargin": {
+    "top": {
+      "value": "0",
+      "type": "px"
+    },
+    "right": {
+      "value": "0",
+      "type": "px"
+    },
+    "bottom": {
+      "value": "0",
+      "type": "px"
+    },
+    "left": {
+      "value": "0",
+      "type": "px"
+    }
+  },
+  "bgPadding": {
+    "top": {
+      "value": "25",
+      "type": "px"
+    },
+    "right": {
+      "value": "0",
+      "type": "px"
+    },
+    "bottom": {
+      "value": "25",
+      "type": "px"
+    },
+    "left": {
+      "value": "0",
+      "type": "px"
+    }
+  }
+}

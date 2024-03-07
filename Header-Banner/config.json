@@ -1,0 +1,19 @@
+{
+  "image": {
+    "src": "https://www.graphicproducts.com/media/24640/toro-max-support-page-header.png",
+    "type": "IMAGE_MANAGER"
+  },
+  "showButton": true,
+  "showReg": true,
+  "title": "DURALABEL TORO MAX PRINTER",
+  "caption": "Find user documentation, software downloads, and how-to videos for your portable Toro Max label and sign printer.",
+  "btnCaption": "SHOP DURALABEL TORO MAX SUPPLIES",
+  "link": "#",
+  "regCaption": "REGISTER YOUR PRINTER",
+  "regLink": "#",
+  "imageHeight": {
+    "value": "320",
+    "type": "px"
+  },
+  "mobile": true
+}
