@@ -1,0 +1,64 @@
+<style>
+    .content-{{_.id}} img{
+        vertical-align:top;
+        float: right;
+    }
+    .content-{{_.id}}{
+        font-size:{{font_size.value}}px; 
+        margin:{{margin.top.value}}px {{margin.right.value}}px {{margin.bottom.value}}px {{margin.left.value}}px; 
+        padding:{{padding.top.value}}px {{padding.right.value}}px {{padding.bottom.value}}px {{padding.left.value}}px;
+        font-weight:{{font_weight}};
+        color:{{color}};
+        text-align:{{text_align.horizontal}};
+        background-color:{{background_color}}
+    }
+    @media (max-width: 481px) {
+        .content-{{_.id}} img{
+        vertical-align:top;
+        float: none;
+        }
+    }
+    @media (max-width: 970px) {
+        .column-container-{{_.id}} .card-wrapper{
+            width: 100%;
+            display: block;
+            margin:0px;
+            padding:40px 17px;
+        }
+    }
+    @media (min-width: 971px) {
+        .column-container-{{_.id}} .card-wrapper{
+            width: calc(33% - 40px);
+            display: inline-block;
+            vertical-align: top;
+            margin:20px
+        }
+    }
+</style>
+<p class="content-{{_.id}}">
+    {{text}}
+    <img src="{{image.src}}">
+</p>
+
+{{#each texts}}
+    {{#if isBulleted}}
+    <li style="
+        font-weight: {{fontWeight}};
+        font-size: {{fontSize.value}}px; 
+        font-family: {{style}};
+        margin:{{margin.top.value}}px {{margin.right.value}}px {{margin.bottom.value}}px {{margin.left.value}}px; 
+        padding:{{padding.top.value}}px {{padding.right.value}}px {{padding.bottom.value}}px {{padding.left.value}}px;
+        color:{{color}}">{{text}}
+    </li>
+    {{else}}
+    <p style="
+        font-weight: {{fontWeight}};
+        font-size: {{fontSize.value}}px; 
+        font-family: {{style}};
+        margin:{{margin.top.value}}px {{margin.right.value}}px {{margin.bottom.value}}px {{margin.left.value}}px; 
+        padding:{{padding.top.value}}px {{padding.right.value}}px {{padding.bottom.value}}px {{padding.left.value}}px;
+        color:{{color}}">{{text}}
+    </p>
+    {{/if}}
+{{/each}}
+    

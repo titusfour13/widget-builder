@@ -1,0 +1,74 @@
+[
+  {
+    "type": "tab",
+    "label": "Design",
+    "sections": [
+      {
+        "label": "Customer Service",
+        "settings": [
+          {
+            "type": "input",
+            "id": "cscaption",
+            "label": "Caption",
+            "default": "Caption"
+          },
+          {
+            "type": "code",
+            "id": "html",
+            "label": "Details",
+            "default": "<ul><li>list1</li></ul>"
+          },{
+            "type": "input",
+            "id": "button1",
+            "label": "Button Caption",
+            "default": "Text"
+          },{
+            "type": "input",
+            "id": "url1",
+            "label": "Button Link",
+            "default": "Link"
+          },
+          {
+            "type": "input",
+            "id": "contactus",
+            "label": "Button Caption",
+            "default": "Contact Us"
+          },{
+            "type": "input",
+            "id": "contacturl",
+            "label": "Button Link",
+            "default": "Link"
+          },{
+            "type": "imageManager",
+            "id": "image",
+            "label":"Desktop Image",
+            "default": {
+                "src": "https://cdn11.bigcommerce.com/s-pzmikw7v7m/images/stencil/original/image-manager/heart-icon-2x.png?t=1708528999",
+                "type": "IMAGE_MANAGER"
+            }
+          },{
+            "type": "input",
+            "id": "whitebutton1",
+            "label": "Button Caption",
+            "default": "Text"
+          },{
+            "type": "input",
+            "id": "whiteurl1",
+            "label": "Button Link",
+            "default": "Link"
+          },{
+            "type": "input",
+            "id": "whitebutton2",
+            "label": "Button Caption",
+            "default": "Text"
+          },{
+            "type": "input",
+            "id": "whiteurl1",
+            "label": "Button Link",
+            "default": "Link"
+          }
+        ]
+      }
+    ]
+  }
+]

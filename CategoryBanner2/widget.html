@@ -1,0 +1,209 @@
+<style>
+    .category-header-image-{{_.id}} img {
+        width: auto;
+        height: auto;
+        min-height: 167px;
+        min-width: 263px;
+    }
+    .category-header-image-{{_.id}} {
+        min-height: 167px;
+        width:auto;
+        {{#if image '==' "color"}}
+            width:{{bgWidth}}px;
+            background-color: {{bgColor}};
+        {{/if}}
+        max-width:30%;
+    }
+    .text-container-{{_.id}} {
+        padding: 10px;
+        vertical-align: middle;
+    }
+    .text-container-{{_.id}} h1{
+        margin: 0;
+        text-transform: uppercase;
+        font-family: {{categoryName.fontFamily}};
+        font-weight: {{categoryName.fontWeight}};
+        font-size: {{categoryName.fontSize.value}}px;
+        color: {{categoryName.color}};
+
+        width: 100%;
+        text-align: {{categoryName.textAlign.horizontal}};
+        padding-top: {{categoryName.textPadding.top.value}}px;
+        padding-right: {{categoryName.textPadding.right.value}}px;
+        padding-bottom: {{categoryName.textPadding.bottom.value}}px;
+        padding-left: {{categoryName.textPadding.left.value}}px;
+
+        margin-top: {{categoryName.textMargin.top.value}}px;
+        margin-right: {{categoryName.textMargin.right.value}}px;
+        margin-bottom: {{categoryName.textMargin.bottom.value}}px;
+        margin-left: {{categoryName.textMargin.left.value}}px;
+    }
+    .text-container-{{_.id}} p{
+        font-size: 18px;
+        width: 100%;
+        margin: 0;
+        font-family: {{categoryDescription.catFontFamily}};
+        font-weight: {{categoryDescription.catFontWeight}};
+        font-size: {{categoryDescription.catFontSize.value}}px;
+        color: {{categoryDescription.catColor}};
+        text-align: {{categoryDescription.catTextAlign.horizontal}};
+        padding-top: {{categoryDescription.catTextPadding.top.value}}px;
+        padding-right: {{categoryDescription.catTextPadding.right.value}}px;
+        padding-bottom: {{categoryDescription.catTextPadding.bottom.value}}px;
+        padding-left: {{categoryDescription.catTextPadding.left.value}}px;
+
+        margin-top: {{categoryDescription.catTextMargin.top.value}}px;
+        margin-right: {{categoryDescription.catTextMargin.right.value}}px;
+        margin-bottom: {{categoryDescription.catTextMargin.bottom.value}}px;
+        margin-left: {{categoryDescription.catTextMargin.left.value}}px;
+    }
+    .image-replacement{
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0,0,0,.7);
+    }
+    .category-banner-{{_.id}}{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        padding-top: {{bgPadding.top.value}}px;
+        padding-right: {{bgPadding.right.value}}px;
+        padding-bottom: {{bgPadding.bottom.value}}px;
+        padding-left: {{bgPadding.left.value}}px;
+        background-color:white;
+        margin-top: {{bgMargin.top.value}}px;
+        margin-right: {{bgMargin.right.value}}px;
+        margin-bottom: {{bgMargin.bottom.value}}px;
+        margin-left: {{bgMargin.left.value}}px;
+    }
+    @media (max-width: 575px) {
+        .category-banner-{{_.id}}{
+            padding: 0px;
+            vertical-align: top;
+            {{#if image '==' "image"}}
+                background-size: cover;                      
+                background-repeat: no-repeat;
+                background-position: center center; 
+                background-image: url('{{bgImage.src}}');
+            {{else if image '==' "color"}}
+                background-color: {{bgColor}};
+            {{else}}
+                background: none;
+            {{/if}}
+        }
+        .text-container-{{_.id}} h1{
+            color: white;
+            font-size: 26px;
+        }
+        .text-container-{{_.id}} p{
+            color: white;
+            font-size: 16px;
+        }
+        .category-header-image-{{_.id}}{
+            display:none
+        }
+        .image-replacement-{{_.id}}{
+            width:100%;
+            height:100%;
+            background-color: {{bgColor}};
+        }
+        .text-container-{{_.id}} {
+            color: white;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,.5);
+        }
+        .mobile-overlay-{{_.id}}{
+            background
+        }
+    }
+    
+</style>
+    
+<div class="category-banner-{{_.id}}">
+    <div class="category-header-image-{{_.id}}">
+        {{#if image '==' "image"}}
+            <img src="{{bgImage.src}}" alt="{{category.image.alt}}"/>
+        {{else if image '==' "color"}}
+            <div class="image-replacement-{{_.id}}"></div>
+        {{else}}
+        {{/if}}
+    </div>
+    <div class="text-container-{{_.id}}">
+        {{#if categoryName.visibility '==' "show"}}
+            <h1 class="page-heading" id="category-heading-{{_.id}}">This is an editor mode description placeholder.</h1>
+        {{/if}}
+        {{#if categoryDescription.visibility '==' "show"}}
+            <p id="category-description-{{_.id}}">This is an editor mode description placeholder.</p>
+        {{/if}}
+    </div>
+</div>
+<script>
+    (function() {
+        const widgetConfig = {{{json .}}}
+        if(!widgetConfig._.context.isEditorMode)
+            placeWidgetContent()
+
+        try {
+            setTimeout(()=>{
+                const jsContext = window.jsContext;
+                const categoryId = jsContext.categoryId
+                const token = jsContext.settings.storefront_api.token
+                if(!widgetConfig._.context.isEditorMode && categoryId)
+                    fetchCategoryDetails(categoryId, token)
+            },300)
+        } catch (error) {
+            console.error(error)
+        }
+
+
+        function fetchCategoryDetails(id, token){
+            const query = 
+                `query Category($categoryId: Int!) {
+                    site {
+                        category(entityId: $categoryId) {
+                            name
+                            seo{
+                                metaDescription
+                            }
+                            defaultImage{
+                                urlOriginal
+                            } 
+                        }
+                    }
+                }`
+            const variables = {categoryId: id}
+
+            // Fetch data from the GraphQL Storefront API
+            var storefrontApiRequest = new XMLHttpRequest(); // IE compatible
+            storefrontApiRequest.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                placeWidgetContent(JSON.parse(this.response).data);
+            }
+            };
+    
+            storefrontApiRequest.open('POST', `/graphql`, true);
+            storefrontApiRequest.setRequestHeader('Authorization', `Bearer ${token}`);
+            storefrontApiRequest.setRequestHeader('Content-type', 'application/json');
+            storefrontApiRequest.send(JSON.stringify({ query, variables}));
+        }
+
+        function placeWidgetContent(data){
+            const titleEl = document.getElementById("category-heading-{{_.id}}")
+            const descriptionEl = document.getElementById("category-description-{{_.id}}")
+            try {
+                if(data){
+                    const {name , seo, defaultImage} = data.site.category
+                    titleEl.innerText = name
+                    descriptionEl.innerText = seo.metaDescription
+                }else{
+                    titleEl.innerText = "--"
+                    descriptionEl.innerText = "--"
+                }
+            } catch (error) {
+                console.error(error)
+            }
+        }
+    })();
+</script>

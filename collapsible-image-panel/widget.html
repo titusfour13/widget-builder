@@ -1,0 +1,99 @@
+<style>
+.collapsible {
+  overflow: hidden;
+  height: 0px;
+  transition: height 0.3s;
+}
+.collapsible-{{_.id}} img{
+    max-width: 100%;
+    height: auto;
+}
+#serialFindersn div{
+    display: inline-block;
+}
+#serialFindersn img{
+    cursor: pointer;
+}
+.serialFinder-{{_.id}} a{
+    color:#015f9c;
+    font-size:{{captionFontSize.value}}px; 
+    font-weight:{{captionFontWeight}};
+    color:{{captionTextColor}};
+    
+}
+.wrapper-{{_.id}}{
+    margin:{{captionTextMargin.top.value}}px {{captionTextMargin.right.value}}px {{captionTextMargin.bottom.value}}px {{captionTextMargin.left.value}}px; 
+    padding:{{captionTextPadding.top.value}}px {{captionTextPadding.right.value}}px {{captionTextPadding.bottom.value}}px {{captionTextPadding.left.value}}px;
+    text-align:{{captionTextAlignment.horizontal}}
+}
+@media (max-width: 481px) {
+    #serialFindersn div{
+    display: block;
+    text-align: center;
+}
+}
+</style>
+
+<script  type="text/javascript">
+window.onload=function(){
+var toggleButtons = document.getElementsByClassName("toggleImageSerial");
+    for (var i = 0; i < toggleButtons.length; i++) {
+    toggleButtons[i].addEventListener("click", toggle);
+    }
+
+    function toggle(event) {
+        id = this.id
+        event.preventDefault();
+        var content = document.getElementById(`${id}sn`);
+        var serials = document.getElementById("serials");
+        if (content.style.height == "0px") {
+            content.style.transitionDuration = 300 + "ms";
+            content.style.height = content.scrollHeight + "px";
+            if(id == "serialFinder"){
+                content.style.borderBottom = "1px solid silver";
+                serials.style.display = "block";
+            }
+            
+            
+        } else {
+            content.style.transitionDuration = 300 + "ms";
+            content.style.height = "0px";
+            if(id == "serialFinder"){   
+                serials.style.display = "none";
+                content.style.borderBottom = "none"
+            }
+        }
+    }
+    }
+</script>
+<div class="serialFinder-{{_.id}}">
+    <div class="wrapper-{{_.id}}">
+        <a href="#serialFindersn" class="toggleImageSerial" id ="serialFinder" role="button">{{text}}</a>
+    </div>
+    <div class="collapsible collapsible-{{_.id}}" style="height: 0px" id="serialFindersn">
+    
+    {{#each images}}
+        <div style="margin:{{containerMargin.top.value}}px {{containerMargin.right.value}}px {{containerMargin.bottom.value}}px {{containerMargin.left.value}}px; 
+                    padding:{{containerPadding.top.value}}px {{containerPadding.right.value}}px {{containerPadding.bottom.value}}px {{captionTextPadding.left.value}}px;">
+            <p style="font-size:{{captionFontSize.value}}px; 
+                margin:{{captionTextMargin.top.value}}px {{captionTextMargin.right.value}}px {{captionTextMargin.bottom.value}}px {{captionTextMargin.left.value}}px; 
+                padding:{{captionTextPadding.top.value}}px {{captionTextPadding.right.value}}px {{captionTextPadding.bottom.value}}px {{captionTextPadding.left.value}}px;
+                font-weight:{{captionFontWeight}};
+                color:{{captionTextColor}};
+                text-align:{{captionTextAlignment.horizontal}}">
+                {{printerName}}
+            </p>
+            <img class="toggleImageSerial" id = "{{uniqueID}}" src="{{image.src}}">
+        </div>
+    {{/each}}
+    </div>
+
+    <div class="collapsible-{{_.id}} " id="serials">
+    {{#each images}}
+        <div class="collapsible" style="height: 0px" id="{{uniqueID}}sn">
+            <img src="{{imageWSerial.src}}">
+        </div>
+    {{/each}}
+    </div>
+</div>
+

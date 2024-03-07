@@ -1,0 +1,19 @@
+[
+  {
+    "type": "tab",
+    "label": "Design",
+    "sections": [
+      {
+        "label": "Script",
+        "settings": [
+          {
+            "type": "input",
+            "id": "caption",
+            "label": "Script",
+            "default": "Caption"
+          }
+        ]
+      }
+    ]
+  }
+]

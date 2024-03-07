@@ -1,0 +1,64 @@
+{
+  "columns": [
+    {
+      "image": {
+        "src": "https://cdn11.bigcommerce.com/s-qy08dii6dm/product_images/uploaded_images/gifts-icon.png",
+        "type": "IMAGE_MANAGER"
+      },
+      "imageHeight": {
+        "value": "100",
+        "type": "px"
+      },
+      "imageWidth": {
+        "value": "100",
+        "type": "px"
+      },
+      "caption": "Caption"
+    },
+    {
+      "image": {
+        "src": "https://cdn11.bigcommerce.com/s-pzmikw7v7m/images/stencil/original/image-manager/batting-icon-2x.png?t=1708071777",
+        "type": "IMAGE_MANAGER"
+      },
+      "imageHeight": {
+        "value": "100",
+        "type": "px"
+      },
+      "imageWidth": {
+        "value": "100",
+        "type": "px"
+      },
+      "caption": "Caption"
+    },
+    {
+      "image": {
+        "src": "https://cdn11.bigcommerce.com/s-n0i50vy/images/stencil/1280x1280/products/109/361/kinfolkessentialissue_1024x1024__22507.1456436715.jpg?c=2&imbypass=on",
+        "type": "IMAGE_MANAGER"
+      },
+      "imageHeight": {
+        "value": "100",
+        "type": "px"
+      },
+      "imageWidth": {
+        "value": "100",
+        "type": "px"
+      },
+      "caption": "Caption"
+    },
+    {
+      "image": {
+        "src": "https://cdn11.bigcommerce.com/s-n0i50vy/images/stencil/1280x1280/products/109/361/kinfolkessentialissue_1024x1024__22507.1456436715.jpg?c=2&imbypass=on",
+        "type": "IMAGE_MANAGER"
+      },
+      "imageHeight": {
+        "value": "100",
+        "type": "px"
+      },
+      "imageWidth": {
+        "value": "100",
+        "type": "px"
+      },
+      "caption": "Caption"
+    }
+  ]
+}

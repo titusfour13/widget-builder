@@ -1,0 +1,91 @@
+[
+
+    {
+        "type": "array",
+        "label": "Content",
+        "id":"columns",
+        "defaultCount": 4,
+        "entryLabel":"Card",
+        "schema": [
+            {
+                "type": "tab",
+                "label": "Image",
+                "sections": [
+                    {
+                        "settings": [
+                            {
+                                "type": "imageManager",
+                                "id": "image",
+                                "default": {
+                                    "src": "https://cdn11.bigcommerce.com/s-qy08dii6dm/images/stencil/original/image-manager/tag-icon-2x.png",
+                                    "type": "IMAGE_MANAGER"
+                                }
+                            },{
+                                "type": "number",
+                                "label": "Height",
+                                "id": "imageHeight",
+                                "default": {
+                                    "value": "100",
+                                    "type": "px"
+                                }
+                            },{
+                                "type": "number",
+                                "label": "Width",
+                                "id": "imageWidth",
+                                "default": {
+                                    "value": "100",
+                                    "type": "px"
+                                }
+                            }
+
+                        ]
+                    }
+                ]
+            },{
+                "type":"tab",
+                "label": "Content",
+                "sections": [
+                    {
+                        "settings": [
+                            {
+                                "type": "input",
+                                "id": "caption",
+                                "label": "Caption / Text",
+                                "default": "Caption"
+                            }
+                        ]
+                    }
+                ]
+            }
+                
+        ]
+    },{
+    "type": "tab",
+    "label": "Design",
+    "sections": [
+      {
+        "label": "Caption",
+        "settings": [
+          {
+            "type": "input",
+            "id": "title",
+            "label": "Title",
+            "default": "Title"
+          },{
+            "type": "input",
+            "id": "caption",
+            "label": "Caption1",
+            "default": "Caption"
+          },
+          {
+            "type": "input",
+            "id": "caption2",
+            "label": "Caption2",
+            "default": "Text"
+          }
+        ]
+      }
+    ]
+  }
+
+]

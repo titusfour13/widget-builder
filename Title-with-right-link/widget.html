@@ -1,0 +1,36 @@
+
+<style>
+        .title-with-link-right-container {
+            position: relative;
+            text-align: left;
+            margin-left: 0px;
+        }
+        .title-with-link-right-container a{
+            position: absolute;
+            top:0;
+            right:14px;
+            text-decoration: none;
+            color:#634a66;
+        }
+        .title-with-link-right-container h4{
+            font-size: 16px;
+            text-transform: uppercase;
+            max-width: 50%;
+        }
+        @media (min-width: 481px) {
+            .title-with-link-right-container{
+                text-align: center;
+                margin-left: 0px;
+            }
+            .title-with-link-right-container h4{
+                font-size: 24px;
+                max-width: 100%;
+            }
+        }
+    </style>
+    <div class="title-with-link-right-container">
+        <h4>{{title}}</h4>
+        <a href="{{url}}">{{caption}} &#x2BC8;</a>
+    </div>
+    
+

@@ -1,0 +1,32 @@
+[
+  {
+        "type": "tab",
+        "label": "Content",
+        "sections": [
+            {
+                "settings": [
+                  {
+                    "type": "range",
+                    "label": "Height",
+                    "id": "height",
+                    "default": 30,
+                    "typeMeta": {
+                      "rangeValues": {
+                        "min": 0,
+                        "max": 1000,
+                        "step": 5,
+                        "unit": "px"
+                      }
+                    }
+                  },
+                  {
+                    "type": "color",
+                    "id": "color",
+                    "label": "Divider Color",
+                    "default": "#ECEDF1"
+                  }
+    ]
+            }
+        ]
+    }
+]

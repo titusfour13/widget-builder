@@ -1,0 +1,116 @@
+<style>
+        .column-container-{{_.id}}{
+            width:100%;
+        }
+        .column-container-{{_.id}} .card-image-with-text {
+            width: 100%; 
+            text-align: center;
+            display: inline-block;
+            height: auto;
+        }
+        .column-container-{{_.id}} .card-wrapper .card-image-with-text img{
+            /* object-fit: cover; */
+            height: 44px;
+            max-width: auto;
+            z-index: 0;
+            opacity: 0;
+        }
+        .button-{{_.id}}{
+            text-align:left;
+        }
+        .button-{{_.id}} a{
+            text-decoration: none;
+            padding: 13px 0px;
+            display: block;
+            width: 50%;
+            margin: 10px auto;
+            text-transform: uppercase;
+            cursor: pointer;
+            color:#f2f2f2;
+            background-color: #F26327;
+            text-align: center;
+            display: inline-block;
+        }
+        .column-container-{{_.id}} a:hover{
+            background: #ff8448 !important;
+        }
+
+        .image-field-{{_.id}}{
+            background-image: url({{image.src}});
+            background-size: contain; 
+            width: 100%; 
+            height: auto; 
+            background-repeat: no-repeat;
+            background-position: center left;
+        }
+        .title-{{_.id}}{
+            font-size:{{titleFontSize.value}}px; 
+            margin:{{titleTextMargin.top.value}}px {{titleTextMargin.right.value}}px {{titleTextMargin.bottom.value}}px {{titleTextMargin.left.value}}px; 
+            padding:{{titleTextPadding.top.value}}px {{titleTextPadding.right.value}}px {{titleTextPadding.bottom.value}}px {{titleTextPadding.left.value}}px;
+            font-weight:{{titleFontWeight}};
+            color:{{titleTextColor}};
+            text-align:{{titleTextAlignment.horizontal}}
+        }
+        .desciption-{{_.id}}{
+            font-size:{{descFontSize.value}}px; 
+            margin:{{descTextMargin.top.value}}px {{descTextMargin.right.value}}px {{descTextMargin.bottom.value}}px {{descTextMargin.left.value}}px; 
+            padding:{{descTextPadding.top.value}}px {{descTextPadding.right.value}}px {{descTextPadding.bottom.value}}px {{descTextPadding.left.value}}px;
+            font-weight:{{descFontWeight}};
+            color:{{descTextColor}};
+            text-align:{{descTextAlignment.horizontal}}
+        }
+        @media (max-width: 481px) {
+            .text-button-{{_.id}}, .image-field-{{_.id}}{
+                display:inline-block;
+                vertical-align:middle;
+            }
+            .button-{{_.id}} a{
+                width: 100%;
+            }
+            .text-button-{{_.id}}{
+                width:75%
+            }
+            .image-field-{{_.id}}{
+                width:20%
+            }
+        }
+        @media (max-width: 970px) {
+            .column-container-{{_.id}} .card-wrapper{
+                width: 100%;
+                display: block;
+                margin:0px;
+            }
+        }
+        @media (min-width: 971px) {
+            .column-container-{{_.id}} .card-wrapper{
+                display: inline-block;
+                vertical-align: top;
+                width: 100%;
+            }
+        }
+    </style>
+    <div class="column-container-{{_.id}}">
+            <div class="card-wrapper">
+                <div class="card-image-with-text">
+                    <div class="image-field-{{_.id}}">
+                        <img src="{{image.src}}">
+                    </div>
+                    <div class="text-button-{{_.id}}">
+                        <p class="title-{{_.id}}">{{title}}</p>
+                        <p class="desciption-{{_.id}}">
+                            {{#if htmlParsing}}
+                                {{{description}}}
+                            {{else}}
+                                {{description}}
+                            {{/if}}
+                        </p>
+                        {{#if isShown}}
+                        <div class="button-{{_.id}}">
+                            <a href="{{link}}" style="cursor: pointer;"> {{buttonText}}</a>    
+                        </div>
+                        {{/if}}
+                    </div>
+                </div>
+            </div>
+    </div>
+    

@@ -1,0 +1,86 @@
+<style>
+
+        .column-container-{{_.id}}{
+            width:100%;
+            text-align:center
+        }
+        .column-container-{{_.id}} .card-image-with-text {
+            width: 100%; 
+            background-color: white;
+            text-align: center;
+            display: inline-block;
+            height: auto;
+            /* padding: 33px 13px; */
+        }
+        .column-container-{{_.id}} .card-wrapper .card-image-with-text img{
+            /* object-fit: cover; */
+            height: 100px;
+            max-width: auto;
+            z-index: 0;
+            opacity: 0;
+            width: 100%;
+        }
+
+        .column-container-{{_.id}} a{
+            text-decoration: none;
+            text-align: center;
+            padding: 2px 2px 0px;
+            display: block;
+            width: 100%;
+            margin: 10px auto;
+            cursor: pointer;
+            color:#f2f2f2;
+            background-color: #033148;
+        }
+        .column-container-{{_.id}} .image-field:hover{
+            opacity: 0.8;
+        }
+        .column-container-{{_.id}} a p{
+            padding: 10px 0px;
+            margin: 0;
+        }
+        @media (max-width: 481px) {
+            .column-container-{{_.id}} .card-wrapper{
+                width: 100%;
+                display: block;
+                margin:0px;
+                /* padding:40px 17px; */
+            }
+        }
+        @media (max-width: 970px) {
+            .column-container-{{_.id}} .card-wrapper{
+                width: 100%;
+                display: block;
+                margin:0px;
+                /* padding:40px 17px; */
+            }
+        }
+        @media (min-width: 971px) {
+            .column-container-{{_.id}} .card-wrapper{
+                width: calc({{divide 96 columns.length}}% - 40px);
+                display: inline-block;
+                vertical-align: top;
+                margin:20px
+            }
+        }
+    </style>
+        
+    <div class="column-container-{{_.id}}">
+        {{#each columns}}
+            <div class="card-wrapper">
+                <a href="{{link}}" style="cursor: pointer;">   
+                    <div class="card-image-with-text">
+                        <div class="image-field" style="background-image: url({{image.src}});background-size: contain; width: 100%; height: auto; background-repeat: no-repeat;background-position: center center;">
+                            <img src="{{image.src}}" style="height:{{imageHeight.value}}px">
+                        </div>
+                    </div>
+                    <p style="font-size:{{captionFontSize.value}}px; 
+                            margin:{{captionTextMargin.top.value}}px {{captionTextMargin.right.value}}px {{captionTextMargin.bottom.value}}px {{captionTextMargin.left.value}}px; 
+                            padding:{{captionTextPadding.top.value}}px {{captionTextPadding.right.value}}px {{captionTextPadding.bottom.value}}px {{captionTextPadding.left.value}}px;
+                            font-weight:{{captionFontWeight}};
+                            color:{{captionTextColor}};
+                            text-align:{{captionTextAlignment.horizontal}}">{{caption}}</p>
+                </a> 
+            </div>
+        {{/each}}
+    </div>

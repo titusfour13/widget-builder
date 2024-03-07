@@ -1,0 +1,112 @@
+
+<style>
+    .modal-{{_.id}} {
+        max-width: 70%;
+        margin: 0 auto;
+        
+    }
+    #welcome-modal{
+        display: block;
+        position: fixed;
+        z-index: 100;
+        left: 0;
+        top: 0;
+        text-align: center;
+        height: 100%;
+        width: 100%;
+        background-color: rgba(14,57,84,.8);
+        overflow: auto;
+    }
+    .modal-content-{{_.id}} {
+        background-color: none;
+        margin: 20% auto;
+        display: flex;
+        flex-direction: column;
+        animation-name: modalFadeIn;
+        animation-duration: 0.5s;
+        text-align:center;
+        width:auto;
+    }
+    /* *{outline: 1px dotted red;} */
+    .modal-content-{{_.id}} img{
+        width: 100%;
+        margin: 0px auto;
+    }
+    .close-modal {
+        color: #ff8c00;
+        font-size: 28px;
+        font-weight: bold;
+        display: block;
+        float: right;
+    }
+
+    .close-modal:hover,
+    .close-modal:focus {
+        color: red;
+        text-decoration: none;
+        cursor: pointer;
+    }
+    .close-{{_.id}}{
+        text-align:right;
+        width: 100%;
+    }
+    @media (max-width: 481px) {
+
+        .modal-content-{{_.id}} {
+            margin: 50% auto;
+        }
+         .modal-{{_.id}} {
+            max-width: 95%;
+            margin: 0 auto;
+        
+        }
+    }
+    @keyframes modalFadeIn {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+
+    @keyframes modalFadeOut {
+        from {
+            opacity: 1;
+        }
+        to {
+            opacity: 0;
+        }
+    }
+
+</style>
+<script>
+    // window.addEventListener("load", function() {
+         var body = document.querySelector('body');
+        body.innerHTML += `<div id="welcome-modal" >
+                    <div class="modal-{{_.id}}">
+                        <div class="modal-content-{{_.id}}">
+                            <div class="close-{{_.id}}">
+                                <span class="close-modal" id="close-modal">&times;</span>
+                            </div>
+                            <a href="{{url}}"><img src="{{image.src}}" alt=""></a>
+                        </div>
+                    </div>
+                </div>`
+        var modal = document.getElementById("welcome-modal");
+        var closeModal = document.getElementById("close-modal");
+        
+    function closeModalHandler() {
+        modal.removeEventListener('animationend', closeModalHandler);
+        modal.parentNode.removeChild(modal);
+    }
+
+    window.addEventListener("click", function(event) {
+        if (event.target == modal || event.target == closeModal) {
+            modal.style.animationName = "modalFadeOut";
+            modal.style.animationDuration = "0.5s";
+            modal.addEventListener('animationend', closeModalHandler);
+        }
+    });
+    // });
+</script>

@@ -1,0 +1,52 @@
+
+<style>
+        #bc-simple-text-{{_.id}} {
+            color: {{color}};
+            background: {{background_color}};
+            font-size: {{font_size.value}}{{font_size.type}};
+            font-weight: {{font_weight}};
+            text-align: {{text_align.horizontal}};
+            padding-top: {{padding.top.value}}{{padding.top.type}};
+            padding-right: {{padding.right.value}}{{padding.right.type}};
+            padding-bottom: {{padding.bottom.value}}{{padding.bottom.type}};
+            padding-left: {{padding.left.value}}{{padding.left.type}};
+            margin-top: {{margin.top.value}}{{margin.top.type}};
+            margin-right: {{margin.right.value}}{{margin.right.type}};
+            margin-bottom: {{margin.bottom.value}}{{margin.bottom.type}};
+            margin-left: {{margin.left.value}}{{margin.left.type}};
+        }
+        
+        #widget-template-title {
+            text-transform: capitalize;
+            text-align: center;
+        }
+    </style>
+    
+<section id='text-with-image{{_.id}}'>
+  <div id="custom-widget-container"></div>
+</section>
+
+<script>
+  // Create an array-type custom widget for the <li> elements
+  var myArrayWidget = window.BCWidgets.createWidget({
+    type: 'array',
+    name: 'My List Widget',
+    allowedWidgets: ['text']
+  });
+
+  // Loop through the links and add a Text widget for each one
+  {{#each links}}
+    // Create a new Text widget for the link text
+    var textWidget = window.BCWidgets.createWidget({
+      type: 'text',
+      content: '{{this}}'
+    });
+
+    // Add the Text widget to the array-type custom widget
+    myArrayWidget.addWidget(textWidget);
+  {{/each}}
+
+  // Render the array-type custom widget in the custom-widget-container
+  var container = document.getElementById('custom-widget-container');
+  myArrayWidget.render(container);
+</script>

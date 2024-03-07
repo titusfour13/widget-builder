@@ -1,0 +1,573 @@
+[
+	{
+		"type": "tab",
+		"label": "Design",
+		"sections": [
+			{
+				"label": "Category Name",
+				"settings": [
+					{
+                        "type": "element",
+                        "label": "Category Name",
+                        "id": "categoryName",
+                        "typeMeta": {
+                            "controls": {
+                                "visibility": {
+                                    "default": "show"
+                                },
+                                "advanced": {
+                                    "label": "Category Name Style",
+                                    "settings": [
+                                        {
+                                            "type": "typography",
+                                            "label": "Text",
+                                            "id": "textStyle",
+                                            "default": "custom"
+                                        },
+                                        {
+                                            "type": "select",
+                                            "label": "Font family",
+                                            "id": "fontFamily",
+                                            "default": "Roboto Condensed",
+                                            "typeMeta": {
+                                                "selectOptions": [
+                                                    {
+                                                        "label": "Theme Default",
+                                                        "value": "inherit"
+                                                    },
+                                                    {
+                                                        "label": "Arial",
+                                                        "value": "Arial, sans-serif"
+                                                    },
+                                                    {
+                                                        "label": "Tahoma",
+                                                        "value": "Tahoma, sans-serif"
+                                                    },
+                                                    {
+                                                        "label": "Verdana",
+                                                        "value": "Verdana, sans-serif"
+                                                    },
+                                                    {
+                                                        "label": "Lucida",
+                                                        "value": "Lucida, sans-serif"
+                                                    },
+                                                    {
+                                                        "label": "Times New Roman",
+                                                        "value": "Times New Roman, serif"
+                                                    },
+                                                    {
+                                                        "label": "Courier",
+                                                        "value": "Courier, serif"
+                                                    },
+                                                    {
+                                                        "label": "Georgia",
+                                                        "value": "Georgia, serif"
+                                                    },
+                                                    {
+                                                        "label": "Roboto",
+                                                        "value": "Roboto"
+                                                    },
+                                                    {
+                                                        "label": "Roboto Condensed",
+                                                        "value": "Roboto Condensed"
+                                                    }
+                                                ]
+                                            },
+                                            "conditional": {
+                                                "key": "textStyle",
+                                                "operator": "IN",
+                                                "value": [
+                                                    "custom"
+                                                ]
+                                            }
+                                        },
+                                        {
+                                            "type": "select",
+                                            "label": "Font weight",
+                                            "id": "fontWeight",
+                                            "default": "700",
+                                            "typeMeta": {
+                                                "selectOptions": [
+                                                    {
+                                                        "label": "Thin",
+                                                        "value": "100"
+                                                    },
+                                                    {
+                                                        "label": "Extra Light (Ultra Light)",
+                                                        "value": "200"
+                                                    },
+                                                    {
+                                                        "label": "Light",
+                                                        "value": "300"
+                                                    },
+                                                    {
+                                                        "label": "Normal",
+                                                        "value": "400"
+                                                    },
+                                                    {
+                                                        "label": "Medium",
+                                                        "value": "500"
+                                                    },
+                                                    {
+                                                        "label": "Semi Bold (Demi Bold)",
+                                                        "value": "600"
+                                                    },
+                                                    {
+                                                        "label": "Bold",
+                                                        "value": "700"
+                                                    },
+                                                    {
+                                                        "label": "Extra Bold (Ultra Bold)",
+                                                        "value": "800"
+                                                    },
+                                                    {
+                                                        "label": "Black (Heavy)",
+                                                        "value": "900"
+                                                    }
+                                                ]
+                                            },
+                                            "conditional": {
+                                                "key": "textStyle",
+                                                "operator": "IN",
+                                                "value": [
+                                                    "custom"
+                                                ]
+                                            }
+                                        },
+                                        {
+                                            "type": "number",
+                                            "label": "Font size",
+                                            "id": "fontSize",
+                                            "default": {
+                                                "value": 32,
+                                                "type": "px"
+                                            },
+                                            "typeMeta": {
+                                                "parseType": "integer"
+                                            },
+                                            "conditional": {
+                                                "key": "textStyle",
+                                                "operator": "IN",
+                                                "value": [
+                                                    "custom"
+                                                ]
+                                            }
+                                        },
+                                        {
+                                            "type": "color",
+                                            "label": "Text color",
+                                            "id": "color",
+                                            "default": "#383A36"
+                                        },
+										{
+											"type": "alignment",
+											"label": "Text Alignment",
+											"id": "textAlign",
+											"default": {
+												"horizontal": "center",
+												"vertical": "middle"
+											},
+											"typeMeta": {
+												"display": "horizontal"
+											}
+										},{
+											"type": "boxModel",
+											"label": "Margin",
+											"id": "textMargin",
+											"default": {
+												"top": {
+													"value": "0",
+													"type": "px"
+												},
+												"right": {
+													"value": "0",
+													"type": "px"
+												},
+												"bottom": {
+													"value": "10",
+													"type": "px"
+												},
+												"left": {
+													"value": "0",
+													"type": "px"
+												}
+											}
+										},
+										{
+											"type": "boxModel",
+											"label": "Padding",
+											"id": "textPadding",
+											"default": {
+												"top": {
+													"value": "0",
+													"type": "px"
+												},
+												"right": {
+													"value": "0",
+													"type": "px"
+												},
+												"bottom": {
+													"value": "0",
+													"type": "px"
+												},
+												"left": {
+													"value": "0",
+													"type": "px"
+												}
+											}
+										}
+                                    ]
+                                }
+                            }
+                        }
+                    }
+				]
+			},{
+				"label": "Category Description",
+				"settings": [
+					{
+                        "type": "element",
+                        "label": "Category Description",
+                        "id": "categoryDescription",
+                        "typeMeta": {
+                            "controls": {
+                                "visibility": {
+                                    "default": "show"
+                                },
+                                "advanced": {
+                                    "label": "Category Description Style",
+                                    "settings": [
+                                        {
+                                            "type": "typography",
+                                            "label": "Text",
+                                            "id": "catDescStyle",
+                                            "default": "custom"
+                                        },
+                                        {
+                                            "type": "select",
+                                            "label": "Font family",
+                                            "id": "catFontFamily",
+                                            "default": "Roboto",
+                                            "typeMeta": {
+                                                "selectOptions": [
+                                                    {
+                                                        "label": "Theme Default",
+                                                        "value": "inherit"
+                                                    },
+                                                    {
+                                                        "label": "Arial",
+                                                        "value": "Arial, sans-serif"
+                                                    },
+                                                    {
+                                                        "label": "Tahoma",
+                                                        "value": "Tahoma, sans-serif"
+                                                    },
+                                                    {
+                                                        "label": "Verdana",
+                                                        "value": "Verdana, sans-serif"
+                                                    },
+                                                    {
+                                                        "label": "Lucida",
+                                                        "value": "Lucida, sans-serif"
+                                                    },
+                                                    {
+                                                        "label": "Times New Roman",
+                                                        "value": "Times New Roman, serif"
+                                                    },
+                                                    {
+                                                        "label": "Courier",
+                                                        "value": "Courier, serif"
+                                                    },
+                                                    {
+                                                        "label": "Georgia",
+                                                        "value": "Georgia, serif"
+                                                    },
+                                                    {
+                                                        "label": "Roboto",
+                                                        "value": "Roboto"
+                                                    },
+                                                    {
+                                                        "label": "Roboto Condensed",
+                                                        "value": "Roboto Condensed"
+                                                    }
+                                                ]
+                                            },
+                                            "conditional": {
+                                                "key": "catDescStyle",
+                                                "operator": "IN",
+                                                "value": [
+                                                    "custom"
+                                                ]
+                                            }
+                                        },
+                                        {
+                                            "type": "select",
+                                            "label": "Font weight",
+                                            "id": "catFontWeight",
+                                            "default": "400",
+                                            "typeMeta": {
+                                                "selectOptions": [
+                                                    {
+                                                        "label": "Thin",
+                                                        "value": "100"
+                                                    },
+                                                    {
+                                                        "label": "Extra Light (Ultra Light)",
+                                                        "value": "200"
+                                                    },
+                                                    {
+                                                        "label": "Light",
+                                                        "value": "300"
+                                                    },
+                                                    {
+                                                        "label": "Normal",
+                                                        "value": "400"
+                                                    },
+                                                    {
+                                                        "label": "Medium",
+                                                        "value": "500"
+                                                    },
+                                                    {
+                                                        "label": "Semi Bold (Demi Bold)",
+                                                        "value": "600"
+                                                    },
+                                                    {
+                                                        "label": "Bold",
+                                                        "value": "700"
+                                                    },
+                                                    {
+                                                        "label": "Extra Bold (Ultra Bold)",
+                                                        "value": "800"
+                                                    },
+                                                    {
+                                                        "label": "Black (Heavy)",
+                                                        "value": "900"
+                                                    }
+                                                ]
+                                            },
+                                            "conditional": {
+                                                "key": "catDescStyle",
+                                                "operator": "IN",
+                                                "value": [
+                                                    "custom"
+                                                ]
+                                            }
+                                        },
+                                        {
+                                            "type": "number",
+                                            "label": "Font size",
+                                            "id": "catFontSize",
+                                            "default": {
+                                                "value": 15,
+                                                "type": "px"
+                                            },
+                                            "typeMeta": {
+                                                "parseType": "integer"
+                                            },
+                                            "conditional": {
+                                                "key": "catDescStyle",
+                                                "operator": "IN",
+                                                "value": [
+                                                    "custom"
+                                                ]
+                                            }
+                                        },
+                                        {
+                                            "type": "color",
+                                            "label": "Text color",
+                                            "id": "catColor",
+                                            "default": "#383A36"
+                                        },
+										{
+											"type": "alignment",
+											"label": "Text Alignment",
+											"id": "catTextAlign",
+											"default": {
+												"horizontal": "left",
+												"vertical": "middle"
+											},
+											"typeMeta": {
+												"display": "horizontal"
+											}
+										},{
+											"type": "boxModel",
+											"label": "Margin",
+											"id": "catTextMargin",
+											"default": {
+												"top": {
+													"value": "0",
+													"type": "px"
+												},
+												"right": {
+													"value": "0",
+													"type": "px"
+												},
+												"bottom": {
+													"value": "0",
+													"type": "px"
+												},
+												"left": {
+													"value": "0",
+													"type": "px"
+												}
+											}
+										},
+										{
+											"type": "boxModel",
+											"label": "Padding",
+											"id": "catTextPadding",
+											"default": {
+												"top": {
+													"value": "0",
+													"type": "px"
+												},
+												"right": {
+													"value": "0",
+													"type": "px"
+												},
+												"bottom": {
+													"value": "0",
+													"type": "px"
+												},
+												"left": {
+													"value": "0",
+													"type": "px"
+												}
+											}
+										}
+                                    ]
+                                }
+                            }
+                        }
+                    }
+				]
+			},
+			{
+				"label": "Category Image",
+				"settings": [
+					{
+						"type": "select",
+						"label": "Background",
+						"id": "image",
+						"default": "image",
+						"typeMeta": {
+							"selectOptions": [
+								{
+									"label": "Image",
+									"value": "image"
+								},
+								{
+									"label": "Color",
+									"value": "color"
+								},
+								{
+									"label": "None",
+									"value": "none"
+								}
+							]
+						}
+					},
+					{
+						"type": "imageManager",
+						"label": "Image",
+						"id": "bgImage",
+						"typeMeta": {
+							"reference": "title"
+						},
+						"default": {
+							"src": "https://www.graphicproducts.com/media/24267/pipe-marking-basics.jpg",
+							"type": "SRC"
+						},
+						"conditional": {
+							"key": "image",
+							"operator": "IN",
+							"value": [
+								"image"
+							]
+						}
+					},
+					{
+						"type": "color",
+						"label": "Background Color",
+						"id": "bgColor",
+						"default": "rgb(0,0,0,0)",
+						"conditional": {
+							"key": "image",
+							"operator": "IN",
+							"value": [
+								"color"
+							]
+						}
+					},
+					{
+						"type": "range",
+						"label": "Width",
+						"id": "bgWidth",
+						"default": 30,
+						"typeMeta": {
+							"rangeValues": {
+								"min": 0,
+								"max": 350,
+								"step": 1,
+								"unit": "px"
+							}
+						},
+						"conditional": {
+							"key": "image",
+							"operator": "IN",
+							"value": [
+								"color"
+							]
+						}
+					},
+					{
+						"type": "boxModel",
+						"label": "Margin",
+						"id": "bgMargin",
+						"default": {
+							"top": {
+								"value": "0",
+								"type": "px"
+							},
+							"right": {
+								"value": "0",
+								"type": "px"
+							},
+							"bottom": {
+								"value": "0",
+								"type": "px"
+							},
+							"left": {
+								"value": "0",
+								"type": "px"
+							}
+						}
+					},
+					{
+						"type": "boxModel",
+						"label": "Padding",
+						"id": "bgPadding",
+						"default": {
+							"top": {
+								"value": "0",
+								"type": "px"
+							},
+							"right": {
+								"value": "0",
+								"type": "px"
+							},
+							"bottom": {
+								"value": "0",
+								"type": "px"
+							},
+							"left": {
+								"value": "0",
+								"type": "px"
+							}
+						}
+					}
+				]
+			}
+		]
+	}
+]

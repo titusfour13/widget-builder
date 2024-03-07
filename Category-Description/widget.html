@@ -1,0 +1,189 @@
+<style>
+    #dl-category-detail-description-{{_.id}}{
+        list-style-type: none;
+        width: {{bgWidth}}%;
+        {{#if bannerBg '==' "image"}}
+            background-size: cover;                      
+            background-repeat: no-repeat;
+            background-position: center center; 
+            background-image: url({{bgImage.src}});
+        {{else if bannerBg '==' "color"}}
+            background-color: {{bgColor}};
+        {{else}}
+            background: none;
+        {{/if}}
+
+        padding-top: {{bgPadding.top.value}}px;
+        padding-right: {{bgPadding.right.value}}px;
+        padding-bottom: {{bgPadding.bottom.value}}px;
+        padding-left: {{bgPadding.left.value}}px;
+
+        margin-top: {{bgMargin.top.value}}px;
+        margin-right: {{bgMargin.right.value}}px;
+        margin-bottom: {{bgMargin.bottom.value}}px;
+        margin-left: {{bgMargin.left.value}}px;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    #dl-category-detail-description-{{_.id}} li{
+        list-style-type: none;
+        flex: 1 0 calc(33.33% - 10px); 
+        max-width: calc(33.33% - 10px);
+        margin: 5px;
+        box-sizing: border-box;
+    }
+
+    #dl-category-detail-description-{{_.id}} .category-section{
+        display: flex;
+    }
+    #dl-category-detail-description-{{_.id}} .category-text-section{
+        padding-left: 5px;
+        padding-top: 5px;
+    }
+    #dl-category-detail-description-{{_.id}} .category-section h2{
+        margin-top: 0px;
+        margin-bottom: 3px;
+        font-size: 16px;
+    }
+    #dl-category-detail-description-{{_.id}} a{
+        text-decoration: none;
+    }
+    #dl-category-detail-description-{{_.id}} .category-description-with-product-count{
+        display: flex;
+        font-size: 14px;
+    }
+        #dl-category-detail-description-{{_.id}} .product-count{
+        color: #727272;
+    }
+    #dl-category-detail-description-{{_.id}} .image-section{
+        max-width: 40%;
+    }
+
+    @media screen and (max-width: 991px) {
+        #dl-category-detail-description-{{_.id}} li {
+            flex: 1 0 calc(50% - 10px); /* 50% for 2 columns */
+            max-width: calc(50% - 10px); /* Max width for each item */
+        }
+        #dl-category-detail-description-{{_.id}} .category-section h2{
+            font-size: 15px;
+        }
+        #dl-category-detail-description-{{_.id}} .category-description-with-product-count{
+            font-size: 12px;
+        }
+        #dl-category-detail-description-{{_.id}} .category-text-section{
+            padding-top: 0px;
+        }
+    }
+
+    /* Media query for mobile devices (max-width: 767px) */
+    @media screen and (max-width: 767px) {
+        #dl-category-detail-description-{{_.id}} li {
+            flex: 1 0 calc(100% - 10px); /* 100% for 1 column */
+            max-width: calc(100% - 10px); /* Max width for each item */
+        }
+    }
+</style>
+<ul id="dl-category-detail-description-{{_.id}}">
+    Invalid Category Name
+</ul>
+<script>
+    (function() {
+        const widgetConfig = {{{json .}}}
+        if(!widgetConfig._.context.isEditorMode)
+            placeWidgetContent()
+            
+        try {
+            setTimeout(()=>{
+                const jsContext = window.jsContext;
+                const token = jsContext.settings.storefront_api.token
+                const featuredCategory = jsContext.categories.find(category => category.name === "{{categoryName}}");
+                const categoryId = parseInt(featuredCategory.id)
+                
+                if(!widgetConfig._.context.isEditorMode && categoryId)
+                    fetchCategoryDetails(categoryId, token)
+            },300)
+        } catch (error) {
+            console.error(error)
+        }
+
+
+        function fetchCategoryDetails(id, token){
+            const query = 
+                `query CategoryTree3LevelsDeep($categoryId: Int!) {
+                    site {
+                        categoryTree(rootEntityId: $categoryId) {
+                            name
+                            entityId
+                            children {
+                                path
+                                name
+                                image {
+                                    url(width: 200)
+                                }
+                                productCount
+                                description
+                            }
+                        }
+                    }
+                }`
+            const variables = {categoryId: id}
+
+            // Fetch data from the GraphQL Storefront API
+            var storefrontApiRequest = new XMLHttpRequest(); // IE compatible
+            storefrontApiRequest.onreadystatechange = function() {
+                if (this.readyState == 4 && this.status == 200) {
+                    placeWidgetContent(JSON.parse(this.response).data);
+                }
+            };
+    
+            storefrontApiRequest.open('POST', `/graphql`, true);
+            storefrontApiRequest.setRequestHeader('Authorization', `Bearer ${token}`);
+            storefrontApiRequest.setRequestHeader('Content-type', 'application/json');
+            storefrontApiRequest.send(JSON.stringify({ query, variables}));
+        }
+
+        function placeWidgetContent(data){
+            const descriptionEl = document.getElementById("dl-category-detail-description-{{_.id}}")
+            if (data && data.site) {
+           
+                try {
+                    
+                    if(data.site.categoryTree[0].children){
+                        categoryChildren = data.site.categoryTree[0].children
+                        let html=""
+                        
+                        for(let i =0; i < categoryChildren.length; i++){
+                            let image = ""
+                            if(categoryChildren[i].image){
+                                image =categoryChildren[i].image.url
+                            }
+                            html += `
+                            <li>
+                                <a href="${categoryChildren[i].path}">
+                                    <div class="category-section">
+                                        <div class="image-section">
+                                            <img src="${image}" alt="${categoryChildren[i].name}">
+                                        </div>
+                                        <div class="category-text-section">
+                                            <h2 class="category-title">${categoryChildren[i].name}</h2>
+                                            <div class="category-description-with-product-count">
+                                                ${categoryChildren[i].description}&nbsp;-&nbsp;<span class="product-count"> ${categoryChildren[i].productCount} ITEMS</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>`;
+                        }
+                        descriptionEl.innerHTML = html
+                    }else{
+                        descriptionEl.innerHTML = "Category Name Not Found"
+                    }
+                } catch (error) {
+                    console.error(error)
+                }
+            } else {
+                console.log("Site property not found in the data object.");
+            }
+        }
+    })();
+</script>

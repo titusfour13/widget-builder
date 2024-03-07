@@ -1,0 +1,223 @@
+{
+  "columns": [
+    {
+      "image": {
+        "src": "https://cdn11.bigcommerce.com/s-n0i50vy/images/stencil/1280x1280/products/109/361/kinfolkessentialissue_1024x1024__22507.1456436715.jpg?c=2&imbypass=on",
+        "type": "IMAGE_MANAGER"
+      },"imageHeight":{
+        "value":"140",
+        "type": "px"
+      },
+      "caption": "Caption",
+      "captionTextColor": "#FFFFFF",
+      "captionFontSize": {
+        "value": "24",
+        "type": "px"
+      },
+      "captionFontWeight": "500",
+      "captionTextAlignment": {
+        "horizontal": "center",
+        "vertical": "top"
+      },
+      "captionTextMargin": {
+        "top": {
+          "value": "0",
+          "type": "px"
+        },
+        "right": {
+          "value": "10.5",
+          "type": "px"
+        },
+        "bottom": {
+          "value": " 0",
+          "type": " px"
+        },
+        "left": {
+          "value": "10.5",
+          "type": "px"
+        }
+      },
+      "captionTextPadding": {
+        "top": {
+          "value": "0",
+          "type": "px"
+        },
+        "right": {
+          "value": "10.5",
+          "type": "px"
+        },
+        "bottom": {
+          "value": "0",
+          "type": " px"
+        },
+        "left": {
+          "value": "10.5",
+          "type": "px"
+        }
+      }
+    },
+    {
+      "image": {
+        "src": "https://cdn11.bigcommerce.com/s-n0i50vy/images/stencil/1280x1280/products/109/361/kinfolkessentialissue_1024x1024__22507.1456436715.jpg?c=2&imbypass=on",
+        "type": "IMAGE_MANAGER"
+      },
+      "imageHeight":{
+        "value":"140",
+        "type": "px"
+      },
+      "caption": "Caption",
+      "captionTextColor": "#FFFFFF",
+      "captionFontSize": {
+        "value": "24",
+        "type": "px"
+      },
+      "captionFontWeight": "500",
+      "captionTextAlignment": {
+        "horizontal": "center",
+        "vertical": "top"
+      },
+      "captionTextMargin": {
+        "top": {
+          "value": "0",
+          "type": "px"
+        },
+        "right": {
+          "value": "10.5",
+          "type": "px"
+        },
+        "bottom": {
+          "value": " 0",
+          "type": " px"
+        },
+        "left": {
+          "value": "10.5",
+          "type": "px"
+        }
+      },
+      "captionTextPadding": {
+        "top": {
+          "value": "0",
+          "type": "px"
+        },
+        "right": {
+          "value": "10.5",
+          "type": "px"
+        },
+        "bottom": {
+          "value": "0",
+          "type": " px"
+        },
+        "left": {
+          "value": "10.5",
+          "type": "px"
+        }
+      }
+    },
+    {
+      "image": {
+        "src": "https://cdn11.bigcommerce.com/s-n0i50vy/images/stencil/1280x1280/products/109/361/kinfolkessentialissue_1024x1024__22507.1456436715.jpg?c=2&imbypass=on",
+        "type": "IMAGE_MANAGER"
+      },
+      "caption": "Caption",
+      "captionTextColor": "#FFFFFF",
+      "captionFontSize": {
+        "value": "24",
+        "type": "px"
+      },
+      "captionFontWeight": "500",
+      "captionTextAlignment": {
+        "horizontal": "center",
+        "vertical": "top"
+      },
+      "captionTextMargin": {
+        "top": {
+          "value": "0",
+          "type": "px"
+        },
+        "right": {
+          "value": "10.5",
+          "type": "px"
+        },
+        "bottom": {
+          "value": " 0",
+          "type": " px"
+        },
+        "left": {
+          "value": "10.5",
+          "type": "px"
+        }
+      },
+      "captionTextPadding": {
+        "top": {
+          "value": "0",
+          "type": "px"
+        },
+        "right": {
+          "value": "10.5",
+          "type": "px"
+        },
+        "bottom": {
+          "value": "0",
+          "type": " px"
+        },
+        "left": {
+          "value": "10.5",
+          "type": "px"
+        }
+      }
+    },
+    {
+      "image": {
+        "src": "https://cdn11.bigcommerce.com/s-n0i50vy/images/stencil/1280x1280/products/109/361/kinfolkessentialissue_1024x1024__22507.1456436715.jpg?c=2&imbypass=on",
+        "type": "IMAGE_MANAGER"
+      },
+      "caption": "Caption",
+      "captionTextColor": "#FFFFFF",
+      "captionFontSize": {
+        "value": "24",
+        "type": "px"
+      },
+      "captionFontWeight": "500",
+      "captionTextAlignment": {
+        "horizontal": "center",
+        "vertical": "top"
+      },
+      "captionTextMargin": {
+        "top": {
+          "value": "0",
+          "type": "px"
+        },
+        "right": {
+          "value": "10.5",
+          "type": "px"
+        },
+        "bottom": {
+          "value": " 0",
+          "type": " px"
+        },
+        "left": {
+          "value": "10.5",
+          "type": "px"
+        }
+      },
+      "captionTextPadding": {
+        "top": {
+          "value": "0",
+          "type": "px"
+        },
+        "right": {
+          "value": "10.5",
+          "type": "px"
+        },
+        "bottom": {
+          "value": "0",
+          "type": " px"
+        },
+        "left": {
+          "value": "10.5",
+          "type": "px"
+        }
+      }
+    }
+  ]
+}

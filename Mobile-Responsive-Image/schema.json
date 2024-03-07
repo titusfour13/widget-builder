@@ -1,0 +1,296 @@
+[
+  {
+    "type": "tab",
+    "label": "Design",
+    "sections": [
+      {
+        "label": "Sample Text",
+        "settings": [
+           {
+              "type": "imageManager",
+              "id": "image",
+              "default": {
+                  "src": "https://www.graphicproducts.com/media/2881/onsite-support.png?width=457&height=437&mode=max",
+                  "type": "IMAGE_MANAGER"
+              }
+          },
+          {
+            "type": "input",
+            "id": "text",
+            "label": "Text",
+            "default": "Simple Text"
+          },
+          {
+              "type": "color",
+              "id": "color",
+              "label": "Text Color",
+              "default": "black"
+          },
+          {
+            "type": "color",
+            "id": "background_color",
+            "label": "Background Color",
+            "default": "white"
+          },
+          {
+            "type": "number",
+            "id": "font_size",
+            "label": "Font Size",
+            "default": {
+              "value": 24,
+              "type": "px"
+            }
+          },
+          {
+            "type": "select",
+            "id": "font_weight",
+            "label": "Font Weight",
+            "default": "500",
+            "typeMeta": {
+              "selectOptions": [
+                {
+                  "label": "Thin",
+                  "value": "100"
+                },
+                {
+                  "label": "Extra Light (Ultra Light)",
+                  "value": "200"
+                },
+                {
+                  "label": "Light",
+                  "value": "300"
+                },
+                {
+                  "label": "Normal",
+                  "value": "400"
+                },
+                {
+                  "label": "Medium",
+                  "value": "500"
+                },
+                {
+                  "label": "Semi Bold (Demi Bold)",
+                  "value": "600"
+                },
+                {
+                  "label": "Bold",
+                  "value": "700"
+                },
+                {
+                  "label": "Extra Bold (Ultra Bold)",
+                  "value": "800"
+                },
+                {
+                  "label": "Black (Heavy)",
+                  "value": "900"
+                }
+              ]
+            }
+          },
+          {
+            "type": "alignment",
+            "label": "Text Alignment",
+            "id": "text_align",
+            "default": {
+              "horizontal": "center",
+              "vertical": "middle"
+            },
+            "typeMeta": {
+              "display": "horizontal"
+            }
+          },
+          {
+            "type": "boxModel",
+            "label": "Margin",
+            "id": "margin",
+            "default": {
+              "top": {
+                "value": "0",
+                "type": "px"
+              },
+              "right": {
+                "value": "0",
+                "type": "px"
+              },
+              "bottom": {
+                "value": "0",
+                "type": "px"
+              },
+              "left": {
+                "value": "0",
+                "type": "px"
+              }
+            }
+          },
+          {
+            "type": "boxModel",
+            "label": "Padding",
+            "id": "padding",
+            "default": {
+              "top": {
+                "value": "8",
+                "type": "px"
+              },
+              "right": {
+                "value": "24",
+                "type": "px"
+              },
+              "bottom": {
+                "value": "8",
+                "type": "px"
+              },
+              "left": {
+                "value": "24",
+                "type": "px"
+              }
+            }
+          }
+        ]
+      }
+    ]
+  },{
+        "type": "array",
+        "label": "Texts",
+        "id":"texts",
+        "defaultCount": 3,
+        "entryLabel":"Text",
+        "schema": [
+            {
+                "type":"tab",
+                "label": "Content",
+                "sections": [
+                    {
+                        "settings": [
+                            {
+                                "type": "input",
+                                "id": "text",
+                                "label": "Text",
+                                "default": "Simple Text"
+                            },{
+                                "type": "boolean",
+                                "id": "isBulleted",
+                                "label": "Bullet",
+                                "default": false
+                            },{
+                                "type": "color",
+                                "id": "color",
+                                "label": "Text Color",
+                                "default": "#1D1D1D"
+                            },{
+                                "type": "number",
+                                "label": "Font size",
+                                "id": "fontSize",
+                                "default": {
+                                    "value": "22",
+                                    "type": "px"
+                                }
+                            },{
+                                "type": "select",
+                                "id": "fontWeight",
+                                "label": "Font Weight",
+                                "default": "500",
+                                "typeMeta": {
+                                    "selectOptions": [
+                                        {
+                                        "label": "Thin",
+                                        "value": "100"
+                                        },
+                                        {
+                                        "label": "Extra Light (Ultra Light)",
+                                        "value": "200"
+                                        },
+                                        {
+                                        "label": "Light",
+                                        "value": "300"
+                                        },
+                                        {
+                                        "label": "Normal",
+                                        "value": "400"
+                                        },
+                                        {
+                                        "label": "Medium",
+                                        "value": "500"
+                                        },
+                                        {
+                                        "label": "Semi Bold (Demi Bold)",
+                                        "value": "600"
+                                        },
+                                        {
+                                        "label": "Bold",
+                                        "value": "700"
+                                        },
+                                        {
+                                        "label": "Extra Bold (Ultra Bold)",
+                                        "value": "800"
+                                        },
+                                        {
+                                        "label": "Black (Heavy)",
+                                        "value": "900"
+                                        }
+                                    ]
+                                }
+                            },{
+                                "type": "typography",
+                                "label": "Header style",
+                                "id": "style",
+                                "default": "default",
+                                "typeMeta": {
+                                    "conditionalSettings": [
+                                    {
+                                        "settings": []
+                                    }
+                                    ]
+                                }
+                            },{
+                                "type": "boxModel",
+                                "label": "Mrgin",
+                                "id": "margin",
+                                "default": {
+                                    "top": {
+                                    "value": "0",
+                                    "type": "px"
+                                    },
+                                    "right": {
+                                    "value": "10.5",
+                                    "type": "px"
+                                    },
+                                    "bottom": {
+                                    "value": " 0",
+                                    "type": " px"
+                                    },
+                                    "left": {
+                                    "value": "10.5",
+                                    "type": "px"
+                                    }
+                                }
+                            },{
+                                "type": "boxModel",
+                                "label": "Padding",
+                                "id": "padding",
+                                "default": {
+                                    "top": {
+                                        "value": "0",
+                                        "type": "px"
+                                    },
+                                    "right": {
+                                        "value": "10.5",
+                                        "type": "px"
+                                    },
+                                    "bottom": {
+                                        "value": "0",
+                                        "type": " px"
+                                    },
+                                    "left": {
+                                        "value": "10.5",
+                                        "type": "px"
+                                    }
+                                }
+                            }
+                        ]
+                    }
+                ]
+            }
+                
+        ]
+    }
+]

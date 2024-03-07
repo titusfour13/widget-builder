@@ -1,0 +1,119 @@
+[
+    {
+        "type": "tab",
+        "title": "Columns",
+        "sections": [
+            {
+                "settings":[
+                    {
+                        "type": "input",
+                        "id": "title",
+                        "label": "Title / Text",
+                        "default": "Manual"
+                    },{
+                        "type": "boolean",
+                        "id": "borderRight",
+                        "label": "Border Right",
+                        "default": true
+                    },{
+                        "type": "imageManager",
+                        "id": "image",
+                        "default": {
+                            "src": "https://www.graphicproducts.com/assets/images/support-content-icon.svg",
+                            "type": "IMAGE_MANAGER"
+                        }
+                    }
+                  ]
+              }
+          ]
+    },
+    {
+                        "title": "Links",
+                        "type": "array",
+                        "label": "Links",
+                        "id": "lists",
+                        "defaultCount": 2,
+                        "entryLabel": "Link List",
+                        "schema": [
+                            {
+                                "type": "tab",
+                                "label": "Links",
+                                "sections": [
+                                    {
+                                        "settings": [
+                                            {
+                                                "type": "select",
+                                                "label": "Link Type",
+                                                "id": "linkType",
+                                                "default": {
+                                                    "value": "link"
+                                                },"typeMeta": {
+                                                    "selectOptions": [
+                                                    {
+                                                        "label": "Embeded Video",
+                                                        "value": "embeded"
+                                                    },
+                                                    {
+                                                        "label": "Link",
+                                                        "value": "link"
+                                                    }
+                                                ]
+                                                }
+                                            },{
+                                                "type": "input",
+                                                "id": "caption",
+                                                "label": "Caption / Text",
+                                                "default": "Caption",
+                                                "conditional": {
+                                                    "key": "linkType",
+                                                    "operator": "IN",
+                                                    "value": [
+                                                        "link"
+                                                    ]
+                                                }
+                                            },
+                                            {
+                                                "type": "input",
+                                                "id": "link",
+                                                "label": "Link/URL",
+                                                "default": "#",
+                                                "conditional": {
+                                                    "key": "linkType",
+                                                    "operator": "IN",
+                                                    "value": [
+                                                        "link"
+                                                    ]
+                                                }
+                                            },{
+                                                "type": "text",
+                                                "id": "wistiaScript",
+                                                "label": "Wistia embeded script",
+                                                "default": "",
+                                                "conditional": {
+                                                    "key": "linkType",
+                                                    "operator": "IN",
+                                                    "value": [
+                                                        "embeded"
+                                                    ]
+                                                }
+                                            },{
+                                                "type": "text",
+                                                "id": "wistiaHTML",
+                                                "label": "Wistia embeded code",
+                                                "default": "asdasd",
+                                                "conditional": {
+                                                    "key": "linkType",
+                                                    "operator": "IN",
+                                                    "value": [
+                                                        "embeded"
+                                                    ]
+                                                }
+                                            }
+                                        ]
+                                    }
+                                ]
+                              }
+                          ]
+                      }
+    
+]

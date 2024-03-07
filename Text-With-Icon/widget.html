@@ -1,0 +1,68 @@
+<style>
+
+    .column-container-text-with-icon-homepage{
+        display: flex;
+        flex-direction: column;
+        margin: 0px auto;
+        justify-content: space-around;
+    }
+    .column-container-text-with-icon-homepage li{
+        padding: 0px;
+        text-align: left;
+        font-size: 15px;
+    }
+
+    .card-wrapper-text-with-icons-homepage img{
+        display: inline-block;
+        vertical-align: middle;
+        height: auto;
+        width: 60px;
+    }
+    .column-container-text-with-icon-homepage ul{
+        list-style-type: none;
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-left: 0px;
+    } 
+    .caption-text-with-icon{
+        padding: 10px;
+    }
+    .image-text-with-icon-homepage{
+        width:79px;
+        height: auto;
+    }
+    .p-text-with-icon-homepage{
+        margin-top: 16px;
+    }
+    @media (min-width: 1024px) {
+        .column-container-text-with-icon-homepage{
+            display: flex;
+            flex-direction: row;
+        }
+        .caption-text-with-icon{
+            max-width: 50%;
+            padding:0px 52px;
+        }
+        .column-container-text-with-icon-homepage li{
+            font-size: 24px;
+        }
+    }
+
+    </style>
+        
+    <div class="column-container-text-with-icon-homepage">
+        <div class="caption-text-with-icon">
+            <h1>{{title}}</h1>
+            <p>{{caption}}</p>
+            <p>{{caption2}}</p>
+        </div>
+        <ul>
+        {{#each columns}}
+            <li class="card-wrapper-text-with-icons-homepage">
+                <img class="image-text-with-icon-homepage"src="{{image.src}}">
+                {{caption}}
+            </li>
+        {{/each}}
+        </ul>
+    </div>

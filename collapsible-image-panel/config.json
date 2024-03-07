@@ -1,0 +1,333 @@
+{
+  "text": "Where do I find the serial number?",
+  "captionTextColor": "#015f9c",
+  "captionFontSize": {
+    "value": "16",
+    "type": "px"
+  },
+  "captionFontWeight": "500",
+  "captionTextAlignment": {
+    "horizontal": "center",
+    "vertical": "top"
+  },
+  "captionTextMargin": {
+    "top": {
+      "value": "0",
+      "type": "px"
+    },
+    "right": {
+      "value": "0",
+      "type": "px"
+    },
+    "bottom": {
+      "value": " 0",
+      "type": " px"
+    },
+    "left": {
+      "value": "0",
+      "type": "px"
+    }
+  },
+  "captionTextPadding": {
+    "top": {
+      "value": "0",
+      "type": "px"
+    },
+    "right": {
+      "value": "0",
+      "type": "px"
+    },
+    "bottom": {
+      "value": "0",
+      "type": " px"
+    },
+    "left": {
+      "value": "0",
+      "type": "px"
+    }
+  },
+  "images": [
+    {
+      "image": {
+        "src": "https://www.graphicproducts.com/media/24694/kodiak.jpg",
+        "type": "IMAGE_MANAGER"
+      },
+      "imageWSerial": {
+        "src": "https://www.graphicproducts.com/media/2459/kodiak-serial.jpg",
+        "type": "IMAGE_MANAGER"
+      },
+      "containerMargin": {
+        "top": {
+          "value": "0",
+          "type": "px"
+        },
+        "right": {
+          "value": "0",
+          "type": "px"
+        },
+        "bottom": {
+          "value": " 0",
+          "type": " px"
+        },
+        "left": {
+          "value": "0",
+          "type": "px"
+        }
+      },
+      "containerPadding": {
+        "top": {
+          "value": "0",
+          "type": "px"
+        },
+        "right": {
+          "value": "0",
+          "type": "px"
+        },
+        "bottom": {
+          "value": "0",
+          "type": " px"
+        },
+        "left": {
+          "value": "0",
+          "type": "px"
+        }
+      },
+      "printerName": "Printer Name",
+      "uniqueID": "bronco",
+      "captionTextColor": "#000000",
+      "captionFontSize": {
+        "value": "24",
+        "type": "px"
+      },
+      "captionFontWeight": "500",
+      "captionTextAlignment": {
+        "horizontal": "center",
+        "vertical": "top"
+      },
+      "captionTextMargin": {
+        "top": {
+          "value": "0",
+          "type": "px"
+        },
+        "right": {
+          "value": "0",
+          "type": "px"
+        },
+        "bottom": {
+          "value": " 0",
+          "type": " px"
+        },
+        "left": {
+          "value": "0",
+          "type": "px"
+        }
+      },
+      "captionTextPadding": {
+        "top": {
+          "value": "0",
+          "type": "px"
+        },
+        "right": {
+          "value": "0",
+          "type": "px"
+        },
+        "bottom": {
+          "value": "0",
+          "type": " px"
+        },
+        "left": {
+          "value": "0",
+          "type": "px"
+        }
+      }
+    },
+    {
+      "image": {
+        "src": "https://www.graphicproducts.com/media/24694/kodiak.jpg",
+        "type": "IMAGE_MANAGER"
+      },
+      "imageWSerial": {
+        "src": "https://www.graphicproducts.com/media/2459/kodiak-serial.jpg",
+        "type": "IMAGE_MANAGER"
+      },
+      "containerMargin": {
+        "top": {
+          "value": "0",
+          "type": "px"
+        },
+        "right": {
+          "value": "0",
+          "type": "px"
+        },
+        "bottom": {
+          "value": " 0",
+          "type": " px"
+        },
+        "left": {
+          "value": "0",
+          "type": "px"
+        }
+      },
+      "containerPadding": {
+        "top": {
+          "value": "0",
+          "type": "px"
+        },
+        "right": {
+          "value": "0",
+          "type": "px"
+        },
+        "bottom": {
+          "value": "0",
+          "type": " px"
+        },
+        "left": {
+          "value": "0",
+          "type": "px"
+        }
+      },
+      "printerName": "Printer Name",
+      "uniqueID": "lobo",
+      "captionTextColor": "#000000",
+      "captionFontSize": {
+        "value": "24",
+        "type": "px"
+      },
+      "captionFontWeight": "500",
+      "captionTextAlignment": {
+        "horizontal": "center",
+        "vertical": "top"
+      },
+      "captionTextMargin": {
+        "top": {
+          "value": "0",
+          "type": "px"
+        },
+        "right": {
+          "value": "0",
+          "type": "px"
+        },
+        "bottom": {
+          "value": " 0",
+          "type": " px"
+        },
+        "left": {
+          "value": "0",
+          "type": "px"
+        }
+      },
+      "captionTextPadding": {
+        "top": {
+          "value": "0",
+          "type": "px"
+        },
+        "right": {
+          "value": "0",
+          "type": "px"
+        },
+        "bottom": {
+          "value": "0",
+          "type": " px"
+        },
+        "left": {
+          "value": "0",
+          "type": "px"
+        }
+      }
+    },
+    {
+      "image": {
+        "src": "https://www.graphicproducts.com/media/24694/kodiak.jpg",
+        "type": "IMAGE_MANAGER"
+      },
+      "imageWSerial": {
+        "src": "https://www.graphicproducts.com/media/2459/kodiak-serial.jpg",
+        "type": "IMAGE_MANAGER"
+      },
+      "containerMargin": {
+        "top": {
+          "value": "0",
+          "type": "px"
+        },
+        "right": {
+          "value": "0",
+          "type": "px"
+        },
+        "bottom": {
+          "value": " 0",
+          "type": " px"
+        },
+        "left": {
+          "value": "0",
+          "type": "px"
+        }
+      },
+      "containerPadding": {
+        "top": {
+          "value": "0",
+          "type": "px"
+        },
+        "right": {
+          "value": "0",
+          "type": "px"
+        },
+        "bottom": {
+          "value": "0",
+          "type": " px"
+        },
+        "left": {
+          "value": "0",
+          "type": "px"
+        }
+      },
+      "printerName": "Printer Name",
+      "uniqueID": "kodiak",
+      "captionTextColor": "#000000",
+      "captionFontSize": {
+        "value": "24",
+        "type": "px"
+      },
+      "captionFontWeight": "500",
+      "captionTextAlignment": {
+        "horizontal": "center",
+        "vertical": "top"
+      },
+      "captionTextMargin": {
+        "top": {
+          "value": "0",
+          "type": "px"
+        },
+        "right": {
+          "value": "0",
+          "type": "px"
+        },
+        "bottom": {
+          "value": " 0",
+          "type": " px"
+        },
+        "left": {
+          "value": "0",
+          "type": "px"
+        }
+      },
+      "captionTextPadding": {
+        "top": {
+          "value": "0",
+          "type": "px"
+        },
+        "right": {
+          "value": "0",
+          "type": "px"
+        },
+        "bottom": {
+          "value": "0",
+          "type": " px"
+        },
+        "left": {
+          "value": "0",
+          "type": "px"
+        }
+      }
+    }
+  ]
+}

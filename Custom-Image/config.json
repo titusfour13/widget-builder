@@ -1,0 +1,14 @@
+{
+  "image": {
+    "src": "https://cdn11.bigcommerce.com/s-n0i50vy/images/stencil/1280x1280/products/109/361/kinfolkessentialissue_1024x1024__22507.1456436715.jpg?c=2&imbypass=on",
+    "type": "IMAGE_MANAGER"
+  },
+  "heightSettings": {
+    "value": "custom"
+  },
+  "imageHeight": {
+    "value": "200",
+    "type": "px"
+  },
+  "mobile": true
+}

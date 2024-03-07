@@ -1,0 +1,451 @@
+[
+
+    {
+        "type": "tab",
+        "label": "Content",
+        "id":"columns",
+        "sections": [
+            {
+                "settings": [
+                    {
+                        "type": "imageManager",
+                        "id": "image",
+                        "default": {
+                            "src": "https://cdn11.bigcommerce.com/s-n0i50vy/images/stencil/1280x1280/products/109/361/kinfolkessentialissue_1024x1024__22507.1456436715.jpg?c=2&imbypass=on",
+                            "type": "IMAGE_MANAGER"
+                        }
+                    }
+                ]
+            }
+        ]
+    },{
+          "type":"tab",
+          "label": "Content",
+          "sections": [
+              {
+                  "settings": [
+                      {
+                          "type": "input",
+                          "id": "title",
+                          "label": "Title",
+                          "default": "Please Enter Title"
+                      },{
+                          "type": "color",
+                          "id": "titleTextColor",
+                          "label": "Text Color",
+                          "default": "#1D1D1D"
+                      },{
+                          "type": "number",
+                          "label": "Font size",
+                          "id": "titleFontSize",
+                          "default": {
+                              "value": "18",
+                              "type": "px"
+                          }
+                      },{
+                          "type": "boxModel",
+                          "label": "Margin",
+                          "id": "titleTextMargin",
+                          "default": {
+                              "top": {
+                              "value": "0",
+                              "type": "px"
+                              },
+                              "right": {
+                              "value": "0",
+                              "type": "px"
+                              },
+                              "bottom": {
+                              "value": " 0",
+                              "type": " px"
+                              },
+                              "left": {
+                              "value": "0",
+                              "type": "px"
+                              }
+                          }
+                      },
+                      {
+                          "type": "boxModel",
+                          "label": "Padding",
+                          "id": "titleTextPadding",
+                          "default": {
+                              "top": {
+                                  "value": "0",
+                                  "type": "px"
+                              },
+                              "right": {
+                                  "value": "0",
+                                  "type": "px"
+                              },
+                              "bottom": {
+                                  "value": "0",
+                                  "type": " px"
+                              },
+                              "left": {
+                                  "value": "0",
+                                  "type": "px"
+                              }
+                          }
+                      },{
+                          "type": "select",
+                          "id": "titleFontWeight",
+                          "label": "Font Weight",
+                          "default": "600",
+                          "typeMeta": {
+                              "selectOptions": [
+                                  {
+                                  "label": "Thin",
+                                  "value": "100"
+                                  },
+                                  {
+                                  "label": "Extra Light (Ultra Light)",
+                                  "value": "200"
+                                  },
+                                  {
+                                  "label": "Light",
+                                  "value": "300"
+                                  },
+                                  {
+                                  "label": "Normal",
+                                  "value": "400"
+                                  },
+                                  {
+                                  "label": "Medium",
+                                  "value": "500"
+                                  },
+                                  {
+                                  "label": "Semi Bold (Demi Bold)",
+                                  "value": "600"
+                                  },
+                                  {
+                                  "label": "Bold",
+                                  "value": "700"
+                                  },
+                                  {
+                                  "label": "Extra Bold (Ultra Bold)",
+                                  "value": "800"
+                                  },
+                                  {
+                                  "label": "Black (Heavy)",
+                                  "value": "900"
+                                  }
+                              ]
+                          }
+                      },
+                      {
+                          "type": "alignment",
+                          "label": "Image alignment",
+                          "id": "titleTextAlignment",
+                          "default": {
+                              "horizontal": "left",
+                              "vertical": "top"
+                          },
+                          "typeMeta": {
+                              "display": "both"
+                          }
+                      }
+                      
+                  ]
+              }
+          ]
+    },{
+          "type":"tab",
+          "label": "Content",
+          "sections": [
+              {
+                  "settings": [
+                      {
+                          "type": "text",
+                          "id": "description",
+                          "label": "Description / Text",
+                          "default": "Please Description / Text"
+                      },{
+                          "type": "boolean",
+                          "id": "htmlParsing",
+                          "label": "Enable HTML Parsing",
+                          "default": false
+                      },{
+                          "type": "color",
+                          "id": "descTextColor",
+                          "label": "Text Color",
+                          "default": "#1D1D1D"
+                      },{
+                          "type": "number",
+                          "label": "Font size",
+                          "id": "descFontSize",
+                          "default": {
+                              "value": "18",
+                              "type": "px"
+                          }
+                      },{
+                          "type": "select",
+                          "id": "descFontWeight",
+                          "label": "Font Weight",
+                          "default": "500",
+                          "typeMeta": {
+                              "selectOptions": [
+                                  {
+                                  "label": "Thin",
+                                  "value": "100"
+                                  },
+                                  {
+                                  "label": "Extra Light (Ultra Light)",
+                                  "value": "200"
+                                  },
+                                  {
+                                  "label": "Light",
+                                  "value": "300"
+                                  },
+                                  {
+                                  "label": "Normal",
+                                  "value": "400"
+                                  },
+                                  {
+                                  "label": "Medium",
+                                  "value": "500"
+                                  },
+                                  {
+                                  "label": "Semi Bold (Demi Bold)",
+                                  "value": "600"
+                                  },
+                                  {
+                                  "label": "Bold",
+                                  "value": "700"
+                                  },
+                                  {
+                                  "label": "Extra Bold (Ultra Bold)",
+                                  "value": "800"
+                                  },
+                                  {
+                                  "label": "Black (Heavy)",
+                                  "value": "900"
+                                  }
+                              ]
+                          }
+                      },{
+                          "type": "alignment",
+                          "label": "Image alignment",
+                          "id": "descTextAlignment",
+                          "default": {
+                              "horizontal": "left",
+                              "vertical": "top"
+                          },
+                          "typeMeta": {
+                              "display": "both"
+                          }
+                      },
+                      {
+                          "type": "boxModel",
+                          "label": "Margin",
+                          "id": "descTextMargin",
+                          "default": {
+                              "top": {
+                              "value": "0",
+                              "type": "px"
+                              },
+                              "right": {
+                              "value": "0",
+                              "type": "px"
+                              },
+                              "bottom": {
+                              "value": " 0",
+                              "type": " px"
+                              },
+                              "left": {
+                              "value": "0",
+                              "type": "px"
+                              }
+                          }
+                      },
+                      {
+                          "type": "boxModel",
+                          "label": "Padding",
+                          "id": "descTextPadding",
+                          "default": {
+                              "top": {
+                                  "value": "0",
+                                  "type": "px"
+                              },
+                              "right": {
+                                  "value": "0",
+                                  "type": "px"
+                              },
+                              "bottom": {
+                                  "value": "0",
+                                  "type": " px"
+                              },
+                              "left": {
+                                  "value": "0",
+                                  "type": "px"
+                              }
+                          }
+                      }
+                      
+                  ]
+              }
+          ]
+    },{
+          "type":"tab",
+          "label": "Content",
+          "sections": [
+              {
+                  "settings": [
+                      {
+                          "type": "input",
+                          "id": "buttonText",
+                          "label": "Button Text",
+                          "default": "Button"
+                      },{
+                          "type": "input",
+                          "id": "link",
+                          "label": "Button URL",
+                          "default": "#"
+                      },{
+                          "type": "color",
+                          "id": "descTextColor",
+                          "label": "Text Color",
+                          "default": "#1D1D1D"
+                      },{
+                          "type": "number",
+                          "label": "Font size",
+                          "id": "descFontSize",
+                          "default": {
+                              "value": "16",
+                              "type": "px"
+                          }
+                      },{
+                          "type": "select",
+                          "id": "descFontWeight",
+                          "label": "Font Weight",
+                          "default": "500",
+                          "typeMeta": {
+                              "selectOptions": [
+                                  {
+                                  "label": "Thin",
+                                  "value": "100"
+                                  },
+                                  {
+                                  "label": "Extra Light (Ultra Light)",
+                                  "value": "200"
+                                  },
+                                  {
+                                  "label": "Light",
+                                  "value": "300"
+                                  },
+                                  {
+                                  "label": "Normal",
+                                  "value": "400"
+                                  },
+                                  {
+                                  "label": "Medium",
+                                  "value": "500"
+                                  },
+                                  {
+                                  "label": "Semi Bold (Demi Bold)",
+                                  "value": "600"
+                                  },
+                                  {
+                                  "label": "Bold",
+                                  "value": "700"
+                                  },
+                                  {
+                                  "label": "Extra Bold (Ultra Bold)",
+                                  "value": "800"
+                                  },
+                                  {
+                                  "label": "Black (Heavy)",
+                                  "value": "900"
+                                  }
+                              ]
+                          }
+                      },{
+                          "type": "alignment",
+                          "label": "Image alignment",
+                          "id": "descTextAlignment",
+                          "default": {
+                              "horizontal": "left",
+                              "vertical": "top"
+                          },
+                          "typeMeta": {
+                              "display": "both"
+                          }
+                      },
+                      {
+                          "type": "boxModel",
+                          "label": "Margin",
+                          "id": "descTextMargin",
+                          "default": {
+                              "top": {
+                              "value": "0",
+                              "type": "px"
+                              },
+                              "right": {
+                              "value": "0",
+                              "type": "px"
+                              },
+                              "bottom": {
+                              "value": " 0",
+                              "type": " px"
+                              },
+                              "left": {
+                              "value": "0",
+                              "type": "px"
+                              }
+                          }
+                      },
+                      {
+                          "type": "boxModel",
+                          "label": "Padding",
+                          "id": "descTextPadding",
+                          "default": {
+                              "top": {
+                                  "value": "0",
+                                  "type": "px"
+                              },
+                              "right": {
+                                  "value": "0",
+                                  "type": "px"
+                              },
+                              "bottom": {
+                                  "value": "0",
+                                  "type": " px"
+                              },
+                              "left": {
+                                  "value": "0",
+                                  "type": "px"
+                              }
+                          }
+                      }
+                      
+                  ]
+              }
+          ]
+    },{
+        "type":"tab",
+        "label": "Content",
+        "sections": [
+            {
+                "settings": [
+                    {
+                        "type": "boolean",
+                        "id": "isShown",
+                        "label": "With Button",
+                        "default": true
+                    },
+                    {
+                        "type": "input",
+                        "id": "buttonText",
+                        "label": "Button Text",
+                        "default": "Button"
+                    },{
+                        "type": "input",
+                        "id": "link",
+                        "label": "Button URL",
+                        "default": "#"
+                    }
+                ]
+              }
+          ]
+    }         
+]

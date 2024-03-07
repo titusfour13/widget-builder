@@ -1,0 +1,27 @@
+[
+  {
+    "type": "tab",
+    "label": "Design",
+    "sections": [
+      {
+        "label": "Modal",
+        "settings": [
+            {
+                "type": "imageManager",
+                "id": "image",
+                "default": {
+                    "src": "https://www.graphicproducts.com/media/24895/toro-max-popup.png",
+                    "type": "IMAGE_MANAGER"
+                }
+            },
+            {
+                "type": "input",
+                "label": "URL",
+                "id": "url",
+                "default": "#"
+            }
+        ]
+      }
+    ]
+  }
+]

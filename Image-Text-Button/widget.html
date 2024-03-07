@@ -1,0 +1,104 @@
+<style>
+        .sticky-side-nav{
+            background-color:white;
+            display: inline-block;
+        }
+        .image-column-{{_.id}}, .text-column-{{_.id}} {
+          display:inline-block;
+          vertical-align:top;
+          width:48%;
+        }
+        .column-container-{{_.id}}{
+            width:100%;
+        }
+        .column-container-{{_.id}} .card-image-with-text {
+            width: 100%; 
+            background-color: #f2f2f2;
+            text-align: center;
+            display: inline-block;
+            height: auto;
+            padding: 33px 13px;
+        }
+        .column-container-{{_.id}} .card-wrapper .card-image-with-text img{
+            /* object-fit: cover; */
+            height: 100%;
+            max-width: auto;
+            z-index: 0;
+            opacity: 0;
+        }
+        .column-container-{{_.id}} .card-wrapper{
+            width: calc(33% - 40px);
+            display: inline-block;
+            vertical-align: top;
+            margin:20px;
+            border: 1px solid #e2e2e2;
+        }
+
+        .column-container-{{_.id}} a{
+            text-decoration: none;
+            padding: 13px 0px;
+            display: block;
+            width: 100%;
+            margin: 10px auto;
+            text-transform: uppercase;
+            cursor: pointer;
+            color:#f2f2f2;
+            background-color: #F26327;
+        }
+        .column-container-{{_.id}} a:hover{
+            background: #ff8448 !important;
+        }
+        
+        @media (max-width: 481px) {
+            .column-container-{{_.id}} .card-wrapper{
+                width: 100%;
+                display: block;
+                margin:0px;
+                padding:40px 17px;
+            }
+        }
+        @media (max-width: 970px) {
+            .column-container-{{_.id}} .card-wrapper{
+                width: 100%;
+                display: block;
+                margin:0px;
+                padding:40px 17px;
+            }
+        }
+        @media (min-width: 971px) {
+            .column-container-{{_.id}} .card-wrapper{
+                width: calc(33% - 40px);
+                display: inline-block;
+                vertical-align: top;
+                margin:20px
+            }
+        }
+    </style>
+    <div class="column-container-{{_.id}}">
+        {{#each columns}}
+            <div class="card-wrapper">
+                <div class="card-image-with-text">
+                    <div class="image-field" style="background-image: url({{image.src}});background-size: contain; width: 100%; height: auto; background-repeat: no-repeat;background-position: center center;">
+                        <img src="{{image.src}}">
+                    </div>
+                    <p style="font-size:{{titleFontSize.value}}px; 
+                        margin:{{titleTextMargin.top.value}}px {{titleTextMargin.right.value}}px {{titleTextMargin.bottom.value}}px {{titleTextMargin.left.value}}px; 
+                        padding:{{titleTextPadding.top.value}}px {{titleTextPadding.right.value}}px {{titleTextPadding.bottom.value}}px {{titleTextPadding.left.value}}px;
+                        font-weight:{{titleFontWeight}};
+                        color:{{titleTextColor}};
+                        text-align:{{titleTextAlignment.horizontal}}">{{title}}</p>
+                    <p style="font-size:{{descFontSize.value}}px; 
+                        margin:{{descTextMargin.top.value}}px {{descTextMargin.right.value}}px {{descTextMargin.bottom.value}}px {{descTextMargin.left.value}}px; 
+                        padding:{{descTextPadding.top.value}}px {{descTextPadding.right.value}}px {{descTextPadding.bottom.value}}px {{descTextPadding.left.value}}px;
+                        font-weight:{{descFontWeight}};
+                        color:{{descTextColor}};
+                        text-align:{{descTextAlignment.horizontal}}">{{description}}</p>
+                    <div>
+                        <a href="{{link}}" style="cursor: pointer;"> {{buttonText}}</a>    
+                    </div>
+                    
+                </div>
+            </div>
+        {{/each}}
+    </div>
+    

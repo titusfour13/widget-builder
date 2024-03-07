@@ -1,0 +1,304 @@
+{
+  "columns": [
+    {
+      "image": {
+        "src": "https://cdn11.bigcommerce.com/s-n0i50vy/images/stencil/1280x1280/products/109/361/kinfolkessentialissue_1024x1024__22507.1456436715.jpg?c=2&imbypass=on",
+        "type": "IMAGE_MANAGER"
+      },
+      "title": "Please Enter Title",
+      "titleTextColor": "#1D1D1D",
+      "titleFontSize": {
+        "value": "24",
+        "type": "px"
+      },
+      "titleTextMargin": {
+        "top": {
+          "value": "0",
+          "type": "px"
+        },
+        "right": {
+          "value": "10.5",
+          "type": "px"
+        },
+        "bottom": {
+          "value": " 0",
+          "type": " px"
+        },
+        "left": {
+          "value": "10.5",
+          "type": "px"
+        }
+      },
+      "titleTextPadding": {
+        "top": {
+          "value": "0",
+          "type": "px"
+        },
+        "right": {
+          "value": "10.5",
+          "type": "px"
+        },
+        "bottom": {
+          "value": "0",
+          "type": " px"
+        },
+        "left": {
+          "value": "10.5",
+          "type": "px"
+        }
+      },
+      "titleFontWeight": "500",
+      "titleTextAlignment": {
+        "horizontal": "center",
+        "vertical": "top"
+      },
+      "description": "Please Description / Text",
+      "descTextColor": "#1D1D1D",
+      "descFontSize": {
+        "value": "24",
+        "type": "px"
+      },
+      "descFontWeight": "500",
+      "descTextAlignment": {
+        "horizontal": "center",
+        "vertical": "top"
+      },
+      "descTextMargin": {
+        "top": {
+          "value": "0",
+          "type": "px"
+        },
+        "right": {
+          "value": "10.5",
+          "type": "px"
+        },
+        "bottom": {
+          "value": " 0",
+          "type": " px"
+        },
+        "left": {
+          "value": "10.5",
+          "type": "px"
+        }
+      },
+      "descTextPadding": {
+        "top": {
+          "value": "0",
+          "type": "px"
+        },
+        "right": {
+          "value": "10.5",
+          "type": "px"
+        },
+        "bottom": {
+          "value": "0",
+          "type": " px"
+        },
+        "left": {
+          "value": "10.5",
+          "type": "px"
+        }
+      }
+    },
+    {
+      "image": {
+        "src": "https://cdn11.bigcommerce.com/s-n0i50vy/images/stencil/1280x1280/products/109/361/kinfolkessentialissue_1024x1024__22507.1456436715.jpg?c=2&imbypass=on",
+        "type": "IMAGE_MANAGER"
+      },
+      "title": "Please Enter Title",
+      "titleTextColor": "#1D1D1D",
+      "titleFontSize": {
+        "value": "24",
+        "type": "px"
+      },
+      "titleTextMargin": {
+        "top": {
+          "value": "0",
+          "type": "px"
+        },
+        "right": {
+          "value": "10.5",
+          "type": "px"
+        },
+        "bottom": {
+          "value": " 0",
+          "type": " px"
+        },
+        "left": {
+          "value": "10.5",
+          "type": "px"
+        }
+      },
+      "titleTextPadding": {
+        "top": {
+          "value": "0",
+          "type": "px"
+        },
+        "right": {
+          "value": "10.5",
+          "type": "px"
+        },
+        "bottom": {
+          "value": "0",
+          "type": " px"
+        },
+        "left": {
+          "value": "10.5",
+          "type": "px"
+        }
+      },
+      "titleFontWeight": "500",
+      "titleTextAlignment": {
+        "horizontal": "center",
+        "vertical": "top"
+      },
+      "description": "Please Description / Text",
+      "descTextColor": "#1D1D1D",
+      "descFontSize": {
+        "value": "24",
+        "type": "px"
+      },
+      "descFontWeight": "500",
+      "descTextAlignment": {
+        "horizontal": "center",
+        "vertical": "top"
+      },
+      "descTextMargin": {
+        "top": {
+          "value": "0",
+          "type": "px"
+        },
+        "right": {
+          "value": "10.5",
+          "type": "px"
+        },
+        "bottom": {
+          "value": " 0",
+          "type": " px"
+        },
+        "left": {
+          "value": "10.5",
+          "type": "px"
+        }
+      },
+      "descTextPadding": {
+        "top": {
+          "value": "0",
+          "type": "px"
+        },
+        "right": {
+          "value": "10.5",
+          "type": "px"
+        },
+        "bottom": {
+          "value": "0",
+          "type": " px"
+        },
+        "left": {
+          "value": "10.5",
+          "type": "px"
+        }
+      }
+    },
+    {
+      "image": {
+        "src": "https://cdn11.bigcommerce.com/s-n0i50vy/images/stencil/1280x1280/products/109/361/kinfolkessentialissue_1024x1024__22507.1456436715.jpg?c=2&imbypass=on",
+        "type": "IMAGE_MANAGER"
+      },
+      "title": "Please Enter Title",
+      "titleTextColor": "#1D1D1D",
+      "titleFontSize": {
+        "value": "24",
+        "type": "px"
+      },
+      "titleTextMargin": {
+        "top": {
+          "value": "0",
+          "type": "px"
+        },
+        "right": {
+          "value": "10.5",
+          "type": "px"
+        },
+        "bottom": {
+          "value": " 0",
+          "type": " px"
+        },
+        "left": {
+          "value": "10.5",
+          "type": "px"
+        }
+      },
+      "titleTextPadding": {
+        "top": {
+          "value": "0",
+          "type": "px"
+        },
+        "right": {
+          "value": "10.5",
+          "type": "px"
+        },
+        "bottom": {
+          "value": "0",
+          "type": " px"
+        },
+        "left": {
+          "value": "10.5",
+          "type": "px"
+        }
+      },
+      "titleFontWeight": "500",
+      "titleTextAlignment": {
+        "horizontal": "center",
+        "vertical": "top"
+      },
+      "description": "Please Description / Text",
+      "descTextColor": "#1D1D1D",
+      "descFontSize": {
+        "value": "24",
+        "type": "px"
+      },
+      "descFontWeight": "500",
+      "descTextAlignment": {
+        "horizontal": "center",
+        "vertical": "top"
+      },
+      "descTextMargin": {
+        "top": {
+          "value": "0",
+          "type": "px"
+        },
+        "right": {
+          "value": "10.5",
+          "type": "px"
+        },
+        "bottom": {
+          "value": " 0",
+          "type": " px"
+        },
+        "left": {
+          "value": "10.5",
+          "type": "px"
+        }
+      },
+      "descTextPadding": {
+        "top": {
+          "value": "0",
+          "type": "px"
+        },
+        "right": {
+          "value": "10.5",
+          "type": "px"
+        },
+        "bottom": {
+          "value": "0",
+          "type": " px"
+        },
+        "left": {
+          "value": "10.5",
+          "type": "px"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "title": "Manual",
+  "borderRight": true,
+  "image": {
+    "src": "https://www.graphicproducts.com/assets/images/support-content-icon.svg",
+    "type": "IMAGE_MANAGER"
+  },
+  "lists": [
+    {
+      "isEmbeded": true,
+      "caption": "Caption",
+      "link": "#",
+      "linkType":{
+        "value":"link"
+      }
+    },
+    {
+      "isEmbeded": true,
+      "caption": "Caption",
+      "link": "#"
+    }
+  ]
+}

@@ -1,0 +1,68 @@
+
+<style>
+        .column-container-{{_.id}} {
+            display:inline-block;
+            list-style:none;
+            height:100%;
+            width:98%;
+            margin-right:2%;
+            padding-left:1%;
+            {{#if borderRight}}
+            border-right:2px solid silver;
+            {{/if}}
+        }
+        div[data-widget-id="{{_.id}}"]{
+            height:100%
+        }
+        .column-container-{{_.id}} li{
+            list-style:none;
+            margin-bottom: 10px;
+        }
+        .column-container-{{_.id}} a{
+            text-decoration: none;
+            color:#015f9c;
+        }
+        .column-container-{{_.id}} p{
+            font-weight: bold;
+            margin: 15px 0px;
+        }
+        .column-container-{{_.id}} ul{
+            padding-left:0px;
+            margin-left: 0px;
+        }
+        @media (max-width: 481px) {
+            .column-container-{{_.id}} {
+                border-right:0px;
+            }
+            .column-container-{{_.id}} a{
+                font-size: 12px
+            }
+        }
+    </style>
+    {{#each lists}}
+        {{{wistiaScript}}}
+    {{/each}}
+
+</span>
+
+    <div class="column-container-{{_.id}}" id="parent-3-column-links-03-09-2023-1:38-PM">
+        <div class="image-field-{{_.id}}">
+            <img src="{{image.src}}">
+            <p class="title--{{_.id}}">{{title}}</p>
+        </div>
+        
+        <div>
+            
+        </div>
+        <ul>
+{{#each lists}}
+            <li>
+{{#if linkType "==" "link"}}
+                <a href="{{link}}" style="cursor: pointer;">{{caption}}</a> 
+{{else}}
+                {{{wistiaHTML}}}
+{{/if}}
+            </li>
+{{/each}}
+        </ul>
+    </div>
