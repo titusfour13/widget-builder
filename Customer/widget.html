@@ -1,0 +1,445 @@
+<style>
+  .customer-widget-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+    background: #f9f9fa 0% 0% no-repeat padding-box;
+    border-radius: 26px;
+    opacity: 1;
+    padding: 20px;
+    min-width: 100%;
+  }
+
+  .homepage-customer-contact-us {
+    display: inline-block;
+    align-items: center;
+    font-size: 1.4rem;
+  }
+  .homepage-customer-contact-us a {
+    color: #221e20;
+  }
+  .customer-widget-container ul {
+    margin-bottom: 0;
+  }
+  .customer-widget-container ul li {
+    font-size: 1.143rem;
+  }
+  .homepage-customer-card-caption {
+    font-size: 2.143rem;
+    color: #221e20;
+    font-weight: 600;
+    margin: 10px 0px 10px 0px;
+  }
+  .homepage-customer-card-details2 {
+    white-space: nowrap;
+    font-size: 1.4rem;
+    color: #221e20;
+    font-weight: 500;
+    margin-bottom: 30px;
+  }
+  .purple-button-a {
+    text-decoration: none;
+    color: white;
+    border: 1px solid white;
+    font-size: 0.875rem;
+    font-weight: 600;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #634a66;
+    border-radius: 28px;
+    margin: 20px auto 40px 0;
+    transition: transform 0.3s ease;
+    width: 140px;
+    height: 40px;
+  }
+  .purple-button-a:hover {
+    color: #634a66;
+    background-color: white;
+    border: 1px solid #634a66;
+    cursor: pointer;
+  }
+
+  .customer-buttons-white-container {
+    display: flex;
+  }
+  .white-button-a {
+    text-decoration: none;
+    color: #634a66;
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    border-radius: 28px;
+    border: 2px solid #634a66;
+    margin: 20px 0 20px 0;
+    width: 140px;
+    height: 40px;
+  }
+  .white-button-a:hover {
+    color: white;
+    background-color: #634a66;
+  }
+  .homepage-customer-contact-us img {
+    height: 30px;
+    margin-right: 10px;
+  }
+  .homepage-customer-contact-us {
+    display: flex;
+  }
+  .homepage-customer-contact-us p {
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
+  .homepage-customer-card-details2 a:hover {
+    color: #634a66;
+  }
+  .you-recent-order {
+    font-size: 1rem;
+    padding: 0 20px;
+  }
+  .order-number-customer-widget {
+    color: #704776;
+    text-decoration: underline;
+    font-size: 1.1429rem;
+  }
+  .order-date-customer-widget {
+    font-weight: 300;
+  }
+  .order-status-customer-widget {
+    margin-left: 1rem;
+    font-weight: 300;
+  }
+  .date-and-status-container span {
+    font-size: 0.928rem;
+  }
+  .order-date-customer-widget span {
+    color: #221e20;
+    font-weight: 600;
+  }
+
+  .order-status-customer-widget span {
+    color: #c67729;
+    background-color: #f2e5bf;
+    text-transform: uppercase;
+    padding: 4px 2px 2px 2px;
+    font-size: 0.813rem;
+  }
+  #customer-widget-order-details-container {
+    display: flex;
+    flex-direction: column;
+  }
+  .order-price-customer-widget {
+    font-size: 1.14rem;
+    margin: 4px 0;
+    font-size: 700;
+    display: block;
+  }
+  .order-botton-container a {
+    margin: 0px;
+  }
+
+  .wishlist-botton-container {
+    display: flex;
+    flex-direction: column;
+    padding: 20px 20px 0;
+  }
+
+  .wishlist-botton-container .text-wishlist {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  .wishlist-botton-container .text-wishlist svg {
+    margin-left: 10px;
+  }
+  .order-botton-links {
+    margin: 10px 0 10px 0;
+    display: flex;
+  }
+  .customer-display-flex,
+  .order-botton-container {
+    display: flex;
+  }
+  .order-botton-container .white-button-a {
+    margin-left: 1rem;
+  }
+  .customer-widget-order-details {
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 20px;
+  }
+  .width-368 {
+    width: 368px;
+  }
+  .customer-name-widget-container {
+    padding: 20px;
+  }
+
+  #sd-image-29a9711f-6e10-4efa-bd6d-0038c927d61c {
+    border-radius: 25px;
+    max-width: 439px;
+    max-height: 439px;
+  }
+  #sd-image-6304c7cb-5467-4466-a514-398b97ce13ad {
+    border-radius: 25px;
+    max-width: 439px;
+    max-height: 439px;
+  }
+
+  .arrowPurple {
+    width: 5px;
+    height: 7px;
+    background: transparent
+      url(https://cdn11.bigcommerce.com/s-pzmikw7v7m/images/stencil/original/image-manager/right-icon-whitebg.png)
+      0% 0% no-repeat padding-box;
+    opacity: 1;
+    position: relative;
+    margin-left: 8px;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .purple-button-a:hover .arrowWhite {
+    background: transparent
+      url(https://cdn11.bigcommerce.com/s-pzmikw7v7m/images/stencil/original/image-manager/right-icon-whitebg.png)
+      0% 0% no-repeat padding-box;
+  }
+  .arrowWhite {
+    width: 4px;
+    height: 7px;
+    background: transparent
+      url(https://cdn11.bigcommerce.com/s-pzmikw7v7m/images/stencil/original/image-manager/right-icon-purplebg.png)
+      0% 0% no-repeat padding-box;
+    opacity: 1;
+    position: relative;
+    margin-left: 8px;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .white-button-a:hover .arrowPurple {
+    background: transparent
+      url(https://cdn11.bigcommerce.com/s-pzmikw7v7m/images/stencil/original/image-manager/right-icon-purplebg.png)
+      0% 0% no-repeat padding-box;
+  }
+  @media (min-width: 481px) {
+    /* .customer-buttons-white-container a {
+      padding: 8px 10px 5px 10px;
+    } */
+    .homepage-customer-card-caption {
+      font-size: 2.125rem;
+    }
+    .homepage-customer-card-details2 {
+      font-size: 1.5rem;
+    }
+    .customer-widget-container {
+      padding: 20px 30px 20px 30px;
+      min-height: 429px;
+      min-width: 429px;
+    }
+    .customer-widget-container2 {
+      padding: 20px 30px 20px 30px;
+    }
+    .homepage-customer-contact-us {
+      margin-bottom: 0;
+    }
+  }
+  @media (min-width: 1025px) {
+    .customer-widget-container {
+      aspect-ratio: auto;
+    }
+    .mb-customer-widget {
+      margin-bottom: 20px;
+    }
+  }
+</style>
+<div class="customer-widget-container" id="customer-widget-container">
+  <div id="customer-name-widget-container">
+    <h3 class="homepage-customer-card-caption width-368">Good Morning,</h3>
+    <p class="you-recent-order">YOUR RECENT ORDER</p>
+  </div>
+  <div id="customer-widget-order-details-container">
+    <div class="customer-widget-order-details">
+      <span class="order-number-customer-widget">ORDER #</span>
+      <span class="order-price-customer-widget">$</span>
+      <div class="date-and-status-container">
+        <span class="order-date-customer-widget">Order Date:</span>
+        <span class="order-status-customer-widget">Status: </span>
+      </div>
+      <div class="order-botton-container order-botton-links">
+        <a
+          class="purple-button-a"
+          href="/account.php?action=view_order&order_id=${orderList.list[0].orderId}"
+          >View Order <i class="arrowWhite"></i>
+        </a>
+        <a class="white-button-a" href="/account.php?action=order_status"
+          >Order History <i class="arrowPurple"></i
+        ></a>
+      </div>
+    </div>
+    <div class="wishlist-botton-container">
+      <span class="text-wishlist">
+        DON'T FORGET YOUR WISHLISTS
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="18.209"
+          height="18.209"
+          viewBox="0 0 18.209 18.209"
+        >
+          <g
+            id="wishlist_icon"
+            data-name="wishlist icon"
+            transform="translate(0)"
+          >
+            <path
+              id="Trazado_217"
+              data-name="Trazado 217"
+              d="M0,0H18.209V18.209H0Z"
+              transform="translate(0)"
+              fill="none"
+            />
+            <path
+              id="Trazado_218"
+              data-name="Trazado 218"
+              d="M15.439,3.764a4.367,4.367,0,0,0-5.83.849,4.359,4.359,0,0,0-5.83-.849A4.241,4.241,0,0,0,2,7.076c-.107,3,2.511,5.4,6.507,9.08l.076.069a1.5,1.5,0,0,0,2.047-.008l.084-.077c4-3.675,6.606-6.076,6.507-9.072A4.238,4.238,0,0,0,15.439,3.764ZM9.686,15.006l-.076.077-.076-.077C5.911,11.678,3.521,9.478,3.521,7.246a2.62,2.62,0,0,1,2.664-2.7A2.975,2.975,0,0,1,8.9,6.366h1.423a2.956,2.956,0,0,1,2.709-1.822,2.62,2.62,0,0,1,2.664,2.7C15.7,9.478,13.308,11.678,9.686,15.006Z"
+              transform="translate(-0.563 -0.846)"
+              fill="#704776"
+            />
+          </g>
+        </svg>
+      </span>
+      <div class="order-botton-container mb-customer-widget">
+        <a
+          class="purple-button-a"
+          href="/account.php?action=view_order&order_id=${orderList.list[0].orderId}"
+          >View All <i class="arrowWhite"></i
+        ></a>
+        <a class="white-button-a" href="/account.php?action=order_status"
+          >+ Create New</a
+        >
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  const widgetConfig = {{{json .}}}
+  console.log(widgetConfig)
+  let name = null;
+  function formatDate(timestamp) {
+      const milliseconds = timestamp * 1000;
+
+      const date = new Date(milliseconds);
+
+      const month = date.getMonth() + 1;
+      const day = date.getDate();
+      const year = date.getFullYear() % 100;
+
+      const formattedDate = `${month}/${day}/${year}`;
+
+      return formattedDate;
+  }
+  function capitalizeFirstLetter(word) {
+      return word.charAt(0).toUpperCase() + word.slice(1);
+  }
+  function getFirstWord(str) {
+      const words = str.trim().split(/\s+/);
+
+      return capitalizeFirstLetter(words[0]);
+  }
+  function placeWidgetContent(name){
+      const content = document.getElementById("customer-name-widget-container");
+      let html = "";
+      if (name) {
+          html += `
+              <h3 class='homepage-customer-card-caption'>Good Morning, ${name}</h3>
+              <p class="you-recent-order">YOUR RECENT ORDER</p>`;
+          content.innerHTML = html;
+      }
+  }
+  let intervalId;
+  async function onB2BScriptLoaded() {
+      clearInterval(intervalId);
+      try {
+          let html = ""
+          if(name){
+              const orderList = await window.B2BPages[0].api.getOrderList();
+              const order = document.getElementById("customer-widget-order-details-container");
+
+              html = `
+              <div class="customer-widget-order-details">
+                  <span class="order-number-customer-widget">ORDER #${orderList.list[0].orderId}</span>
+              <span class="order-price-customer-widget">$${orderList.list[0].totalIncTax}</span>
+                  <div classs"date-and-status-container">
+                      <span class="order-date-customer-widget">Order Date: <span>${formatDate(orderList.list[0].createdAt)}</span></span>
+                      <span class="order-status-customer-widget">Status: <span>${orderList.list[0].customOrderStatus}</span></span>
+                  </div>
+                  <div class="order-botton-container order-botton-links">
+                      <a class="purple-button-a" href="/account.php?action=view_order&order_id=${orderList.list[0].orderId}">View Order <i class="arrowWhite"></i></a>
+                      <a class="white-button-a" href="/account.php?action=order_status">Order History <i class="arrowPurple"></i></a>
+                  </div>
+               </div>
+              <div class="wishlist-botton-container">
+                  <span class="text-wishlist">
+                      DON'T FORGET YOUR WISHLISTS
+                      <svg xmlns="http://www.w3.org/2000/svg" width="18.209" height="18.209" viewBox="0 0 18.209 18.209">
+                          <g id="wishlist_icon" data-name="wishlist icon" transform="translate(0)">
+                              <path id="Trazado_217" data-name="Trazado 217" d="M0,0H18.209V18.209H0Z" transform="translate(0)" fill="none"/>
+                              <path id="Trazado_218" data-name="Trazado 218" d="M15.439,3.764a4.367,4.367,0,0,0-5.83.849,4.359,4.359,0,0,0-5.83-.849A4.241,4.241,0,0,0,2,7.076c-.107,3,2.511,5.4,6.507,9.08l.076.069a1.5,1.5,0,0,0,2.047-.008l.084-.077c4-3.675,6.606-6.076,6.507-9.072A4.238,4.238,0,0,0,15.439,3.764ZM9.686,15.006l-.076.077-.076-.077C5.911,11.678,3.521,9.478,3.521,7.246a2.62,2.62,0,0,1,2.664-2.7A2.975,2.975,0,0,1,8.9,6.366h1.423a2.956,2.956,0,0,1,2.709-1.822,2.62,2.62,0,0,1,2.664,2.7C15.7,9.478,13.308,11.678,9.686,15.006Z" transform="translate(-0.563 -0.846)" fill="#704776"/>
+                          </g>
+                      </svg>
+                  </span>
+                  <div class="order-botton-container mb-customer-widget">
+                      <a class="purple-button-a" href="/account.php?action=view_order&order_id=${orderList.list[0].orderId}">View All  <i class="arrowWhite"></i></a>
+                      <a class="white-button-a" href="/account.php?action=order_status">+ Create New</a>
+                  </div>
+              </div>
+              `
+              placeWidgetContent(name);
+              order.innerHTML = html
+          }else {
+              const logout = document.getElementById("customer-widget-container")
+              html += `
+                  <h3 class='homepage-customer-card-caption'>{{cscaption}}</h3>
+                  {{{html}}}
+                  <a class="purple-button-a" href="{{url1}}">{{button1}}  <i class="arrowWhite"></i></a>
+                  <div class="homepage-customer-contact-us">
+                      <img src="{{image.src}}" alt="questions"/><p class='homepage-customer-card-details2'>{{csdetails2}} Questions?  <a href="{{contacturl}}">{{contactus}}</a></p>
+                  </div>
+                  <div class="customer-buttons-white-container">
+                      <a class="white-button-a" href="{{whiteurl1}}">{{whitebutton1}}  <i class="arrowPurple"></i></a>
+                      <a class="white-button-a" href="{{whiteurl2}}">{{whitebutton2}}  <i class="arrowPurple"></i></a>
+                  </div>`;
+              logout.innerHTML = html;
+          }
+      } catch (error) {
+          console.error(error);
+      }
+  }
+
+  try {
+      setTimeout(() => {
+          const jsContext = window.jsContext;
+          if (jsContext.customer && jsContext.customer.name) {
+              name = getFirstWord(jsContext.customer.name);
+          }
+      }, 300);
+  } catch (error) {
+      console.error(error);
+  }
+
+  intervalId = setInterval(() => {
+      if (window.B2BPages) {
+          onB2BScriptLoaded();
+          clearInterval(intervalId);
+      }
+  }, 1000);
+</script>

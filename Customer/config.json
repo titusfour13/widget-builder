@@ -1,0 +1,17 @@
+{
+  "cstitle": "Title",
+  "cscaption": "Caption",
+  "html": "<ul><li>list1</li></ul>",
+  "csdetails2": "Text",
+  "button1": "Text",
+  "url1": "Link",
+  "contactus": "Contact Us",
+  "contacturl": "Link",
+  "image": {
+    "src": "https://cdn11.bigcommerce.com/s-pzmikw7v7m/images/stencil/original/image-manager/heart-icon-2x.png?t=1708528999",
+    "type": "IMAGE_MANAGER"
+  },
+  "whitebutton1": "Text",
+  "whiteurl1": "Link",
+  "whitebutton2": "Text"
+}
