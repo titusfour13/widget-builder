@@ -1,0 +1,40 @@
+
+<style>
+        #eesco-text-{{_.id}} {
+            color: {{color}};
+            background: {{background_color}};
+            font-size: {{font_size.value}}{{font_size.type}};
+            font-weight: {{font_weight}};
+            text-align: {{text_align.horizontal}};
+            padding-top: {{padding.top.value}}{{padding.top.type}};
+            padding-right: {{padding.right.value}}{{padding.right.type}};
+            padding-bottom: {{padding.bottom.value}}{{padding.bottom.type}};
+            padding-left: {{padding.left.value}}{{padding.left.type}};
+            margin-top: {{margin.top.value}}{{margin.top.type}};
+            margin-right: {{margin.right.value}}{{margin.right.type}};
+            margin-bottom: {{margin.bottom.value}}{{margin.bottom.type}};
+            margin-left: {{margin.left.value}}{{margin.left.type}};
+        }
+        
+        #eesco-title-{{_.id}} {
+            text-transform: capitalize;
+            text-align: center;
+            color: {{titlecolor}};
+            background: {{title_background_color}};
+            font-size: {{title_font_size.value}}{{title_font_size.type}};
+            font-weight: {{title_font_weight}};
+            text-align: {{title_text_align.horizontal}};
+            padding-top: {{title_padding.top.value}}{{title_padding.top.type}};
+            padding-right: {{title_padding.right.value}}{{title_padding.right.type}};
+            padding-bottom: {{title_padding.bottom.value}}{{title_padding.bottom.type}};
+            padding-left: {{title_padding.left.value}}{{title_padding.left.type}};
+            margin-top: {{title_margin.top.value}}{{title_margin.top.type}};
+            margin-right: {{title_margin.right.value}}{{title_margin.right.type}};
+            margin-bottom: {{title_margin.bottom.value}}{{title_margin.bottom.type}};
+            margin-left: {{title_margin.left.value}}{{title_margin.left.type}};
+        }
+    </style>
+    
+    <h1 id='eesco-title-{{_.id}}'>{{title_content}}</h1>
+    <p id='eesco-text-{{_.id}}'>{{content}}</p>
+
