@@ -1,0 +1,212 @@
+{
+  "columns": [
+    {
+      "map": {
+        "src": "https://cdn11.bigcommerce.com/s-qy08dii6dm/images/stencil/original/image-manager/patti-anderson-2x.png",
+        "type": "IMAGE_MANAGER"
+      },
+      "image": {
+        "src": "https://cdn11.bigcommerce.com/s-qy08dii6dm/images/stencil/original/image-manager/patti-anderson-2x.png",
+        "type": "IMAGE_MANAGER"
+      },
+      "territory": "Territories",
+      "firstName": "FirstName",
+      "lastName": "LastName",
+      "email": "test@email.com",
+      "modalId": "Name",
+      "aboutNote": "Note",
+      "captionTextMargin": {
+        "top": {
+          "value": "0",
+          "type": "px"
+        },
+        "right": {
+          "value": "10.5",
+          "type": "px"
+        },
+        "bottom": {
+          "value": " 0",
+          "type": " px"
+        },
+        "left": {
+          "value": "10.5",
+          "type": "px"
+        }
+      },
+      "captionTextPadding": {
+        "top": {
+          "value": "0",
+          "type": "px"
+        },
+        "right": {
+          "value": "10.5",
+          "type": "px"
+        },
+        "bottom": {
+          "value": "0",
+          "type": " px"
+        },
+        "left": {
+          "value": "10.5",
+          "type": "px"
+        }
+      }
+    },
+    {
+      "map": {
+        "src": "https://cdn11.bigcommerce.com/s-qy08dii6dm/images/stencil/original/image-manager/patti-anderson-2x.png",
+        "type": "IMAGE_MANAGER"
+      },
+      "image": {
+        "src": "https://cdn11.bigcommerce.com/s-qy08dii6dm/images/stencil/original/image-manager/patti-anderson-2x.png",
+        "type": "IMAGE_MANAGER"
+      },
+      "territory": "Territories",
+      "firstName": "FirstName",
+      "lastName": "LastName",
+      "email": "test@email.com",
+      "modalId": "Name",
+      "aboutNote": "Note",
+      "captionTextMargin": {
+        "top": {
+          "value": "0",
+          "type": "px"
+        },
+        "right": {
+          "value": "10.5",
+          "type": "px"
+        },
+        "bottom": {
+          "value": " 0",
+          "type": " px"
+        },
+        "left": {
+          "value": "10.5",
+          "type": "px"
+        }
+      },
+      "captionTextPadding": {
+        "top": {
+          "value": "0",
+          "type": "px"
+        },
+        "right": {
+          "value": "10.5",
+          "type": "px"
+        },
+        "bottom": {
+          "value": "0",
+          "type": " px"
+        },
+        "left": {
+          "value": "10.5",
+          "type": "px"
+        }
+      }
+    },
+    {
+      "map": {
+        "src": "https://cdn11.bigcommerce.com/s-qy08dii6dm/images/stencil/original/image-manager/patti-anderson-2x.png",
+        "type": "IMAGE_MANAGER"
+      },
+      "image": {
+        "src": "https://cdn11.bigcommerce.com/s-qy08dii6dm/images/stencil/original/image-manager/patti-anderson-2x.png",
+        "type": "IMAGE_MANAGER"
+      },
+      "territory": "Territories",
+      "firstName": "FirstName",
+      "lastName": "LastName",
+      "email": "test@email.com",
+      "modalId": "Name",
+      "aboutNote": "Note",
+      "captionTextMargin": {
+        "top": {
+          "value": "0",
+          "type": "px"
+        },
+        "right": {
+          "value": "10.5",
+          "type": "px"
+        },
+        "bottom": {
+          "value": " 0",
+          "type": " px"
+        },
+        "left": {
+          "value": "10.5",
+          "type": "px"
+        }
+      },
+      "captionTextPadding": {
+        "top": {
+          "value": "0",
+          "type": "px"
+        },
+        "right": {
+          "value": "10.5",
+          "type": "px"
+        },
+        "bottom": {
+          "value": "0",
+          "type": " px"
+        },
+        "left": {
+          "value": "10.5",
+          "type": "px"
+        }
+      }
+    },
+    {
+      "map": {
+        "src": "https://cdn11.bigcommerce.com/s-qy08dii6dm/images/stencil/original/image-manager/patti-anderson-2x.png",
+        "type": "IMAGE_MANAGER"
+      },
+      "image": {
+        "src": "https://cdn11.bigcommerce.com/s-qy08dii6dm/images/stencil/original/image-manager/patti-anderson-2x.png",
+        "type": "IMAGE_MANAGER"
+      },
+      "territory": "Territories",
+      "firstName": "FirstName",
+      "lastName": "LastName",
+      "email": "test@email.com",
+      "modalId": "Name",
+      "aboutNote": "Note",
+      "captionTextMargin": {
+        "top": {
+          "value": "0",
+          "type": "px"
+        },
+        "right": {
+          "value": "10.5",
+          "type": "px"
+        },
+        "bottom": {
+          "value": " 0",
+          "type": " px"
+        },
+        "left": {
+          "value": "10.5",
+          "type": "px"
+        }
+      },
+      "captionTextPadding": {
+        "top": {
+          "value": "0",
+          "type": "px"
+        },
+        "right": {
+          "value": "10.5",
+          "type": "px"
+        },
+        "bottom": {
+          "value": "0",
+          "type": " px"
+        },
+        "left": {
+          "value": "10.5",
+          "type": "px"
+        }
+      }
+    }
+  ]
+}

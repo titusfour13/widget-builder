@@ -1,0 +1,272 @@
+<style>
+
+        .column-container-{{_.id}}{
+            width:100%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .column-container-{{_.id}} .card-wrapper{
+            background: #FFFFFF 0% 0% no-repeat padding-box;
+            box-shadow: 0px 4px 6px #0000000A;
+            border-radius: 4px;
+            flex: 1 0 100%;
+            max-width:22.643rem; 
+        } 
+        .column-container-{{_.id}} .card-wrapper .territory{
+            color:#808080;
+            font-size: 1rem;
+            font-weight: normal;
+        }
+        .column-container-{{_.id}} .card-wrapper .teritories{
+            color:#221E20;
+            font-weight: 600;
+            font-size: 1.143rem;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+            min-height: 3.429rem;
+        }
+        .column-container-{{_.id}} .image-and-map-container {
+            display: flex;
+            justify-content: space-between;
+        }
+        .column-container-{{_.id}} .image-and-map-container img{
+            width:7.929rem;
+            height: 7.929rem;
+        }
+        .column-container-{{_.id}} .image-and-map-container .map-svg{
+            width: 50%;
+            height: 112px;
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: center;
+            text-align: center;
+        }
+        .column-container-{{_.id}} .image-and-map-container .map-svg img{
+            width: auto;
+        }
+        .column-container-{{_.id}} .image-and-map-container h4{
+            margin-top: 0.5rem;
+            display: flex;
+            flex-direction: column;
+            font-size: 1.429rem;
+        }
+        .column-container-{{_.id}} .image-and-map-container h4 span{
+            text-align: center  ;
+            color:#221E20;
+            white-space: nowrap;
+        }
+        .column-container-{{_.id}} .email-about{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .column-container-{{_.id}} .email-about span{
+            color:#38223C;
+            font-size: 1.071rem;
+            font-weight: 500;
+            margin-right: 1rem;
+        }
+        .column-container-{{_.id}} .email-about span:hover{
+            cursor: pointer;
+        }
+        .column-container-{{_.id}} .email-about a, .column-container-{{_.id}} .aboutme-modal a{
+            display: flex;
+            text-decoration: none;
+            color: #38223C;
+            font-weight: 500;
+            font-size: 1.071rem;
+            padding: 5px 12px 5px 12px;
+            min-width: 80px;
+            box-shadow: 0px 4px 6px #0000000A;
+            border-radius: 4px;
+        }
+        .email-about a, .column-container-{{_.id}} .aboutme-modal a{
+            max-width: 91px;
+        }
+        .column-container-{{_.id}} .email-about a svg, .column-container-{{_.id}} .aboutme-modal a svg{
+            margin-right: 8px;
+        }
+
+        .column-container-{{_.id}} .overlay {
+            position: fixed;
+            display: none;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(128, 128, 128, 0.7); /* transparent gray */
+            z-index: 1;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        .column-container-{{_.id}} .overlay.show {
+            display: block;
+            opacity: 1;
+        }
+        .column-container-{{_.id}} .aboutme-modal {
+            position: fixed;
+            display: none;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #fefefe;
+            padding: 40px;
+            width: 100%;
+            max-width: 600px;
+            z-index: 2;
+            background: #FFFFFF 0% 0% no-repeat padding-box;
+            box-shadow: 0px 4px 20px #00000055;
+            border-radius: 4px;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .column-container-{{_.id}} .aboutme-modal.show {
+            display: block;
+            opacity: 1;
+        }
+        .column-container-{{_.id}} .  {
+            position: relative;
+        }
+
+        .column-container-{{_.id}} .close-aboutme-modal {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            color: #aaa;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        .column-container-{{_.id}} .modal-content img{
+            width: 11.143rem;
+            height: 11.143rem;
+        }
+        .column-container-{{_.id}} .modal-content .territory{
+            font-size: 1rem;
+            color: #221E20;
+            font-weight: bold;
+        }
+        .column-container-{{_.id}} .modal-content .about-note{
+            line-height: 1.714rem;
+            font-size: 1.143rem;
+        }
+
+        .column-container-{{_.id}} .modal-content .teritories{
+            font-size: 1rem;
+            color: #808080;
+            font-weight: normal;
+            margin: 0.5rem 0 1.429rem 0;
+        }
+        .column-container-{{_.id}} .modal-content .teritories br{
+            display: none;
+        }
+        .column-container-{{_.id}} .rep-details{
+            display: flex;
+            margin-bottom: 1.429rem;
+        }
+         .column-container-{{_.id}} .rep-details div{
+            margin-left: 1rem;
+        }
+        .column-container-{{_.id}} .rep-details h4{
+            display: flex;
+            flex-direction: column;
+            font-size: 2.286rem;
+            font-weight: 500;
+            margin: 15px 0 20px 0;
+            line-height: 2.429rem;
+            color:#221e20;
+        }
+        .column-container-{{_.id}} .close-aboutme-modal:hover,
+        .column-container-{{_.id}} .close-aboutme-modal:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        @media (min-width: 431px) {
+            .column-container-{{_.id}}{
+                display:flex;
+                justify-content: space-between;
+            }
+            .column-container-{{_.id}} .aboutme-modal {
+                width: 39.286rem;
+            }
+            
+        }
+        @media (min-width: 768px) {
+            .column-container-{{_.id}} .card-wrapper {
+                flex: 1 0 44%;
+            }
+        }
+
+        /* For desktop: 4 columns */
+        @media (min-width: 1025px) {
+            .column-container-{{_.id}} .card-wrapper {
+                flex: 1 0 23%;
+            }
+        }
+    </style>
+        
+    <div class="column-container-{{_.id}}">
+        {{#each columns}}
+            <div class="card-wrapper" style="margin:{{captionTextMargin.top.value}}px {{captionTextMargin.right.value}}px {{captionTextMargin.bottom.value}}px {{captionTextMargin.left.value}}px; 
+                padding:{{captionTextPadding.top.value}}px {{captionTextPadding.right.value}}px {{captionTextPadding.bottom.value}}px {{captionTextPadding.left.value}}px;">
+                <span class="territory">Territory:</span>
+                <p class="teritories">{{{territory}}}</p>
+                <div class="image-and-map-container">
+                    <div class="map-svg"> <img src="{{map.src}}" alt="map"/></div>
+                    <div>
+                        <img src="{{image.src}}" alt="profile"/>
+                        <h4>
+                            <span>{{firstName}}</span> 
+                            <span>{{lastName}}</span>
+                        </h4>
+                    </div>
+                </div>
+                <div class="email-about">
+                    <a href="mailto:{{email}}">
+                        <svg xmlns='http://www.w3.org/2000/svg' width='20.914' height='16.93' viewBox='0 0 20.914 16.93'>
+                            <g id='Email_icon' transform='translate(-152.613 -1005.174)'>
+                                <rect id='Rectángulo_3660' data-name='Rectángulo 3660' width='19.287' height='15.935' transform='translate(153.111 1005.672)' fill='#faf7fb'/>
+                                <path id='Rectángulo_3661' data-name='Rectángulo 3661' d='M0,0H0A2.789,2.789,0,0,1,2.789,2.789V13.146A2.789,2.789,0,0,1,0,15.935H0a0,0,0,0,1,0,0V0A0,0,0,0,1,0,0Z' transform='translate(170.241 1005.672)' fill='#e5daea'/>
+                                <path id='Icon_material-email' data-name='Icon material-email' d='M4.74,5.25H20.674a2.493,2.493,0,0,1,2.49,2.49V19.691a2.493,2.493,0,0,1-2.49,2.49H4.74a2.493,2.493,0,0,1-2.49-2.49L2.26,7.739A2.488,2.488,0,0,1,4.74,5.25ZM20.674,21.185a1.5,1.5,0,0,0,1.494-1.494V7.74a1.5,1.5,0,0,0-1.494-1.494H4.74A1.491,1.491,0,0,0,3.256,7.74l-.01,11.951A1.5,1.5,0,0,0,4.74,21.185Z' transform='translate(150.363 999.924)' fill='#634a66'/>
+                                <path id='Path_2876' data-name='Path 2876' d='M-7703.249-10653.111l-8.2-5.1v-1.375l8.2,4.924,8.457-4.924v1.375Z' transform='translate(7866.223 11667.985)' fill='#634a66'/>
+                            </g>
+                        </svg>
+                        Email</a>
+                    <span class="about-me" target-modal="{{modalId}}">
+                        About Me +
+                    </span>
+                </div>
+            </div>
+            <div id="{{modalId}}" class="aboutme-modal">
+                <span class="close-aboutme-modal">&times;</span>
+                <div class="modal-content">
+                    <div class="rep-details">
+                    <img src="{{image.src}}" alt="name"/>
+                    <div>
+                        <h4>
+                            <span>{{firstName}}</span> 
+                            <span>{{lastName}}</span>
+                        </h4>
+                        <a href="mailto:patrick@four13.co">
+                        <svg xmlns='http://www.w3.org/2000/svg' width='20.914' height='16.93' viewBox='0 0 20.914 16.93'>
+                            <g id='Email_icon' transform='translate(-152.613 -1005.174)'>
+                                <rect id='Rectángulo_3660' data-name='Rectángulo 3660' width='19.287' height='15.935' transform='translate(153.111 1005.672)' fill='#faf7fb'/>
+                                <path id='Rectángulo_3661' data-name='Rectángulo 3661' d='M0,0H0A2.789,2.789,0,0,1,2.789,2.789V13.146A2.789,2.789,0,0,1,0,15.935H0a0,0,0,0,1,0,0V0A0,0,0,0,1,0,0Z' transform='translate(170.241 1005.672)' fill='#e5daea'/>
+                                <path id='Icon_material-email' data-name='Icon material-email' d='M4.74,5.25H20.674a2.493,2.493,0,0,1,2.49,2.49V19.691a2.493,2.493,0,0,1-2.49,2.49H4.74a2.493,2.493,0,0,1-2.49-2.49L2.26,7.739A2.488,2.488,0,0,1,4.74,5.25ZM20.674,21.185a1.5,1.5,0,0,0,1.494-1.494V7.74a1.5,1.5,0,0,0-1.494-1.494H4.74A1.491,1.491,0,0,0,3.256,7.74l-.01,11.951A1.5,1.5,0,0,0,4.74,21.185Z' transform='translate(150.363 999.924)' fill='#634a66'/>
+                                <path id='Path_2876' data-name='Path 2876' d='M-7703.249-10653.111l-8.2-5.1v-1.375l8.2,4.924,8.457-4.924v1.375Z' transform='translate(7866.223 11667.985)' fill='#634a66'/>
+                            </g>
+                        </svg>
+                        Email</a>
+                    </div>
+                    </div>
+                    <span class="territory">Territories:</span>
+                    <p class="teritories">{{{territory}}}</p>
+                    <p class="about-note">{{aboutNote}}</p>
+                </div>
+            </div>
+            <div id="overlay" class="overlay"></div>
+        {{/each}}
+    </div>
