@@ -1,0 +1,139 @@
+[
+	{
+		"type": "array",
+		"label": "Content",
+		"id": "columns",
+		"defaultCount": 4,
+		"entryLabel": "Card",
+		"schema": [
+			{
+				"type": "tab",
+				"label": "Map",
+				"sections": [
+					{
+						"settings": [
+							{
+								"type": "imageManager",
+								"id": "map",
+								"default": {
+									"src": "https://cdn11.bigcommerce.com/s-qy08dii6dm/images/stencil/original/image-manager/patti-anderson-2x.png",
+									"type": "IMAGE_MANAGER"
+								}
+							}
+						]
+					}
+				]
+			},
+			{
+				"type": "tab",
+				"label": "Image",
+				"sections": [
+					{
+						"settings": [
+							{
+								"type": "imageManager",
+								"id": "image",
+								"default": {
+									"src": "https://cdn11.bigcommerce.com/s-qy08dii6dm/images/stencil/original/image-manager/patti-anderson-2x.png",
+									"type": "IMAGE_MANAGER"
+								}
+							}
+						]
+					}
+				]
+			},
+			{
+				"type": "tab",
+				"label": "Content",
+				"sections": [
+					{
+						"settings": [
+							{
+								"type": "input",
+								"id": "territory",
+								"label": "Territories",
+								"default": "Territories"
+							},
+							{
+								"type": "input",
+								"id": "firstName",
+								"label": "First Name",
+								"default": "FirstName"
+							},
+							{
+								"type": "input",
+								"id": "lastName",
+								"label": "Last Name",
+								"default": "LastName"
+							},
+							{
+								"type": "input",
+								"id": "email",
+								"label": "Email",
+								"default": "test@email.com"
+							},
+							{
+								"type": "input",
+								"id": "modalId",
+								"label": "Target Modal(No Space)",
+								"default": "Name"
+							},
+							{
+								"type": "text",
+								"id": "aboutNote",
+								"label": "About Note",
+								"default": "Note"
+							},
+							{
+								"type": "boxModel",
+								"label": "Margin",
+								"id": "captionTextMargin",
+								"default": {
+									"top": {
+										"value": "0",
+										"type": "px"
+									},
+									"right": {
+										"value": "10.5",
+										"type": "px"
+									},
+									"bottom": {
+										"value": " 0",
+										"type": " px"
+									},
+									"left": {
+										"value": "10.5",
+										"type": "px"
+									}
+								}
+							},
+							{
+								"type": "boxModel",
+								"label": "Padding",
+								"id": "captionTextPadding",
+								"default": {
+									"top": {
+										"value": "0",
+										"type": "px"
+									},
+									"right": {
+										"value": "10.5",
+										"type": "px"
+									},
+									"bottom": {
+										"value": "0",
+										"type": " px"
+									},
+									"left": {
+										"value": "10.5",
+										"type": "px"
+									}
+								}
+							}
+						]
+					}
+				]
+			}
+		]
+	}
+]

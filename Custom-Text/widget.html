@@ -1,0 +1,75 @@
+
+<style>
+        #eesco-text-{{_.id}} {
+            color: {{color}};
+            background: {{background_color_mobile}};
+            font-size: {{font_size_mobile.value}}{{font_size_mobile.type}};
+            font-weight: {{font_weight_mobile}};
+            text-align: {{text_align_mobile.horizontal}};
+            padding-top: {{padding_mobile.top.value}}{{padding_mobile.top.type}};
+            padding-right: {{padding_mobile.right.value}}{{padding_mobile.right.type}};
+            padding-bottom: {{padding_mobile.bottom.value}}{{padding_mobile.bottom.type}};
+            padding-left: {{padding_mobile.left.value}}{{padding_mobile.left.type}};
+            margin-top: {{margin_mobile.top.value}}{{margin_mobile.top.type}};
+            margin-right: {{margin_mobile.right.value}}{{margin_mobile.right.type}};
+            margin-bottom: {{margin_mobile.bottom.value}}{{margin_mobile.bottom.type}};
+            margin-left: {{margin_mobile.left.value}}{{margin_mobile.left.type}};
+        }
+        
+        #eesco-title-{{_.id}} {
+            text-transform: capitalize;
+            text-align: center;
+            color: {{titlecolor_mobile}};
+            background: {{title_background_color_mobile}};
+            font-size: {{title_font_size_mobile.value}}{{title_font_size_mobile.type}};
+            font-weight: {{title_font_weight_mobile}};
+            text-align: {{title_text_align_mobile.horizontal}};
+            padding-top: {{title_padding_mobile.top.value}}{{title_padding_mobile.top.type}};
+            padding-right: {{title_padding_mobile.right.value}}{{title_padding_mobile.right.type}};
+            padding-bottom: {{title_padding_mobile.bottom.value}}{{title_padding_mobile.bottom.type}};
+            padding-left: {{title_padding_mobile.left.value}}{{title_padding_mobile.left.type}};
+            margin-top: {{title_margin_mobile.top.value}}{{title_margin_mobile.top.type}};
+            margin-right: {{title_margin_mobile.right.value}}{{title_margin_mobile.right.type}};
+            margin-bottom: {{title_margin_mobile.bottom.value}}{{title_margin_mobile.bottom.type}};
+            margin-left: {{title_margin_mobile.left.value}}{{title_margin_mobile.left.type}};
+        }
+        @media (min-width: 431px) {
+            #eesco-text-{{_.id}} {
+                color: {{color}};
+                background: {{background_color}};
+                font-size: {{font_size.value}}{{font_size.type}};
+                font-weight: {{font_weight}};
+                text-align: {{text_align.horizontal}};
+                padding-top: {{padding.top.value}}{{padding.top.type}};
+                padding-right: {{padding.right.value}}{{padding.right.type}};
+                padding-bottom: {{padding.bottom.value}}{{padding.bottom.type}};
+                padding-left: {{padding.left.value}}{{padding.left.type}};
+                margin-top: {{margin.top.value}}{{margin.top.type}};
+                margin-right: {{margin.right.value}}{{margin.right.type}};
+                margin-bottom: {{margin.bottom.value}}{{margin.bottom.type}};
+                margin-left: {{margin.left.value}}{{margin.left.type}};
+            }
+            
+            #eesco-title-{{_.id}} {
+                text-transform: capitalize;
+                text-align: center;
+                color: {{titlecolor}};
+                background: {{title_background_color}};
+                font-size: {{title_font_size.value}}{{title_font_size.type}};
+                font-weight: {{title_font_weight}};
+                text-align: {{title_text_align.horizontal}};
+                padding-top: {{title_padding.top.value}}{{title_padding.top.type}};
+                padding-right: {{title_padding.right.value}}{{title_padding.right.type}};
+                padding-bottom: {{title_padding.bottom.value}}{{title_padding.bottom.type}};
+                padding-left: {{title_padding.left.value}}{{title_padding.left.type}};
+                margin-top: {{title_margin.top.value}}{{title_margin.top.type}};
+                margin-right: {{title_margin.right.value}}{{title_margin.right.type}};
+                margin-bottom: {{title_margin.bottom.value}}{{title_margin.bottom.type}};
+                margin-left: {{title_margin.left.value}}{{title_margin.left.type}};
+            } 
+        }
+    </style>
+    
+    <h1 id='eesco-title-{{_.id}}'>{{title_content}}</h1>
+    <p id='eesco-text-{{_.id}}'>{{content}}</p>
+

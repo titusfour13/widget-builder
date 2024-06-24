@@ -28,6 +28,7 @@
             margin: 10px 0px 10px 0px;
             white-space: nowrap;
         }
+        /* test */
         .homepage-customer-card-details2{
             white-space: nowrap;
             font-size: 1.4rem;
@@ -161,6 +162,29 @@
         .width-368{
             width: 368px;
         }
+        .spinner-container-{{_.id}}{
+            min-height:26rem;
+            display:flex;
+            align-items:center;
+            width:100%
+        }
+        .spinner-{{_.id}} {
+            margin:0px auto;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            border: 5px solid #333;
+            border-top-color: #fff;
+            animation: spin 1s infinite linear;
+        }
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
         @media (min-width: 481px) {
             .customer-buttons-white-container a{
                 padding: 8px 10px 5px 10px;
@@ -188,7 +212,7 @@
         }
     </style>
     <div class="customer-widget-container" id="customer-widget-container">
-        <div id="customer-name-widget-container">
+        <!-- <div id="customer-name-widget-container">
             <h3 class='homepage-customer-card-caption  width-368'>Good Morning, </h3>
             <p class="you-recent-order">YOUR RECENT ORDER</p>
         </div>
@@ -220,12 +244,21 @@
                     <a class="white-button-a" href="/account.php?action=order_status">+ Creat New</a>
                 </div>
             </div>
+        </div> -->
+        <h3 class='homepage-customer-card-caption'>{{cscaption}}</h3>
+        {{{html}}}
+        <a class="purple-button-a" href="{{url1}}">{{button1}} ></a>
+        <div class="homepage-customer-contact-us">
+            <img src="{{image.src}}" alt="questions"/><p class='homepage-customer-card-details2'>{{csdetails2}} Questions?  <a href="{{contacturl}}">{{contactus}}</a></p>
+        </div>
+        <div class="customer-buttons-white-container">
+            <a class="white-button-a" href="{{whiteurl1}}">{{whitebutton1}} ></a>
+            <a class="white-button-a" href="{{whiteurl2}}">{{whitebutton2}} ></a>
         </div>
     </div>
     
 <script>
     const widgetConfig = {{{json .}}}
-    console.log(widgetConfig)
     let name = null;
     function formatDate(timestamp) {
         const milliseconds = timestamp * 1000;
@@ -248,59 +281,120 @@
         
         return capitalizeFirstLetter(words[0]);
     }
-    function placeWidgetContent(name){
-        const content = document.getElementById("customer-name-widget-container");
-        let html = "";
-        if (name) {
-            html += `
-                <h3 class='homepage-customer-card-caption'>Good Morning, ${name}</h3>
-                <p class="you-recent-order">YOUR RECENT ORDER</p>`;
-            content.innerHTML = html;
-        } 
-    }
+    // function placeWidgetContent(name){
+    //     const content = document.getElementById("customer-name-widget-container");
+    //     let html = "";
+    //     if (name) {
+    //         html += `
+    //             <h3 class='homepage-customer-card-caption'>Good Morning, ${name}</h3>
+    //             <p class="you-recent-order">YOUR RECENT ORDER</p>`;
+    //         content.innerHTML = html;
+    //     } 
+    // }
     let intervalId;
     async function onB2BScriptLoaded() {
         clearInterval(intervalId);
+        const order = document.getElementById("customer-widget-container");
         try {
             let html = ""
             if(name){
                 const orderList = await window.B2BPages[0].api.getOrderList();
-                const order = document.getElementById("customer-widget-order-details-container");
                 
                 html = `
-                <span class="order-number-customer-widget">ORDER #${orderList.list[0].orderId}</span>
-                <span class="order-price-customer-widget">$${orderList.list[0].totalIncTax}</span>
-                <div class="customer-widget-order-details">
-                    <div classs"date-and-status-container">
-                        <span class="order-date-customer-widget">Order Date: <span>${formatDate(orderList.list[0].createdAt)}</span></span>
-                        <span class="order-status-customer-widget">Status: <span>${orderList.list[0].customOrderStatus}</span></span>
+                <div id="customer-name-widget-container">
+                    <h3 class='homepage-customer-card-caption'>Good Morning, ${name}</h3>
+                    <p class="you-recent-order">YOUR RECENT ORDER</p>
+                </div>
+                <div id="customer-widget-order-details-container">
+                    <span class="order-number-customer-widget">ORDER #${orderList.list[0]?.orderId !== undefined ? orderList.list[0]?.orderId : 'N/A'}</span>
+                    <span class="order-price-customer-widget">$${orderList.list[0]?.totalIncTax !== undefined ? orderList.list[0]?.totalIncTax : 'N/A'}</span>
+                    <div class="customer-widget-order-details">
+                        <div classs"date-and-status-container">
+                            <span class="order-date-customer-widget">Order Date: <span>${orderList.list[0]?.createdAt  !== undefined? formatDate(orderList.list[0]?.createdAt) : 'N/A'}</span></span>
+                            <span class="order-status-customer-widget">Status: <span>${orderList.list[0]?.customOrderStatus !== undefined ? orderList.list[0]?.customOrderStatus  :  'N/A'}</span></span>
+                        </div>
+                        <div class="order-botton-container order-botton-links">
+                            <a class="purple-button-a" href="/account.php?action=view_order&order_id=${orderList.list[0]?.orderId !== undefined ? orderList.list[0]?.orderId  :  'N/A'}">View Order ></a>
+                            <a class="white-button-a" href="/account.php?action=order_status">Order History ></a>
+                        </div>
                     </div>
-                    <div class="order-botton-container order-botton-links">
-                        <a class="purple-button-a" href="/account.php?action=view_order&order_id=${orderList.list[0].orderId}">View Order ></a>
-                        <a class="white-button-a" href="/account.php?action=order_status">Order History ></a>
-                    </div>
-                 </div>
-                <div class="wishlist-botton-container">
-                    <span clas="text-wishlist">
-                        DON'T FORGET YOUR LISTS 
-                        <svg xmlns="http://www.w3.org/2000/svg" width="18.209" height="18.209" viewBox="0 0 18.209 18.209">
-                            <g id="wishlist_icon" data-name="wishlist icon" transform="translate(0)">
-                                <path id="Trazado_217" data-name="Trazado 217" d="M0,0H18.209V18.209H0Z" transform="translate(0)" fill="none"/>
-                                <path id="Trazado_218" data-name="Trazado 218" d="M15.439,3.764a4.367,4.367,0,0,0-5.83.849,4.359,4.359,0,0,0-5.83-.849A4.241,4.241,0,0,0,2,7.076c-.107,3,2.511,5.4,6.507,9.08l.076.069a1.5,1.5,0,0,0,2.047-.008l.084-.077c4-3.675,6.606-6.076,6.507-9.072A4.238,4.238,0,0,0,15.439,3.764ZM9.686,15.006l-.076.077-.076-.077C5.911,11.678,3.521,9.478,3.521,7.246a2.62,2.62,0,0,1,2.664-2.7A2.975,2.975,0,0,1,8.9,6.366h1.423a2.956,2.956,0,0,1,2.709-1.822,2.62,2.62,0,0,1,2.664,2.7C15.7,9.478,13.308,11.678,9.686,15.006Z" transform="translate(-0.563 -0.846)" fill="#704776"/>
-                            </g>
-                        </svg>
-                    </span>
-                    <div class="order-botton-container mb-customer-widget">
-                        <a class="purple-button-a" href="/account.php?action=view_order&order_id=${orderList.list[0].orderId}">View All ></a>
-                        <a class="white-button-a" href="/account.php?action=order_status">+ Creat New</a>
+                    <div class="wishlist-botton-container">
+                        <span clas="text-wishlist">
+                            DON'T FORGET YOUR LISTS 
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18.209" height="18.209" viewBox="0 0 18.209 18.209">
+                                <g id="wishlist_icon" data-name="wishlist icon" transform="translate(0)">
+                                    <path id="Trazado_217" data-name="Trazado 217" d="M0,0H18.209V18.209H0Z" transform="translate(0)" fill="none"/>
+                                    <path id="Trazado_218" data-name="Trazado 218" d="M15.439,3.764a4.367,4.367,0,0,0-5.83.849,4.359,4.359,0,0,0-5.83-.849A4.241,4.241,0,0,0,2,7.076c-.107,3,2.511,5.4,6.507,9.08l.076.069a1.5,1.5,0,0,0,2.047-.008l.084-.077c4-3.675,6.606-6.076,6.507-9.072A4.238,4.238,0,0,0,15.439,3.764ZM9.686,15.006l-.076.077-.076-.077C5.911,11.678,3.521,9.478,3.521,7.246a2.62,2.62,0,0,1,2.664-2.7A2.975,2.975,0,0,1,8.9,6.366h1.423a2.956,2.956,0,0,1,2.709-1.822,2.62,2.62,0,0,1,2.664,2.7C15.7,9.478,13.308,11.678,9.686,15.006Z" transform="translate(-0.563 -0.846)" fill="#704776"/>
+                                </g>
+                            </svg>
+                        </span>
+                        <div class="order-botton-container mb-customer-widget">
+                            <a class="purple-button-a" href="/account.php?action=view_order&order_id=${orderList.list[0]?.orderId !== undefined ?orderList.list[0]?.orderId   :  'N/A'}">View All ></a>
+                            <a class="white-button-a" href="/account.php?action=order_status">+ Creat New</a>
+                        </div>
                     </div>
                 </div>
                 `
-                placeWidgetContent(name);
+                // placeWidgetContent(name);
                 order.innerHTML = html
-            }else {
-                const logout = document.getElementById("customer-widget-container")
-                html += `
+            }
+
+        } catch (error) {
+            console.error(error);
+            order.innerHTML = `
+                <div id="customer-name-widget-container">
+                    <h3 class='homepage-customer-card-caption'>Good Morning, ${name}</h3>
+                    <p class="you-recent-order">YOUR RECENT ORDER</p>
+                </div>
+                <div id="customer-widget-order-details-container">
+                    <span class="order-number-customer-widget">ORDER # N/A</span>
+                    <span class="order-price-customer-widget">N/A</span>
+                    <div class="customer-widget-order-details">
+                        <div classs"date-and-status-container">
+                            <span class="order-date-customer-widget">Order Date: <span>N/A</span></span>
+                            <span class="order-status-customer-widget">Status: <span>N/A</span></span>
+                        </div>
+                        <div class="order-botton-container order-botton-links">
+                            <a class="purple-button-a" href="/account.php?action=view_order&order_id=N/A">View Order ></a>
+                            <a class="white-button-a" href="/account.php?action=order_status">Order History ></a>
+                        </div>
+                    </div>
+                    <div class="wishlist-botton-container">
+                        <span clas="text-wishlist">
+                            DON'T FORGET YOUR LISTS 
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18.209" height="18.209" viewBox="0 0 18.209 18.209">
+                                <g id="wishlist_icon" data-name="wishlist icon" transform="translate(0)">
+                                    <path id="Trazado_217" data-name="Trazado 217" d="M0,0H18.209V18.209H0Z" transform="translate(0)" fill="none"/>
+                                    <path id="Trazado_218" data-name="Trazado 218" d="M15.439,3.764a4.367,4.367,0,0,0-5.83.849,4.359,4.359,0,0,0-5.83-.849A4.241,4.241,0,0,0,2,7.076c-.107,3,2.511,5.4,6.507,9.08l.076.069a1.5,1.5,0,0,0,2.047-.008l.084-.077c4-3.675,6.606-6.076,6.507-9.072A4.238,4.238,0,0,0,15.439,3.764ZM9.686,15.006l-.076.077-.076-.077C5.911,11.678,3.521,9.478,3.521,7.246a2.62,2.62,0,0,1,2.664-2.7A2.975,2.975,0,0,1,8.9,6.366h1.423a2.956,2.956,0,0,1,2.709-1.822,2.62,2.62,0,0,1,2.664,2.7C15.7,9.478,13.308,11.678,9.686,15.006Z" transform="translate(-0.563 -0.846)" fill="#704776"/>
+                                </g>
+                            </svg>
+                        </span>
+                        <div class="order-botton-container mb-customer-widget">
+                            <a class="purple-button-a" href="/account.php?action=view_order&order_id=N/A">View All ></a>
+                            <a class="white-button-a" href="/account.php?action=order_status">+ Creat New</a>
+                        </div>
+                    </div>
+                </div>
+                `
+        }
+    }
+
+    try {
+        const intervalId = setInterval(() => {
+            const spinner = document.getElementById("customer-widget-container");
+            const jsContext = window.jsContext;
+            
+            if (jsContext && jsContext.customer && jsContext.customer.name) {
+                name = getFirstWord(jsContext.customer.name);
+                spinner.innerHTML = `
+                    <div class="spinner-container-{{_.id}}">
+                        <div class="spinner-{{_.id}}"></div>
+                    </div>
+                `;
+                
+                clearInterval(intervalId); // Clear the interval once the condition is met
+            } else if (jsContext){
+                spinner.innerHTML = `
                     <h3 class='homepage-customer-card-caption'>{{cscaption}}</h3>
                     {{{html}}}
                     <a class="purple-button-a" href="{{url1}}">{{button1}} ></a>
@@ -310,21 +404,11 @@
                     <div class="customer-buttons-white-container">
                         <a class="white-button-a" href="{{whiteurl1}}">{{whitebutton1}} ></a>
                         <a class="white-button-a" href="{{whiteurl2}}">{{whitebutton2}} ></a>
-                    </div>`;
-                logout.innerHTML = html;
+                    </div>
+                `;
+                clearInterval(intervalId);
             }
-        } catch (error) {
-            console.error(error);
-        }
-    }
-
-    try {
-        setTimeout(() => {
-            const jsContext = window.jsContext;
-            if (jsContext.customer && jsContext.customer.name) {
-                name = getFirstWord(jsContext.customer.name);
-            }
-        }, 300);
+        }, 100);
     } catch (error) {
         console.error(error);
     }
